@@ -1,0 +1,20 @@
+Title: Principal
+----
+
+
+decade_experience_title: Más de una década de experiencia
+----
+decade_experience_summary: We have over 10 years of experience
+
+
+----
+all_in_one_title: Todo En Uno
+----
+all_in_one_summary: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+
+
+----
+top_notch_materials_title: Materiales de primera categoría
+----
+top_notch_materials_summary: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
