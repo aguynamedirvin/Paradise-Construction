@@ -11,4 +11,3 @@ fields:
   quote:
     label: Quote
     type:  textarea
-    icon:  file-text-o

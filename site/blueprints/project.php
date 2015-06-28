@@ -24,6 +24,21 @@ fields:
     type: select
     options: images
     width: 1/2
+  category:
+    label: Category
+    type: radio
+    default: remodeling
+    options:
+      remodeling: New Construction and Remodeling
+      roofing: Roofing
+      landscaping: Landscaping
+      paint: Texture and Complete Paint
+      concrete: Concrete
+      driveways: Driveways
+      sidewalks: Sidewalks
+      walkways: Walkways
+      cement_slabs: Cement Slabs
+      stamped_concrete: Stamped Concrete
   tags:
     label: Tags
     type:  tags

@@ -1,0 +1,9 @@
+Title: Paradise
+
+----
+
+Text: This is a test.
+
+----
+
+Background: palms.png

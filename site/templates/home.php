@@ -18,23 +18,24 @@
 					</div>
 				</div>
 			</div>
-	
+
+			<?php foreach(page('slides')->children()->limit(5) as $slide): ?>
+			<div class="slide" style="background-image: url(<?php echo $slide->image($slide->background())->url() ?>);">
+				<div class="slide-content wrap">
+					<div class="slide-meta">
+						<h2 class="title"><?php echo $slide->title() ?></h2>
+						<p class="summary"><?php echo $slide->text() ?></p>
+					</div>
+				</div>
+			</div>
+			<?php endforeach ?>
+				
 			<div class="slide" style="background-image: url(temp/images/slide1.png);">
 				<div class="slide-content wrap">
 					<div class="slide-meta">
 						<h2 class="title">Slide 2 title</h2>
 						<p class="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel nostrum quod, autem cum. Amet distinctio, placeat quos.</p>
 						<a href="#contact" class="btn btn-dark">View projects</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="slide" style="background-image: url(temp/images/slide1.png);">
-				<div class="slide-content wrap">
-					<div class="slide-meta">
-						<h2 class="title">Slide 3 title</h2>
-						<p class="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel nostrum quod, autem cum. Amet distinctio, placeat quos.</p>
-						<a href="#contact" class="btn">View projects</a>
 					</div>
 				</div>
 			</div>
