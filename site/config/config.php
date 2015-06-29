@@ -17,6 +17,9 @@ for more information: http://getkirby.com/license
 
 c::set('license', 'put your license key here');
 
+
+c::set('debug', true);
+
 /*
 
 ---------------------------------------
@@ -29,7 +32,6 @@ of the system, please check out http://getkirby.com/docs/advanced/options
 
 */
 
-
 c::set('languages', array(
   array(
     'code'    => 'en',
@@ -40,7 +42,7 @@ c::set('languages', array(
   ),
   array(
     'code'    => 'es',
-    'name'    => 'Spanish',
+    'name'    => 'Español',
     'locale'  => 'es_US',
     'url'     => '/es',
   ),

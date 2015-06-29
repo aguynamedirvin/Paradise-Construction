@@ -2,7 +2,7 @@ Title: Project C
 
 ----
 
-Tags: stuff
+Tags: Texture & Complete Paint
 
 ----
 
@@ -19,3 +19,7 @@ Before: hightide.jpg
 ----
 
 After: kermit-the-fog.jpg
+
+----
+
+Category: remodeling

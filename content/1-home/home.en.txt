@@ -4,13 +4,13 @@ Title: Home
 
 decade_experience_title: Over a decade of experience
 ----
-decade_experience_summary: We have over 10 years of experience
+decade_experience_summary: We have over 10 years of experience satisfying customers
 
 
 ----
 all_in_one_title: All-In-One
 ----
-all_in_one_summary: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+all_in_one_summary: We offer a complete service unlike other companies in El Paso
 
 
 
@@ -18,3 +18,27 @@ all_in_one_summary: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 top_notch_materials_title: Top-Notch Materials
 ----
 top_notch_materials_summary: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+----
+
+why_us_title: Why we’re awesome
+
+----
+
+projects_title: Don’t just take our word for it
+
+----
+
+view_projects_btn: View all of our projects
+
+----
+
+services_title: Here’s what we do
+
+----
+
+services_btn: View all of our services
+
+----
+
+client_quote_title: What our clients are saying

@@ -14,6 +14,12 @@ fields:
     type:  date
     default: today
     format: MM/YYYY
+    width: 1/2
+  location:
+    label: Location
+    type: text
+    icon: map-marker
+    width: 1/2
   before:
     label: Before Picture
     type: select

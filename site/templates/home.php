@@ -23,8 +23,19 @@
 			<div class="slide" style="background-image: url(<?php echo $slide->image($slide->background())->url() ?>);">
 				<div class="slide-content wrap">
 					<div class="slide-meta">
+						<?php if ($slide->display_title() != 'false'): ?>
 						<h2 class="title"><?php echo $slide->title() ?></h2>
+						<?php endif ?>
+
+						<?php if (!$slide->text()->isEmpty()): ?>
 						<p class="summary"><?php echo $slide->text() ?></p>
+						<?php endif ?>
+
+						<?php if (!$slide->button_text()->isEmpty() && !$slide->button_link()->isEmpty()): ?>
+						<a class="btn btn-big <?php ecco($slide->button_style() == 'btn-line', ' btn-line') ?>" href="<?php echo $slide->button_link() ?>">
+							<?php echo $slide->button_text() ?>
+						</a>
+						<?php endif ?>
 					</div>
 				</div>
 			</div>
@@ -49,7 +60,7 @@
 		<section id="why-us" class="section">
 			<div class="wrap">
 				<div class="section-meta">
-					<h2 class="title section-title ">Why we're awesome</h2>
+					<h2 class="title section-title "><?php echo $page->why_us_title() ?></h2>
 				</div>
 
 				<div class="section-content">
@@ -91,7 +102,7 @@
 		<div id="projects-showcase" class="section">
 			
 			<div class="section-meta">
-				<h2 class="title section-title ">Don't just take our word for it</h2>
+				<h2 class="title section-title "><?php echo $page->projects_title() ?></h2>
 			</div>
 
 			<div class="section-content">
@@ -99,7 +110,7 @@
 				<!-- Projects -->
 				<?php snippet('projects', array('limit' => 4)) ?>
 
-				<a href="<?php echo page('projects')->url() ?>"><button class="btn btn-line aligncenter">View all of our projects</button></a>
+				<a href="<?php echo page('projects')->url() ?>"><button class="btn btn-line aligncenter"><?php echo $page->view_projects_btn() ?></button></a>
 			</div>
 		</div>
 
@@ -110,7 +121,7 @@
 		<div id="our-services" class="section">
 			<div class="wrap">
 				<div class="section-meta">
-					<h2 class="title section-title ">Here's what we do</h2>
+					<h2 class="title section-title "><?php echo $page->services_title() ?></h2>
 				</div>
 
 				<div class="section-content">
@@ -118,7 +129,7 @@
 					<?php snippet('services') ?>
 					
 					
-					<a href="<?php echo page('services')->url() ?>"><button class="btn aligncenter">View all of our services</button></a>
+					<a href="<?php echo page('services')->url() ?>"><button class="btn aligncenter"><?php echo $page->services_btn() ?></button></a>
 				</div>
 			</div>
 		</div>
@@ -129,7 +140,7 @@
 		<div id="client-quotes" class="section">
 			<div class="wrap">
 				<div class="section-meta">
-					<h2 class="title section-title ">What our clients are saying</h2>
+					<h2 class="title section-title "><?php echo $page->client_quote_title() ?></h2>
 				</div>
 
 				<div class="section-content">

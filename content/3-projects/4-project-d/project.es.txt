@@ -6,7 +6,7 @@ Text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo l
 
 ----
 
-Tags: project
+Tags: Textures & Pintura Completa
 
 ----
 
@@ -14,8 +14,12 @@ Date: 2015-06-01
 
 ----
 
-Before: 
+Before: photo-1435163741535-a345a0ceadba.jpg
 
 ----
 
-After: 
+After: photo-1435163741535-a345a0ceadba.jpg
+
+----
+
+Category: remodeling

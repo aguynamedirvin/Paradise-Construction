@@ -3,7 +3,7 @@
 			<div class="footer-widgets">
 				<div class="wrap">
 					<div class="widget contact">
-						<h3>Talk to us</h3>
+						<h3><?php echo $site->contact_widget() ?></h3>
 						<ul>
 							<li><i class="fa fa-phone"></i> <b><?php echo $site->phone_text() ?>:</b> <a href="tel:<?php echo $site->phone() ?>"><?php echo $site->phone() ?></a></li>
 							<li><i class="fa fa-envelope"></i> <b><?php echo $site->email_text() ?>:</b> <a href="mailto:<?php echo $site->email() ?>"><?php echo $site->email() ?></a></li>
@@ -12,7 +12,7 @@
 					</div>
 
 					<div class="widget social">
-						<h3>Stay in touch</h3>
+						<h3><?php echo $site->social_widget() ?></h3>
 						<div class="social-networks">
 							<!-- Facebook -->
 							<span><a href="<?php echo $site->facebook() ?>">&#xf09a;</a></span>
@@ -26,7 +26,7 @@
 					</div>
 
 					<div class="widget company">
-						<h3>Company</h3>
+						<h3><?php echo $site->company_widget() ?></h3>
 						<ul>
 							<?php foreach($pages->visible() as $p): ?>
 							<li><a <?php e($p->isOpen(), ' class="active"') ?> href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?></a></li>
@@ -35,7 +35,7 @@
 					</div>
 
 					<div class="widget language">
-						<h3>Language</h3>
+						<h3><?php echo $site->language_widget() ?></h3>
 						<ul>
 							<?php foreach($site->languages() as $language): ?>
 								<li<?php e($site->language() == $language, ' class="active"') ?>>
@@ -53,7 +53,7 @@
 				<div class="wrap">
 					<div class="site-info">
 						<div class="alignleft"><?php echo $site->copyright()->kirbytext() ?></div>
-						<div class="alignright">Proudly crafted by <a href="http://squarepixl.com"><span class="square-pixl">&#xf04d;</span> SquarePixl</a>.</div>
+						<div class="alignright"><?php echo l::get('square_pixl') ?></div>
 					</div>
 				</div>
 			</div>

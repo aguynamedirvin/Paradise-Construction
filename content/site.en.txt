@@ -59,3 +59,19 @@ Email-text: Email
 ----
 
 Address-text: Address
+
+----
+
+contact_widget: Talk To Us
+
+----
+
+social_widget: Stay In Touch
+
+----
+
+company_widget: Company
+
+----
+
+language_widget: Language

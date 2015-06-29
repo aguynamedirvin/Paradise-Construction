@@ -2,7 +2,7 @@ Title: Project A
 
 ----
 
-Tags: outdoor
+Tags: Nueva Construcción y Remodelación
 
 ----
 
@@ -22,3 +22,7 @@ Before: green.jpg
 ----
 
 After: forrest.jpg
+
+----
+
+Category: remodeling

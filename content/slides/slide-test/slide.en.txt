@@ -1,0 +1,25 @@
+Title: Slide Test
+
+----
+
+Text: Lorem ipsum dolor.
+
+----
+
+Background: palms.png
+
+----
+
+Display-title: false
+
+----
+
+Button-text: Projects
+
+----
+
+Button-link: http://localhost.com/kirby/projects
+
+----
+
+Button-style: btn-line

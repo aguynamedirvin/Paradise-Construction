@@ -7,7 +7,7 @@
 
 		// add the tag filter
 		if($tag = param('tag')) {
-			$projects = $projects->filterBy('tags', $tag, ',');
+			$projects = $projects->filterBy('tags', urldecode($tag), ',');
 		}
 
 		// fetch all tags

@@ -2,7 +2,7 @@ Title: Project B
 
 ----
 
-Tags: city
+Tags: Paisaje
 
 ----
 
@@ -22,3 +22,7 @@ Before: mountains.jpg
 ----
 
 After: road.jpg
+
+----
+
+Category: remodeling

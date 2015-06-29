@@ -4,13 +4,13 @@ Title: Principal
 
 decade_experience_title: Más de una década de experiencia
 ----
-decade_experience_summary: We have over 10 years of experience
+decade_experience_summary: Tenemos mas de 10 años de experienca
 
 
 ----
 all_in_one_title: Todo En Uno
 ----
-all_in_one_summary: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+all_in_one_summary: Ofrecemos mas servicios que cualquier otra compañía en El Paso
 
 
 
@@ -18,3 +18,27 @@ all_in_one_summary: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 top_notch_materials_title: Materiales de primera categoría
 ----
 top_notch_materials_summary: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+----
+
+why_us_title: Cientos de clientes satisfechos
+
+----
+
+projects_title: Vea por si mismo
+
+----
+
+view_projects_btn: Ver todos nuestros proyectos
+
+----
+
+services_title: Nuestros servicios
+
+----
+
+services_btn: Ver todos nuestros servicios
+
+----
+
+client_quote_title: Lo que dicen nuestros clientes
