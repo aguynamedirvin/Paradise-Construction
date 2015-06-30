@@ -2,19 +2,19 @@ Title: Slide Test
 
 ----
 
-Text: Lorem ipsum dolor.
+Text: okfdshiudfhsiosdhfjdsiknflsknkcnsdlkn.hsdhiofbafklskdjn
 
 ----
 
-Background: palms.png
+Background: hightide.jpg
 
 ----
 
-Display-title: false
+Display-title: true
 
 ----
 
-Button-text: Projects
+Button-text: Hello
 
 ----
 

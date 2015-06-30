@@ -1,0 +1,29 @@
+Title: Project E
+
+----
+
+Date: 2015-06-01
+
+----
+
+Location: El Paso
+
+----
+
+Before: before_picture.png
+
+----
+
+After: after_picture.png
+
+----
+
+Category: remodeling
+
+----
+
+Tags: Remodeling
+
+----
+
+Text: 

@@ -20,7 +20,7 @@
 			</div>
 
 			<?php foreach(page('slides')->children()->limit(5) as $slide): ?>
-			<div class="slide" style="background-image: url(<?php echo $slide->image($slide->background())->url() ?>);">
+			<div class="slide" style="background-image: url(<?php echo thumb($slide->image($slide->background()), array('width' => 1440, 'height' => 650, 'crop' => true, 'upscale' => true, 'quality' => 80))->url() ?>);">
 				<div class="slide-content wrap">
 					<div class="slide-meta">
 						<?php if ($slide->display_title() != 'false'): ?>

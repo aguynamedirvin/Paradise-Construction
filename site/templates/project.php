@@ -4,21 +4,27 @@
 
 		<div class="project-info">
 			<ul>
-				<li>Date: <?php echo $page->date('m/Y', 'date') ?></li>
+				<li><b>Date:</b> <?php echo $page->date('m/Y', 'date') ?></li>
 				<?php if (!$page->location()->isEmpty()): ?>
-				<li>Location: <?php echo $page->location() ?></li>
+				<li><b>Location:</b> <?php echo $page->location() ?></li>
 				<?php endif ?>
-				<li>Category: <a href=""><?php echo $page->tags() ?></a></li>
+				<li><b>Category:</b> <a href=""><?php echo $page->tags() ?></a></li>
 				<?php if (!$page->text()->isEmpty()): ?>
-				<li>Summary: <?php echo $page->text() ?></li>
+				<li><b>Summary:</b> <?php echo $page->text() ?></li>
 				<?php endif ?>
 			</ul>
 		</div>
 
+		<?php 
+
+			$thumb_settings = array('width' => 780, 'height' => 550, 'crop' => true, 'upscale' => true);
+
+		?>
+
 		<div class="project-pictures">
-			<div class="before-after twentytwenty-container" style="max-width: 775px">
-				<img src="<?php echo $page->image($page->before())->url() ?>" alt="Before">
-				<img src="<?php echo $page->image($page->after())->url() ?>" alt="After">
+			<div class="before-after twentytwenty-container">
+				<img src="<?php echo thumb($page->image($page->before()), $thumb_settings)->url() ?>" alt="Before">
+				<img src="<?php echo thumb($page->image($page->after()), $thumb_settings)->url() ?>" alt="After">
 			</div>
 		</div>
 

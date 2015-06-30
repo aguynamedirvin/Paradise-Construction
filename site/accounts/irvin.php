@@ -8,9 +8,9 @@ language: en
 role: admin
 history:
   - slides/slide-test
+  - projects/project-e
   - projects/project-b
   - projects/project-a
   - projects/project-d
-  - projects/project-c
 firstname: Irvin
 lastname: Dominguez
