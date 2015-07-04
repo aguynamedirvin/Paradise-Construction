@@ -1,7 +1,10 @@
 <?php if(!defined('KIRBY')) exit ?>
 
+# main site blueprint
+
 title: Site
 pages: default
+
 fields:
   title:
     label: Title

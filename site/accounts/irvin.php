@@ -7,10 +7,10 @@ password: >
 language: en
 role: admin
 history:
+  - projects/project-d
+  - projects/project-c
   - slides/slide-test
   - projects/project-e
   - projects/project-b
-  - projects/project-a
-  - projects/project-d
 firstname: Irvin
 lastname: Dominguez

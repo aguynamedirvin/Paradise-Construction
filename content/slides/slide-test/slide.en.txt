@@ -10,11 +10,11 @@ Background: hightide.jpg
 
 ----
 
-Display-title: true
+Display-title: false
 
 ----
 
-Button-text: Hello
+Button-text: Button
 
 ----
 

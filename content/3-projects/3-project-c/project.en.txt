@@ -2,7 +2,7 @@ Title: Project C
 
 ----
 
-Tags: Texture & Complete Paint
+Tags: New Construction & Remodeling
 
 ----
 
@@ -23,3 +23,7 @@ After: kermit-the-fog.jpg
 ----
 
 Category: remodeling
+
+----
+
+Location: 

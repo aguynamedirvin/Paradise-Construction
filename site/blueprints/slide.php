@@ -34,7 +34,8 @@ fields:
     width: 1/4
     default: btn-solid
     options:
-      btn-solid: Solid
+      btn-green: Solid Green
+      btn-dark: Solid Black
       btn-line: Line
   text:
     label: Text

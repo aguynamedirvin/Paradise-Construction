@@ -106,15 +106,17 @@
 			</div>
 
 			<div class="section-content">
-
+			
 				<!-- Projects -->
-				<?php snippet('projects', array('limit' => 4)) ?>
+				<div class="gallery">
+
+					<?php projects(array('limit' => 4, 'columns' => 4)); ?>
+					
+				</div>
 
 				<a href="<?php echo page('projects')->url() ?>"><button class="btn btn-line aligncenter"><?php echo $page->view_projects_btn() ?></button></a>
 			</div>
 		</div>
-
-
 
 
 		<!-- Our services -->
@@ -127,7 +129,6 @@
 				<div class="section-content">
 					
 					<?php snippet('services') ?>
-					
 					
 					<a href="<?php echo page('services')->url() ?>"><button class="btn aligncenter"><?php echo $page->services_btn() ?></button></a>
 				</div>

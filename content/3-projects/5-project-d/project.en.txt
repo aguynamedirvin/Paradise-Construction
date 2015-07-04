@@ -6,7 +6,7 @@ Text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo l
 
 ----
 
-Tags: Landscaping
+Tags: Landscaping,New Construction & Remodeling
 
 ----
 
@@ -23,3 +23,7 @@ After: photo-1435163741535-a345a0ceadba.jpg
 ----
 
 Category: remodeling
+
+----
+
+Location: 
