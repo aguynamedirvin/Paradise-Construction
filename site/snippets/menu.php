@@ -5,7 +5,9 @@
 		<?php endforeach ?>
 
 		<li class="hide-sm">
-			<button class="btn btn-line"><?php echo l::get('free_estimate_btn') ?></button>
+			<a href="<?php echo page('free-estimate')->url() ?>">
+                <button class="btn btn-line"><?php echo l::get('free_estimate_btn') ?></button>
+            </a>
 		</li>
 
 	</ul>

@@ -32,7 +32,7 @@ fields:
     label: Button Style
     type: select
     width: 1/4
-    default: btn-solid
+    default: btn-green
     options:
       btn-green: Solid Green
       btn-dark: Solid Black

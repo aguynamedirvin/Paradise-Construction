@@ -2,7 +2,7 @@ Title: Slide Test
 
 ----
 
-Text: okfdshiudfhsiosdhfjdsiknflsknkcnsdlkn.hsdhiofbafklskdjn
+Text: okfdshiudfhsiosdhfjdsiknflsknkcnsdlkn.hsdhiofbafklskdj
 
 ----
 
@@ -22,4 +22,4 @@ Button-link: http://localhost.com/kirby/projects
 
 ----
 
-Button-style: btn-line
+Button-style: btn-dark

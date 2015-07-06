@@ -42,6 +42,8 @@
  *
  * 'shuffle'		(false)		Displays random projects
  *
+ * 'filterBy'		(empty)		Filters projects by a defined set of options which are 'by', 'tag', and 'separator'
+ *
  */
 
 
@@ -57,6 +59,13 @@ function projects($options = array()) {
 		'limit'         => 9,
 		'columns'       => 3,
 		'shuffle'		=> false,
+		'filterBy'		=> array(
+
+			'by'		=> '',
+			'tag'		=> '',
+			'separator'	=> '',
+
+		),
 	);
 
 
@@ -88,6 +97,13 @@ function projects($options = array()) {
 	if ($options['shuffle']) {
 		$projects = $projects->shuffle();
 	}
+	if (!array_filter($options['filterBy'])) {
+		$projects = $projects->filterBy(
+			$options['filterBy']['by'], 
+			$options['filterBy']['tag'],
+			$options['filterBy']['separator']
+		);
+	}
 
 
 	/**
@@ -96,10 +112,10 @@ function projects($options = array()) {
 	$count = 0;
 
 	foreach ($projects as $project) { 
-
 		$count++;
+
 ?>
-		<div class="project<?php ecco($count == $options['columns'], ' last') ?>">
+		<div class="project<?php ecco($count % $options['columns'] == 0, ' last') ?>">
 			<a href="<?php echo $project->url() ?>">
 				<?php $image = $project->image( $project->after() ) ?>
 				<img src="<?php echo thumb($image, $thumbSettings)->url() ?>" alt="<?php echo $project->title()->html() ?>" >

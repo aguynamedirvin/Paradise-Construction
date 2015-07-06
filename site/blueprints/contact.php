@@ -1,11 +1,9 @@
 <?php if(!defined('KIRBY')) exit ?>
 
-# projects blueprint
+# contact blueprint
 
-title: Projects
-pages:
-  template: project
-files: false
+title: Contact
+pages: false
 
 deletable: false
 
@@ -16,3 +14,4 @@ fields:
   text:
     label: Text
     type:  textarea
+    size:  large

@@ -23,16 +23,16 @@
 			<div class="slide" style="background-image: url(<?php echo thumb($slide->image($slide->background()), array('width' => 1440, 'height' => 650, 'crop' => true, 'upscale' => true, 'quality' => 80))->url() ?>);">
 				<div class="slide-content wrap">
 					<div class="slide-meta">
-						<?php if ($slide->display_title() != 'false'): ?>
+						<?php if ($slide->display_title()->isTrue()): ?>
 						<h2 class="title"><?php echo $slide->title() ?></h2>
 						<?php endif ?>
 
-						<?php if (!$slide->text()->isEmpty()): ?>
+						<?php if ($slide->text()->isNotEmpty()): ?>
 						<p class="summary"><?php echo $slide->text() ?></p>
 						<?php endif ?>
 
-						<?php if (!$slide->button_text()->isEmpty() && !$slide->button_link()->isEmpty()): ?>
-						<a class="btn btn-big <?php ecco($slide->button_style() == 'btn-line', ' btn-line') ?>" href="<?php echo $slide->button_link() ?>">
+						<?php if ($slide->button_text()->isNotEmpty() && $slide->button_link()->isNotEmpty()): ?>
+						<a class="btn btn-big <?php ecco($slide->button_style() == 'btn-line', ' btn-line'); ecco($slide->button_style() == 'btn-dark', ' btn-dark')?>" href="<?php echo $slide->button_link() ?>">
 							<?php echo $slide->button_text() ?>
 						</a>
 						<?php endif ?>
@@ -111,10 +111,12 @@
 				<div class="gallery">
 
 					<?php projects(array('limit' => 4, 'columns' => 4)); ?>
-					
+
 				</div>
 
-				<a href="<?php echo page('projects')->url() ?>"><button class="btn btn-line aligncenter"><?php echo $page->view_projects_btn() ?></button></a>
+				<div class="aligncenter">
+					<a href="<?php echo page('projects')->url() ?>" class="btn btn-line"><?php echo $page->view_projects_btn() ?></a>
+				</div>
 			</div>
 		</div>
 
@@ -130,7 +132,9 @@
 					
 					<?php snippet('services') ?>
 					
-					<a href="<?php echo page('services')->url() ?>"><button class="btn aligncenter"><?php echo $page->services_btn() ?></button></a>
+					<div class="aligncenter">
+						<a href="<?php echo page('services')->url() ?>" class="btn"><?php echo $page->services_btn() ?></a>
+					</div>
 				</div>
 			</div>
 		</div>

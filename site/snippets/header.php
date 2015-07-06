@@ -11,13 +11,13 @@ error_reporting(E_ALL);
 		<meta charset="utf-8">
 
 		<?php if($page->isHomePage()): ?>
-		<title><?php echo html($site->title()) ?></title>
+		<title><?php echo $site->title()->html() ?></title>
 		<?php else: ?>
-		<title><?php echo html($page->title()) ?> | <?php echo html($site->title()) ?></title>
+		<title><?php echo $page->title()->html() ?> | <?php echo $site->title()->html() ?></title>
 		<?php endif ?>
 
 		
-		<?php if($page->description() != ''): ?>
+		<?php if($page->description()->isNotEmpty()): ?>
 		<meta name="description" content="<?php echo html($page->description()) ?>" />
 		<?php else: ?>
 		<meta name="description" content="<?php echo html($site->description()) ?>" />
@@ -27,7 +27,6 @@ error_reporting(E_ALL);
 
 		<!-- Mobile specific metas -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
 		<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 		<!-- Stylesheets -->
@@ -93,6 +92,5 @@ error_reporting(E_ALL);
 
 		<?php if(!$page->isHomePage()): ?>
 		<div class="pad"></div>
-		
 		<?php snippet('free_estimate') ?>
 		<?php endif ?>

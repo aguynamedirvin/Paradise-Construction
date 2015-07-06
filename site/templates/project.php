@@ -14,11 +14,11 @@ $thumbSettings = array('width' => 780, 'height' => 550, 'crop' => true, 'upscale
 			<div class="project-info">
 				<ul>
 					<li><b>Date:</b> <?php echo $page->date('m/Y', 'date') ?></li>
-					<?php if (!$page->location()->isEmpty()): ?>
+					<?php if ($page->location()->isNotEmpty()): ?>
 					<li><b>Location:</b> <?php echo $page->location() ?></li>
 					<?php endif ?>
-					<li><b>Category:</b> <?php echo $page->tags() ?></li>
-					<?php if (!$page->text()->isEmpty()): ?>
+					<li><b>Category:</b> <?php echo $page->category() ?></li>
+					<?php if ($page->text()->isNotEmpty()): ?>
 					<li><b>Summary:</b> <?php echo $page->text() ?></li>
 					<?php endif ?>
 				</ul>

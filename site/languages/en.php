@@ -4,6 +4,11 @@
 	l::set('free_estimate_btn', 'Free Estimate');
 	l::set('send_message_btn', 'Send Message');
 
+	l::set('name', 'Name');
+	l::set('email', 'Email');
+	l::set('phone', 'Phone Number');
+	l::set('message', 'Message');
+
 	l::set('next', 'Next');
 	l::set('previous', 'Previous');
 

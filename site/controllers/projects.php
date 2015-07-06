@@ -2,22 +2,22 @@
 
 	return function($site, $pages, $page) {
 
-		// fetch the basic set of pages
+	/*	// fetch the basic set of pages
 		$projects = $page->children()->visible()->sortBy('date', 'desc');
 
-		// add the tag filter
-		if($tag = param('tag')) {
-			$projects = $projects->filterBy('tags', urldecode($tag), ',');
+		// add the category filter
+		if($cat = param('category')) {
+			$projects = $projects->filterBy('category', urldecode($cat), ',');
 		}
 
-		// fetch all tags
-		$tags = $projects->limit(9)->pluck('tags', ',', false);
+		// fetch all categories
+		$cats = $projects->pluck('category', ',', false);
 
-		// apply pagination
+		// Apply pagination
 		$projects   = $projects->paginate(9);
 		$pagination = $projects->pagination();
 
-		return compact('projects', 'tags', 'tag', 'pagination');
+		return compact('projects', 'cats', 'cat', 'pagination');*/
 
 	};
 

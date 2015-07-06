@@ -12,24 +12,46 @@ snippet('header')
 		
 		<h1 class="title"><?php echo $page->title()->html() ?></h1>
 
+		<?php 
+
+		// fetch the basic set of pages
+		$projects = $page->children()->visible();
+
+		// fetch all categories
+		$cats = $projects->pluck('category', ',', true);
+
+		// Apply pagination
+		$projects   = $projects->paginate(9);
+		$pagination = $projects->pagination();
+
+		?>
+
 		<ul class="pages-nav">
-			<li><a href="<?php echo $page->url() ?>">All</a></li>
-			<?php foreach($tags as $tag): ?>
-			<li>
-				<a href="<?php echo $page->url() . '/tag:' . $tag ?>">
-					<?php echo html($tag) ?>
+			<li <?php if (!param('category')) echo ' class="active"' ?>><a href="<?php echo page('projects')->url() ?>">All</a></li>
+			<?php foreach ($cats as $cat): ?>
+			<li <?php if (param('category') == $cat) echo ' class="active"' ?>>
+				<a href="<?php echo $page->url() . '/category:' . $cat ?>">
+					<?php echo $cat ?>
 				</a>
 			</li>
 			<?php endforeach ?>
 		</ul>
 
-		<div class="gallery">
 
-			<?php projects() ?>
+		<div class="gallery">
+			
+			<?php 
+
+				if($cat = param('category')) {
+					projects(array('filterBy' => array('by' => 'category', 'tag' => $cat, 'separator' => ',')));
+				} else {
+					projects();
+				}
+
+			?>
 
 		</div>
 
-			
 
 		<?php if($projects->pagination()->hasPages()): /*** pagination ***/ ?>
 		<ul class="pages-nav">

@@ -14,11 +14,11 @@ Date: 2014-12-01
 
 ----
 
-Before: green.jpg
+Before: the-sea.jpg
 
 ----
 
-After: forrest.jpg
+After: green.jpg
 
 ----
 
