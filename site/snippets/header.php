@@ -11,9 +11,9 @@ error_reporting(E_ALL);
 		<meta charset="utf-8">
 
 		<?php if($page->isHomePage()): ?>
-		<title><?php echo $site->title()->html() ?></title>
+		<title><?php echo ($site->title()) ?></title>
 		<?php else: ?>
-		<title><?php echo $page->title()->html() ?> | <?php echo $site->title()->html() ?></title>
+		<title><?php echo html($page->title()) ?> | <?php echo $site->title()->html() ?></title>
 		<?php endif ?>
 
 		
@@ -22,7 +22,7 @@ error_reporting(E_ALL);
 		<?php else: ?>
 		<meta name="description" content="<?php echo html($site->description()) ?>" />
 		<?php endif ?>
-		<meta name="keywords" content="<?php echo $site->keywords()->html() ?>" />
+		<meta name="keywords" content="<?php echo html($site->keywords()) ?>" />
 
 
 		<!-- Mobile specific metas -->

@@ -97,7 +97,7 @@ function projects($options = array()) {
 	if ($options['shuffle']) {
 		$projects = $projects->shuffle();
 	}
-	if (!array_filter($options['filterBy'])) {
+	if (!empty(array_filter($options['filterBy']))) {
 		$projects = $projects->filterBy(
 			$options['filterBy']['by'], 
 			$options['filterBy']['tag'],
@@ -110,20 +110,20 @@ function projects($options = array()) {
 	 * Main Loop
 	 */
 	$count = 0;
-
 	foreach ($projects as $project) { 
-		$count++;
+		if($project->hasImages()) {
+			$count++;
 
 ?>
-		<div class="project<?php ecco($count % $options['columns'] == 0, ' last') ?>">
-			<a href="<?php echo $project->url() ?>">
-				<?php $image = $project->image( $project->after() ) ?>
-				<img src="<?php echo thumb($image, $thumbSettings)->url() ?>" alt="<?php echo $project->title()->html() ?>" >
-				<button class="btn btn-line aligncenter"><?php echo l::get('view_project_btn') ?></button>
-			</a>
-		</div>
+			<div class="project<?php ecco($count % $options['columns'] == 0, ' last') ?>">
+				<a href="<?php echo $project->url() ?>">
+					<?php $image = $project->image( $project->after() ) ?>
+					<img src="<?php echo thumb($image, $thumbSettings)->url() ?>" alt="<?php echo $project->title()->html() ?>" >
+					<button class="btn btn-line aligncenter"><?php echo l::get('view_project_btn') ?></button>
+				</a>
+			</div>
 <?php
-
+		}
 	}
 
 }

@@ -6,8 +6,14 @@
 
 	l::set('name', 'Name');
 	l::set('email', 'Email');
-	l::set('phone', 'Phone Number');
+	l::set('phone', 'Phone');
 	l::set('message', 'Message');
+	l::set('address', 'Address');
+
+	l::set('contact_us', 'Contact Us');
+	l::set('follow_us', 'Follow Us');
+	l::set('company', 'Company');
+	l::set('language', 'Language');
 
 	l::set('next', 'Next');
 	l::set('previous', 'Previous');

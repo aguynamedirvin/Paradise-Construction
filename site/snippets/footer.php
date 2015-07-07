@@ -3,16 +3,16 @@
 			<div class="footer-widgets">
 				<div class="wrap">
 					<div class="widget contact">
-						<h3><?php echo $site->contact_widget() ?></h3>
+						<h3><?php echo l::get('contact_us') ?></h3>
 						<ul>
-							<li><i class="fa fa-phone"></i> <b><?php echo $site->phone_text() ?>:</b> <a href="tel:<?php echo $site->phone() ?>"><?php echo $site->phone() ?></a></li>
-							<li><i class="fa fa-envelope"></i> <b><?php echo $site->email_text() ?>:</b> <a href="mailto:<?php echo $site->email() ?>"><?php echo $site->email() ?></a></li>
-							<li><i class="fa fa-map-marker"></i> <b><?php echo $site->address_text() ?>:</b> <?php echo $site->address() ?></li>
+							<li><i class="fa fa-phone"></i> <b><?php echo l::get('phone') ?>:</b> <a href="tel:<?php echo $site->phone() ?>"><?php echo $site->phone() ?></a></li>
+							<li><i class="fa fa-envelope"></i> <b><?php echo l::get('email') ?>:</b> <a href="mailto:<?php $email = $site->email(); echo emailencode("" . $email . "") ?>"><?php echo emailencode("" . $email . "") ?></a></li>
+							<li><i class="fa fa-map-marker"></i> <b><?php echo l::get('address') ?>:</b> <?php echo $site->address() ?></li>
 						</ul>
 					</div>
 
 					<div class="widget social">
-						<h3><?php echo $site->social_widget() ?></h3>
+						<h3><?php echo l::get('follow_us') ?></h3>
 						<div class="social-networks">
 							<!-- Facebook -->
 							<span><a href="<?php echo $site->facebook() ?>">&#xf09a;</a></span>
@@ -26,7 +26,7 @@
 					</div>
 
 					<div class="widget company">
-						<h3><?php echo $site->company_widget() ?></h3>
+						<h3><?php echo l::get('company') ?></h3>
 						<ul>
 							<?php foreach($pages->visible() as $p): ?>
 							<li><a <?php e($p->isOpen(), ' class="active"') ?> href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?></a></li>
@@ -35,7 +35,7 @@
 					</div>
 
 					<div class="widget language">
-						<h3><?php echo $site->language_widget() ?></h3>
+						<h3><?php echo l::get('language') ?></h3>
 						<ul>
 							<?php foreach($site->languages() as $language): ?>
 								<li<?php e($site->language() == $language, ' class="active"') ?>>
@@ -58,9 +58,6 @@
 				</div>
 			</div>
 		</footer>
-
-
-
 
 
 		<!-- JavaScript -->
@@ -102,17 +99,19 @@
 		</script>
 
 
-
-
-		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+		<?php if($site->google_analytics()->isNotEmpty()): ?>
+		
+		<!-- Google Analytics -->
 		<script>
 			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
 			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
 			e=o.createElement(i);r=o.getElementsByTagName(i)[0];
 			e.src='https://www.google-analytics.com/analytics.js';
 			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-			ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+			ga('create','<?php echo $site->google_analytics() ?>','auto');ga('send','pageview');
 		</script>
+
+		<?php endif ?>
 
 	</body>
 </html>

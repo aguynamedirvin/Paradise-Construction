@@ -23,7 +23,7 @@ snippet('header')
 		// Apply pagination
 		$projects   = $projects->paginate(9);
 		$pagination = $projects->pagination();
-
+		
 		?>
 
 		<ul class="pages-nav">

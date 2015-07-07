@@ -15,6 +15,9 @@ fields:
   description:
     label: Description
     type:  textarea
+  free-estimate:
+    label: Free Estimate Headline
+    type: text
   line-a:
     type: line
   phone:
@@ -54,3 +57,6 @@ fields:
   copyright:
     label: Copyright
     type:  textarea
+  google-analytics:
+    label: Google Analytics ID
+    type: text

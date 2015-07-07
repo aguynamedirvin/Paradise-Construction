@@ -4,7 +4,15 @@ return function($site, $pages, $page) {
 
 	$alert = null;
 
-	if(get('submit')) {
+	$data = array(
+		'name'	=> '',
+		'email'	=> '',
+		'phone'	=> '',
+		'text'	=> ''
+	);
+
+	// check for form submission and also check that the url field has not been filled in for spam protection
+	if(get('submit') && empty(get('url'))) {
 
 		$data = array(
 			'name'  => get('name'),
@@ -16,15 +24,15 @@ return function($site, $pages, $page) {
 		$rules = array(
 			'name'  => array('required'),
 			'email' => array('required', 'email'),
-			'phone' => array('required', 'num',),
+			'phone' => array('required', 'num'),
 			'text'  => array('required', 'min' => 3, 'max' => 3000),
 		);
 
 		$messages = array(
-			'name'  => 'Please enter a valid name',
-			'email' => 'Please enter a valid email address',
-			'phone' => 'Please enter a valid phone number between 7 and 11 digits',
-			'text'  => 'Please enter a text between 3 and 3000 characters'
+			'name'  => 'Enter a valid name.',
+			'email' => 'Enter a valid email address.',
+			'phone' => 'Enter a valid phone number.',
+			'text'  => 'Please fill in the message textarea.'
 		);
 
 		// some of the data is invalid
@@ -39,9 +47,9 @@ return function($site, $pages, $page) {
 
 			// build the email
 			$email = email(array(
-				'to'      => 'irvindominguez1@gmail.com',
-				'from'    => 'irvindominguez1@gmail.com',
-				'subject' => 'New contact request',
+				'to'      => $site->email(),
+				'from'    => $site->email(),
+				'subject' => 'New message from Paradise Construction',
 				'replyTo' => $data['email'],
 				'body'    => $body
 			));
@@ -49,7 +57,7 @@ return function($site, $pages, $page) {
 			// try to send it and redirect to the
 			// thank you page if it worked
 			if($email->send()) {
-				go('contact/thank-you');
+				go('contact/status:thank-you');
 			// add the error to the alert list if it failed
 			} else {
 				$alert = array($email->error());
@@ -59,6 +67,6 @@ return function($site, $pages, $page) {
 
 	}
 
-	return compact('alert');
+	return compact('alert', 'data');
 
 };

@@ -26,11 +26,13 @@ fields:
     label: Before Picture
     type: select
     options: images
+    required: true
     width: 1/2
   after:
     label: After Picture
     type: select
     options: images
+    required: true
     width: 1/2
   category:
     label: Category

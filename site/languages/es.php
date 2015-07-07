@@ -8,6 +8,12 @@
     l::set('email', 'Correo Electrónico');
     l::set('phone', 'Número de Teléfono');
     l::set('message', 'Mensaje');
+    l::set('address', 'Direccíon');
+
+    l::set('contact_us', 'Contáctanos');
+    l::set('follow_us', 'Síguenos');
+    l::set('company', 'Compañia');
+    l::set('language', 'Lenguaje');
 
 	l::set('next', 'Siguiente');
 	l::set('previous', 'Anterior');

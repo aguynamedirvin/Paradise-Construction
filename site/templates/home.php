@@ -32,8 +32,8 @@
 						<?php endif ?>
 
 						<?php if ($slide->button_text()->isNotEmpty() && $slide->button_link()->isNotEmpty()): ?>
-						<a class="btn btn-big <?php ecco($slide->button_style() == 'btn-line', ' btn-line'); ecco($slide->button_style() == 'btn-dark', ' btn-dark')?>" href="<?php echo $slide->button_link() ?>">
-							<?php echo $slide->button_text() ?>
+						<a class="btn btn-big<?php ecco($slide->button_style() == 'btn-line', ' btn-line'); ecco($slide->button_style() == 'btn-dark', ' btn-dark')?>" href="<?php echo $slide->button_link() ?>">
+							<?php echo html($slide->button_text()) ?>
 						</a>
 						<?php endif ?>
 					</div>

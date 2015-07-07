@@ -42,36 +42,8 @@ Address: 2342 Main St. El Paso TX 79938
 
 ----
 
-free-estimate-title: Llamanos hoy para obtener una estimacion <b>gratis</b>!
+Google-analytics: UA-XXXX-XXXX
 
 ----
 
-free-estimate-summary: Find out how much it costs to renovate your home.
-
-----
-
-Phone-text: Teléfono
-
-----
-
-Email-text: Correo Electronico
-
-----
-
-Address-text:Direccíon
-
-----
-
-contact_widget: Contáctanos
-
-----
-
-social_widget: Síguenos
-
-----
-
-company_widget: Compañia
-
-----
-
-language_widget: Lenguaje
+Free-estimate: Llamanos Hoy Para Obtener Una Estimacion <b>Gratis</b>!

@@ -34,7 +34,7 @@ $thumbSettings = array('width' => 780, 'height' => 550, 'crop' => true, 'upscale
 		</div>
 
 
-		<div class="gallery">
+		<div class="gallery hide-sm">
 			<h3>Other Projects</h3>
 			
 			<?php projects(array('limit' => 3, 'shuffle' => true)) ?>

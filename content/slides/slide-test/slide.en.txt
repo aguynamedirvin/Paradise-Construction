@@ -14,7 +14,7 @@ Display-title: false
 
 ----
 
-Button-text: Button
+Button-text: Button>
 
 ----
 
