@@ -2,7 +2,7 @@ Title: Slide Test
 
 ----
 
-Text: okfdshiudfhsiosdhfjdsiknflsknkcnsdlkn.hsdhiofbafklskdj
+Text: 
 
 ----
 
@@ -10,16 +10,16 @@ Background: hightide.jpg
 
 ----
 
-Display-title: false
+Display-title: true
 
 ----
 
-Button-text: Button>
+Button-text: 
 
 ----
 
-Button-link: http://localhost.com/kirby/projects
+Button-link: 
 
 ----
 
-Button-style: btn-dark
+Button-style: 

@@ -22,7 +22,7 @@ After: photo-1435163741535-a345a0ceadba.jpg
 
 ----
 
-Category: concrete
+Category: Texture & Complete Paint
 
 ----
 

@@ -38,17 +38,10 @@ fields:
     label: Category
     type: radio
     default: remodeling
-    options:
-      remodeling: New Construction and Remodeling
-      roofing: Roofing
-      landscaping: Landscaping
-      paint: Texture and Complete Paint
-      concrete: Concrete
-      driveways: Driveways
-      sidewalks: Sidewalks
-      walkways: Walkways
-      cement_slabs: Cement Slabs
-      stamped_concrete: Stamped Concrete
+    options: query
+    query:
+      page: services
+      value: '{{title}}'
   tags:
     label: Tags
     type:  tags

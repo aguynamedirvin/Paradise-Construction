@@ -8,7 +8,7 @@ snippet('header')
 
 ?>
 
-	<div id="projects-page" class="page wrap">
+	<main class="main" id="projects" role="main">
 		
 		<h1 class="title"><?php echo $page->title()->html() ?></h1>
 
@@ -26,30 +26,31 @@ snippet('header')
 		
 		?>
 
-		<ul class="pages-nav">
-			<li <?php if (!param('category')) echo ' class="active"' ?>><a href="<?php echo page('projects')->url() ?>">All</a></li>
+		<ul class="pages-nav" id="category">
+			<li <?php if (!param('category')) echo ' class="active"' ?>><a href="<?php echo page('projects')->url() ?>/#projects">All</a></li>
 			<?php foreach ($cats as $cat): ?>
 			<li <?php if (param('category') == $cat) echo ' class="active"' ?>>
-				<a href="<?php echo $page->url() . '/category:' . $cat ?>">
+				<a href="<?php echo $page->url() . '/category:' . urlencode($cat) ?>/#projects">
 					<?php echo $cat ?>
 				</a>
 			</li>
 			<?php endforeach ?>
 		</ul>
 
+		<div class="project-showcase">
+			<div class="project-gallery">
+				
+				<?php 
 
-		<div class="gallery">
-			
-			<?php 
+					if($cat = param('category')) {
+						projects(array('filterBy' => array('by' => 'category', 'tag' => urldecode($cat), 'separator' => ',')));
+					} else {
+						projects();
+					}
 
-				if($cat = param('category')) {
-					projects(array('filterBy' => array('by' => 'category', 'tag' => $cat, 'separator' => ',')));
-				} else {
-					projects();
-				}
+				?>
 
-			?>
-
+			</div>
 		</div>
 
 
@@ -60,7 +61,7 @@ snippet('header')
 			<?php endif ?>
 
 			<?php foreach($pagination->range(10) as $page): ?>
-			<li><a<?php if($pagination->page() == $page) echo ' class="active"' ?> href="<?php echo $pagination->pageURL($page) ?>"><?php echo $page ?></a></li>      
+			<li><a <?php if($pagination->page() == $page) echo ' class="active"' ?> href="<?php echo $pagination->pageURL($page) ?>"><?php echo $page ?></a></li>      
 			<?php endforeach ?>
 
 			<?php if($pagination->hasNextPage()): ?>
@@ -70,6 +71,6 @@ snippet('header')
 		<?php endif ?>
 		
 
-	</div>
+	</main>
 
 <?php snippet('footer') ?>

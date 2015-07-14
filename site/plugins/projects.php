@@ -97,7 +97,7 @@ function projects($options = array()) {
 	if ($options['shuffle']) {
 		$projects = $projects->shuffle();
 	}
-	if (!empty(array_filter($options['filterBy']))) {
+	if (!empty($options['filterBy'])) {
 		$projects = $projects->filterBy(
 			$options['filterBy']['by'], 
 			$options['filterBy']['tag'],

@@ -26,7 +26,7 @@ fields:
     width: 1/4
   button_link:
     label: Button Link
-    type: url
+    type: text
     width: 1/2
   button_style:
     label: Button Style

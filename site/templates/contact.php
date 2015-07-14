@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
 
-	<main id="contact-page" class="main wrap page" role="main">
+	<main class="main" role="main">
 
 	<?php if(param('status') == 'thank-you'): ?>
 

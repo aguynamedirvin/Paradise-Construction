@@ -18,7 +18,7 @@ After: after_picture.png
 
 ----
 
-Category: paint
+Category: nueva-construccion-y-remodelacion
 
 ----
 

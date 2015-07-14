@@ -6,7 +6,6 @@ title: Slides
 pages:
   template: slide
   sort:     title asc
-  num:      zero
 
 deletable: false
 

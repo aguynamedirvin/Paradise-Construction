@@ -1,11 +1,11 @@
 <?php snippet('header') ?>
 
-	<div id="services-page" class="page wrap">
+	<main class="main" role="main">
 
 		<h1 class="title"><?php echo $page->title()->html() ?></h1>
 
 		<?php snippet('services') ?>
 
-	</div>
+	</main>
 
 <?php snippet('footer') ?>

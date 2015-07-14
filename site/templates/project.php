@@ -6,10 +6,10 @@ $thumbSettings = array('width' => 780, 'height' => 550, 'crop' => true, 'upscale
 
 ?>
 
-	<div id="project-page" class="page wrap">
+	<main class="main" role="main">
 
 
-		<div class="project">
+		<div class="project-container">
 
 			<div class="project-info">
 				<ul>
@@ -34,13 +34,15 @@ $thumbSettings = array('width' => 780, 'height' => 550, 'crop' => true, 'upscale
 		</div>
 
 
-		<div class="gallery hide-sm">
-			<h3>Other Projects</h3>
-			
-			<?php projects(array('limit' => 3, 'shuffle' => true)) ?>
+		<div class="project-showcase">
+			<div class="project-gallery hide-sm">
+				<h3>Other Projects</h3>
 				
+				<?php projects(array('limit' => 3, 'shuffle' => true)) ?>
+					
+			</div>
 		</div>
 
-	</div>
+	</main>
 
 <?php snippet('footer') ?>

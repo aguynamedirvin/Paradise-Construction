@@ -76,7 +76,7 @@
 					load: [
 						'<?php echo $site->url() ?>/assets/js/main.min.js',
 					],
-					complete: function() {
+					callback: function() {
 						// This is to run the before and after plugin: TwentyTwenty
 						jQuery('.before-after').twentytwenty();
 					}

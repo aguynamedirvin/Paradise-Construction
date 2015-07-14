@@ -22,7 +22,7 @@ After: kermit-the-fog.jpg
 
 ----
 
-Category: landscaping
+Category: Landscape Removal
 
 ----
 

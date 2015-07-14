@@ -8,13 +8,12 @@
 				<div class="slide-content wrap">
 					<div class="slide-meta">
 						<div class="big-logo">
-							<svg class="icon" role="img">
+							<img src="<?php echo $site->url() . '/assets/images/logo.png' ?>">
+							<!-- <svg class="icon" role="img">
 								<use xlink:href="assets/images/svg-sprite.svg#icon-logo"></use>
-							</svg>
+							</svg> -->
 						</div>
 						<p class="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe soluta, facere hic officiis. Odio delectus libero itaque eius a quod blanditiis.</p>
-						<a href="#contact" class="btn btn-line btn-big">Contact Us</a>
-						<a href="#contact" class="btn btn-big">View Projects</a>
 					</div>
 				</div>
 			</div>
@@ -40,16 +39,6 @@
 				</div>
 			</div>
 			<?php endforeach ?>
-				
-			<div class="slide" style="background-image: url(temp/images/slide1.png);">
-				<div class="slide-content wrap">
-					<div class="slide-meta">
-						<h2 class="title">Slide 2 title</h2>
-						<p class="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel nostrum quod, autem cum. Amet distinctio, placeat quos.</p>
-						<a href="#contact" class="btn btn-dark">View projects</a>
-					</div>
-				</div>
-			</div>
 	
 		</div>
 	</div>
@@ -108,9 +97,9 @@
 			<div class="section-content">
 			
 				<!-- Projects -->
-				<div class="gallery">
+				<div class="project-gallery">
 
-					<?php projects(array('limit' => 4, 'columns' => 4)); ?>
+					<?php projects(array('limit' => 4)); ?>
 
 				</div>
 

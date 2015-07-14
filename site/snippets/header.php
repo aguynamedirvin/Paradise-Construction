@@ -49,7 +49,7 @@ error_reporting(E_ALL);
 		<?php endif ?>
 		
 		<!--[if lte IE 8]>
-		<script src="build/js/svg4everybody.ie.min.js"></script>
+		<script src="<?php echo $site->url() ?>/assets/js/svg4everybody.ie.min.js"></script>
 		<![endif]-->
 		
 		<!-- Modernizer -->
@@ -64,8 +64,9 @@ error_reporting(E_ALL);
 				{
 					// If SVGs not supported
 					test: Modernizr.svg,
-					nope: ['<?php echo $site->url() ?>/assets/js/svg4everybody.min.js']
+					nope: ['<?php echo $site->url() ?>/assets/js/svg4everybody.min.js', 'ielt8!<?php echo $site->url() ?>/assets/js/svg4everybody.ie.min.js']
 				},
+
 			]);
 		</script>
 
@@ -76,13 +77,12 @@ error_reporting(E_ALL);
 			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 
-
 		<!-- Header -->
 		<div id="header" class="header sticky">
 			<div class="wrap">
 				
 				<!-- Logo -->
-				<a href="<?php echo url() ?>" class="logo" alt="<?php echo $site->title()->html() ?>"></a>
+				<a href="<?php echo $site->language->url() ?>" class="logo" alt="<?php echo $site->title()->html() ?>"></a>
 
 				<!-- Main Navigation Menu -->
 				<?php snippet('menu') ?>

@@ -1,11 +1,11 @@
 <?php snippet('header') ?>
 
-	<div class="page wrap">
+	<main class="main" role="main">
 
 		<h1 class="title"><?php echo $page->title()->html() ?></h1>
 
 		<?php echo $page->text()->kirbytext() ?>
 
-	</div>
+	</main>
 
 <?php snippet('footer') ?>
