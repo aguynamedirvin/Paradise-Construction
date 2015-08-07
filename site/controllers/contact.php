@@ -11,8 +11,7 @@ return function($site, $pages, $page) {
 		'text'	=> ''
 	);
 
-	// check for form submission and also check that the url field has not been filled in for spam protection
-	if(get('submit') && empty(get('url'))) {
+	if(get('submit')) {
 
 		$data = array(
 			'name'  => get('name'),
@@ -25,7 +24,7 @@ return function($site, $pages, $page) {
 			'name'  => array('required'),
 			'email' => array('required', 'email'),
 			'phone' => array('required', 'num'),
-			'text'  => array('required', 'min' => 3, 'max' => 3000),
+			'text'  => array('required', 'min' => 3, 'max' => 3000)
 		);
 
 		$messages = array(

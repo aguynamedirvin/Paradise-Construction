@@ -1,8 +1,5 @@
-<?php
-error_reporting(E_ALL);
-?>
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="<?php echo $site->language()->code() ?>">
 	<head>
 		
 		<!-- Force IE to use the latest rendering engine -->

@@ -25,4 +25,8 @@ After: road.jpg
 
 ----
 
-Category: remodeling
+Category: Cascadas
+
+----
+
+Location: 

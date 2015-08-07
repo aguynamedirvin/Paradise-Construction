@@ -7,10 +7,10 @@ password: >
 language: en
 role: admin
 history:
+  - services/landscaping
   - projects/project-b
   - projects/project-d
-  - projects/project-c
   - projects/project-e
-  - services/techumbre
+  - projects/project-c
 firstname: Irvin
 lastname: Dominguez

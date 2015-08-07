@@ -39,11 +39,6 @@ fields:
     type: text
     icon: facebook
     width: 1/2
-  twitter:
-    label: Twitter
-    type: text
-    icon: twitter
-    width: 1/2
   google_plus:
     label: Google Plus
     type: text

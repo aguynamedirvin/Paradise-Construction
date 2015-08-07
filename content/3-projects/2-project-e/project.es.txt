@@ -18,7 +18,7 @@ After: after_picture.png
 
 ----
 
-Category: nueva-construccion-y-remodelacion
+Category: Nueva Construcción y Remodelación
 
 ----
 

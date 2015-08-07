@@ -17,9 +17,6 @@
 							<!-- Facebook -->
 							<span><a href="<?php echo $site->facebook() ?>">&#xf09a;</a></span>
 
-							<!-- Twitter -->
-							<span><a href="<?php echo $site->twitter() ?>">&#xf099;</a></span>
-
 							<!-- Google Plus -->
 							<span><a href="<?php echo $site->google_plus() ?>">&#xf0d5;</a></span>
 						</div>
@@ -45,6 +42,12 @@
 								</li>
 							<?php endforeach ?>
 						</ul>
+					</div>
+
+					<div class="widget bbb">
+						<a href="http://www.bbb.org/elpaso/business-reviews/roofing-contractors/paradise-construction-in-el-paso-tx-99130588">
+							<img src="<?php echo $site->url() . '/assets/images/bbb_logo.png' ?>" width="70">
+						</a>
 					</div>
 
 				</div>

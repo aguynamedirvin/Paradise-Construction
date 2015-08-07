@@ -22,4 +22,8 @@ After: kermit-the-fog.jpg
 
 ----
 
-Category: remodeling
+Category: Stamped Concrete
+
+----
+
+Location: 
