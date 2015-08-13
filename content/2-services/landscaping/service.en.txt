@@ -3,3 +3,11 @@ Title: Landscaping
 ----
 
 Text: 
+
+----
+
+Featured: true
+
+----
+
+Icon: helmet

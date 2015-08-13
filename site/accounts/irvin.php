@@ -7,10 +7,11 @@ password: >
 language: en
 role: admin
 history:
+  - services/texture-complete-paint
   - services/landscaping
+  - services/rock-wall
+  - >
+    services/nueva-construccion-y-remodelacion
   - projects/project-b
-  - projects/project-d
-  - projects/project-e
-  - projects/project-c
 firstname: Irvin
 lastname: Dominguez

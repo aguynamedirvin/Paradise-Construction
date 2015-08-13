@@ -3,3 +3,11 @@ Title: Texture & Complete Paint
 ----
 
 Text: 
+
+----
+
+Featured: true
+
+----
+
+Icon: brush

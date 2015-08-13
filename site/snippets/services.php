@@ -1,44 +1,24 @@
+<?php 
+
+$services = page('services')->children();
+
+?>
 <ul class="services">
+	<?php foreach ($services as $service): if ( $service->featured()->isTrue() ): ?>
 	<li>
 		<div class="icon-container">
 			<svg class="icon" role="img">
-				<use xlink:href="<?php echo $site->url() ?>/assets/images/svg-sprite.svg#icon-helmet"></use>
+				<use xlink:href="<?php echo $site->url() ?>/assets/images/svg-sprite.svg#icon-<?php echo $service->icon() ?>"></use>
 			</svg>
 		</div>
-		<h4 class="service-title">Landscaping</h4>
-		<p class="service-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quasi quae quidem voluptas molestiae mollitia.</p>
+		<h4 class="service-title"><?php echo $service->title() ?></h4>
+		<p class="service-summary"><?php echo $service->text() ?></p>
 	</li>
-	<li>
-		<div class="icon-container">
-			<svg class="icon" role="img">
-				<use xlink:href="<?php echo $site->url() ?>/assets/images/svg-sprite.svg#icon-bricks"></use>
-			</svg>
-		</div>
-		<h4 class="service-title">Rock wall</h4>
-		<p class="service-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quasi quae quidem voluptas molestiae mollitia.</p>
-	</li>
-	<li>
-		<div class="icon-container">
-			<svg class="icon" role="img">
-				<use xlink:href="<?php echo $site->url() ?>/assets/images/svg-sprite.svg#icon-brush"></use>
-			</svg>
-		</div>
-		<h4 class="service-title">Textures &amp; complete paint</h4>
-		<p class="service-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quasi quae quidem voluptas molestiae mollitia.</p>
-	</li>
-	<li>
-		<div class="icon-container">
-			<svg class="icon" role="img">
-				<use xlink:href="<?php echo $site->url() ?>/assets/images/svg-sprite.svg#icon-home"></use>
-			</svg>
-		</div>
-		<h4 class="service-title">New construction &amp; remodeling</h4>
-		<p class="service-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quasi quae quidem voluptas molestiae mollitia.</p>
-	</li>
+	<?php endif; endforeach ?>
 </ul>
 
 <ul class="all-services">
-	<?php foreach (page('services')->children() as $service): ?>
+	<?php foreach ($services as $service): ?>
 	<li><?php echo $service->title() ?></li>
 	<?php endforeach ?>
 </ul>

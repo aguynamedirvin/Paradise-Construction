@@ -3,3 +3,11 @@ Title: Rock Wall
 ----
 
 Text: 
+
+----
+
+Featured: true
+
+----
+
+Icon: bricks

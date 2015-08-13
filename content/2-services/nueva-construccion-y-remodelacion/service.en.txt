@@ -3,3 +3,11 @@ Title: New Construction & Remodeling
 ----
 
 Text: 
+
+----
+
+Featured: true
+
+----
+
+Icon: home

@@ -11,11 +11,13 @@
 		<ul class="services">
 			<?php foreach ($services as $service): if( $service->text()->isNotEmpty() ): ?>
 			<li>
+				<?php if ( $service->icon()->isNotEmpty() ): ?>
 				<div class="icon-container">
 					<svg class="icon" role="img">
-						<use xlink:href="<?php echo $site->url() ?>/assets/images/svg-sprite.svg#icon-helmet"></use>
+						<use xlink:href="<?php echo $site->url() ?>/assets/images/svg-sprite.svg#icon-<?php echo $service->icon() ?>"></use>
 					</svg>
 				</div>
+				<?php endif ?>
 				<h4 class="service-title"><?php echo $service->title() ?></h4>
 				<p class="service-summary"><?php echo $service->text() ?></p>
 			</li>
