@@ -87,7 +87,9 @@
 			</div>
 		</div>
 
-		<?php if(!$page->isHomePage()): ?>
+	<?php if (!$page->isHomePage()): ?>
 		<div class="pad"></div>
-		<?php snippet('free_estimate') ?>
+		<?php if (param('status') != 'free-estimate'): ?>
+			<?php snippet('free_estimate') ?>
 		<?php endif ?>
+	<?php endif ?>

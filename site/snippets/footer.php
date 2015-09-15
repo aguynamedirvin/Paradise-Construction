@@ -1,6 +1,6 @@
 		<!-- Footer -->
 		<footer id="footer" role="footer">
-			<div class="footer-widgets">
+			<div class="footer__widgets">
 				<div class="wrap">
 					<div class="widget contact">
 						<h3><?php echo l::get('contact_us') ?></h3>
@@ -52,7 +52,7 @@
 
 				</div>
 			</div>
-			<div class="footer-note">
+			<div class="footer__note">
 				<div class="wrap">
 					<div class="site-info">
 						<div class="alignleft"><?php echo $site->copyright()->kirbytext() ?></div>

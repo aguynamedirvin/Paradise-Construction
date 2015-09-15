@@ -13,12 +13,12 @@
 								<use xlink:href="assets/images/svg-sprite.svg#icon-logo"></use>
 							</svg> -->
 						</div>
-						<p class="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe soluta, facere hic officiis. Odio delectus libero itaque eius a quod blanditiis.</p>
+						<p class="summary">Having the most beautiful home in your neighborhood is about more than simple aesthetics. It’s about stature and class. Paradise Construction transforms the “every day” into elegance.</p>
 					</div>
 				</div>
 			</div>
 
-			<?php foreach(page('slides')->children()->limit(5) as $slide): ?>
+			<?php foreach(page('slides')->children()->limit(4) as $slide): ?>
 			<div class="slide" style="background-image: url(<?php echo thumb($slide->image($slide->background()), array('width' => 1440, 'height' => 650, 'crop' => true, 'upscale' => true, 'quality' => 80))->url() ?>);">
 				<div class="slide-content wrap">
 					<div class="slide-meta">
@@ -48,38 +48,39 @@
 		<!-- Why Us -->
 		<section id="why-us" class="section">
 			<div class="wrap">
-				<div class="section-meta">
-					<h2 class="title section-title "><?php echo $page->why_us_title() ?></h2>
+				<div class="section__meta">
+					<h2 class="title"><?php echo $page->why_us_title() ?></h2>
+					<p class="summary">Having the most beautiful home in your neighborhood is about more than simple aesthetics. It’s about stature and class. Paradise Construction transforms the “every day” into elegance.</p>
 				</div>
 
-				<div class="section-content">
+				<div class="section__content">
 					<ul>
-						<li class="item">
+						<li class="service">
 							<div class="icon-container icon-round">
 								<svg class="icon" role="img">
 									<use xlink:href="assets/images/svg-sprite.svg#icon-helmet"></use>
 								</svg>
 							</div>
-							<h3 class="service-title"><?php echo $page->decade_experience_title() ?></h3>
-							<p class="service-summary"><?php echo $page->decade_experience_summary() ?></p>
+							<h3 class="service__title"><?php echo $page->decade_experience_title() ?></h3>
+							<p class="service__summary"><?php echo $page->decade_experience_summary() ?></p>
 						</li>
-						<li class="item">
+						<li class="service">
 							<div class="icon-container icon-round">
 								<svg class="icon" role="img">
 									<use xlink:href="assets/images/svg-sprite.svg#icon-layers"></use>
 								</svg>
 							</div>
-							<h3 class="service-title"><?php echo $page->all_in_one_title() ?></h3>
-							<p class="service-summary"><?php echo $page->all_in_one_summary() ?></p>
+							<h3 class="service__title"><?php echo $page->all_in_one_title() ?></h3>
+							<p class="service__summary"><?php echo $page->all_in_one_summary() ?></p>
 						</li>
-						<li class="item last">
+						<li class="service last">
 							<div class="icon-container icon-round">
 								<svg class="icon" role="img">
 									<use xlink:href="assets/images/svg-sprite.svg#icon-tools"></use>
 								</svg>
 							</div>
-							<h3 class="service-title"><?php echo $page->top_notch_materials_title() ?></h3>
-							<p class="service-summary"><?php echo $page->top_notch_materials_summary() ?></p>
+							<h3 class="service__title"><?php echo $page->top_notch_materials_title() ?></h3>
+							<p class="service__summary"><?php echo $page->top_notch_materials_summary() ?></p>
 						</li>
 					</ul>
 				</div>
@@ -90,16 +91,16 @@
 		<!-- Projects Gallery -->
 		<div id="projects-showcase" class="section">
 			
-			<div class="section-meta">
-				<h2 class="title section-title "><?php echo $page->projects_title() ?></h2>
+			<div class="section__meta">
+				<h2 class="title"><?php echo $page->projects_title() ?></h2>
 			</div>
 
-			<div class="section-content">
+			<div class="section__content">
 			
 				<!-- Projects -->
 				<div class="project-gallery">
 
-					<?php projects(array('limit' => 4)); ?>
+					<?php projects(array('limit' => 4)) ?>
 
 				</div>
 
@@ -113,11 +114,11 @@
 		<!-- Our services -->
 		<div id="our-services" class="section">
 			<div class="wrap">
-				<div class="section-meta">
-					<h2 class="title section-title "><?php echo $page->services_title() ?></h2>
+				<div class="section__meta">
+					<h2 class="title"><?php echo $page->services_title() ?></h2>
 				</div>
 
-				<div class="section-content">
+				<div class="section__content">
 					
 					<?php snippet('services') ?>
 					
@@ -133,11 +134,11 @@
 		<!-- Client quotes -->
 		<div id="client-quotes" class="section">
 			<div class="wrap">
-				<div class="section-meta">
-					<h2 class="title section-title "><?php echo $page->client_quote_title() ?></h2>
+				<div class="section__meta">
+					<h2 class="title "><?php echo $page->client_quote_title() ?></h2>
 				</div>
 
-				<div class="section-content">
+				<div class="section__content">
 					<div class="quote-slider">
 						<?php foreach(page('voices')->children()->limit(5) as $voice): ?>
 							<div class="client-quote">

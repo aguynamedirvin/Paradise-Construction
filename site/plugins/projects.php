@@ -46,7 +46,6 @@
  *
  */
 
-
 function projects($options = array()) {
 
 
@@ -117,7 +116,15 @@ function projects($options = array()) {
 ?>
 			<div class="project<?php ecco($count % $options['columns'] == 0, ' last') ?>">
 				<a href="<?php echo $project->url() ?>">
-					<?php $image = $project->image( $project->after() ) ?>
+					<?php 
+
+						if ($project->image( $project->featured() )) {
+							$image = $project->image( $project->featured() );
+						} else {
+							$image = $project->image();
+						}
+
+					?>
 					<img src="<?php echo thumb($image, $thumbSettings)->url() ?>" alt="<?php echo $project->title()->html() ?>" >
 					<button class="btn btn-line aligncenter"><?php echo l::get('view_project_btn') ?></button>
 				</a>

@@ -32,6 +32,9 @@ fields:
     label: Address
     type: text
     icon: map-marker
+  working-hours:
+    label: Working Hours
+    type: textarea
   line-b:
     type: line
   facebook:

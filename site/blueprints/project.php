@@ -22,18 +22,24 @@ fields:
     type: text
     icon: map-marker
     width: 1/2
-  before:
-    label: Before Picture
+  featured:
+    label: Featured Picture
     type: select
     options: images
     required: true
-    width: 1/2
-  after:
-    label: After Picture
-    type: select
-    options: images
-    required: true
-    width: 1/2
+    default: 
+  #before:
+  #  label: Before Picture
+  #  type: select
+  #  options: images
+  #  required: true
+  #  width: 1/2
+  #after:
+  #  label: After Picture
+  #  type: select
+  #  options: images
+  #  required: true
+  #  width: 1/2
   category:
     label: Category
     type: radio

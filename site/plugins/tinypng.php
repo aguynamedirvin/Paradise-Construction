@@ -10,6 +10,9 @@
  *
  */
 
+
+/*
+
 kirby()->hook('panel.file.upload', function($page) {
 
 	$path = kirby()->roots()->content();
@@ -34,8 +37,6 @@ function tinypng_compress($key, $input, $output) {
 			"content" => file_get_contents($input)
 		),
 		"ssl" => array(
-			/* Uncomment below if you have trouble validating our SSL certificate.
-				 Download cacert.pem from: http://curl.haxx.se/ca/cacert.pem */
 			"cafile" => __DIR__ . "/cacert.pem",
 			"verify_peer" => true
 		)
@@ -43,17 +44,17 @@ function tinypng_compress($key, $input, $output) {
 
 	$result = fopen($url, "r", false, stream_context_create($options));
 	if ($result) {
-		/* Compression was successful, retrieve output from Location header. */
+		// Compression was successful, retrieve output from Location header.
 		foreach ($http_response_header as $header) {
 			if (strtolower(substr($header, 0, 10)) === "location: ") {
 				file_put_contents($output, fopen(substr($header, 10), "rb", false));
 			}
 		}
 	} else {
-		/* Something went wrong! */
+		// Something went wrong!
 		print("Compression failed");
 	}
 
-}
+}*/
 
 ?>

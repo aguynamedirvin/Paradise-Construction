@@ -18,8 +18,8 @@
 					</svg>
 				</div>
 				<?php endif ?>
-				<h4 class="service-title"><?php echo $service->title() ?></h4>
-				<p class="service-summary"><?php echo $service->text() ?></p>
+				<h4 class="service__title"><?php echo $service->title() ?></h4>
+				<p class="service__summary"><?php echo $service->text() ?></p>
 			</li>
 			<?php endif; endforeach ?>
 		</ul>

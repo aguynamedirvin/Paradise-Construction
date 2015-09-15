@@ -19,7 +19,6 @@ c::set('license', 'put your license key here');
 
 
 c::set('debug', true);
-//c::set('cache', true);
 
 
 /*
@@ -34,6 +33,10 @@ of the system, please check out http://getkirby.com/docs/advanced/options
 
 */
 
+// Enable caching
+//c::set('cache', true);
+
+// Set up the languages
 c::set('languages', array(
   array(
     'code'    => 'en',

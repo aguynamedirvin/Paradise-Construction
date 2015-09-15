@@ -29,7 +29,7 @@ snippet('header')
 		<ul class="pages-nav" id="category">
 			<li <?php if (!param('category')) echo ' class="active"' ?>><a href="<?php echo page('projects')->url() ?>/#projects">All</a></li>
 			<?php foreach ($cats as $cat): ?>
-			<li <?php if (param('category') == $cat) echo ' class="active"' ?>>
+			<li <?php if (param('category') == urlencode($cat)) echo ' class="active"' ?>>
 				<a href="<?php echo $page->url() . '/category:' . urlencode($cat) ?>/#projects">
 					<?php echo $cat ?>
 				</a>
