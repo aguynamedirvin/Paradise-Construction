@@ -12,6 +12,10 @@ snippet('header')
 		
 		<h1 class="title"><?php echo $page->title()->html() ?></h1>
 
+		<?php if ($page->summary()->isNotEmpty()): ?>
+		<p class="summary"><?php echo $page->summary()->html() ?></p>
+		<?php endif ?>
+
 		<?php 
 
 		// fetch the basic set of pages
@@ -37,20 +41,19 @@ snippet('header')
 			<?php endforeach ?>
 		</ul>
 
-		<div class="project-showcase">
-			<div class="project-gallery">
-				
-				<?php 
 
-					if($cat = param('category')) {
-						projects(array('filterBy' => array('by' => 'category', 'tag' => urldecode($cat), 'separator' => ',')));
-					} else {
-						projects();
-					}
+		<div class="projects">
+			
+			<?php 
 
-				?>
+				if($cat = param('category')) {
+					projects(array('filterBy' => array('by' => 'category', 'tag' => urldecode($cat), 'separator' => ',')));
+				} else {
+					projects();
+				}
 
-			</div>
+			?>
+
 		</div>
 
 

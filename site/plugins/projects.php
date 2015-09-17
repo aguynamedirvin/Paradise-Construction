@@ -114,7 +114,7 @@ function projects($options = array()) {
 			$count++;
 
 ?>
-			<div class="project<?php ecco($count % $options['columns'] == 0, ' last') ?>">
+			<div class="project__thumb<?php ecco($count % $options['columns'] == 0, ' last') ?>">
 				<a href="<?php echo $project->url() ?>">
 					<?php 
 

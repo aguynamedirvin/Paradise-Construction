@@ -98,10 +98,8 @@
 			<div class="section__content">
 			
 				<!-- Projects -->
-				<div class="project-gallery">
-
+				<div class="featured-projects">
 					<?php projects(array('limit' => 4)) ?>
-
 				</div>
 
 				<div class="aligncenter">

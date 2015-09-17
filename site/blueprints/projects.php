@@ -13,6 +13,6 @@ fields:
   title:
     label: Title
     type:  text
-  text:
-    label: Text
+  summary:
+    label: Summary
     type:  textarea

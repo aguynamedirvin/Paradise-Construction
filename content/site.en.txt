@@ -2,7 +2,7 @@ Title: Paradise Construction
 
 ----
 
-Description: 
+Description: Having the most beautiful home in your neighborhood is about more than simple aesthetics. It’s about stature and class. Paradise Construction transforms the “every day” into elegance.
 
 ----
 
@@ -15,10 +15,6 @@ Google-plus: http://google.com/plus/
 ----
 
 Facebook: http://facebook.com/
-
-----
-
-Twitter: http://twitter.com/
 
 ----
 
@@ -47,3 +43,10 @@ Google-analytics: UA-XXXX-XXXX
 ----
 
 Free-estimate: Call us today for a <b>free</b> estimate!
+
+----
+
+Working-hours: 
+
+Mon – Friday: 8am – 7pm
+Sat: 12pm – 6pm

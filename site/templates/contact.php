@@ -10,11 +10,12 @@
 		</div>
 
 	<?php else: ?>
-
-
 		
 		<h1 class="title"><?php e(param('status') == 'free-estimate', 'Get A Free Estimate', $page->title()) ?></h1>
-		<p class="summary"><?php echo $page->text() ?></p>
+		
+		<?php if ($page->summary()->isNotEmpty()): ?>
+		<p class="summary"><?php echo $page->summary()->html() ?></p>
+		<?php endif ?>
 
 		<?php if($alert): ?>
 		<div class="alert">
@@ -46,31 +47,29 @@
 			</form>
 
 			<!-- Contact Info -->
-			<div class="contact-info">
-				<ul>
-					<li>
-						<i class="icon fa fa-envelope"></i>
-						<div class="text">
-							<h3><?php echo l::get('email') ?></h3>
-							<p><?php echo $site->email() ?></p>
-						</div>
-					</li>
-					<li>
-						<i class="icon fa fa-phone"></i>
-						<div class="text">
-							<h3><?php echo l::get('phone') ?></h3>
-							<p><?php echo $site->phone() ?></p>
-						</div>
-					</li>
-					<li>
-						<i class="icon fa fa-clock-o"></i>
-						<div class="text">
-							<h3><?php echo l::get('working-hours') ?></h3>
-							<p><?php echo $site->working_hours()->kirbytext() ?><p>
-						</div>
-					</li>
-				</ul>
-			</div>
+			<ul class="contact-info">
+				<li>
+					<i class="contact-info__icon fa fa-envelope"></i>
+					<div class="contact-info__details">
+						<h3><?php echo l::get('email') ?></h3>
+						<p><?php echo $site->email() ?></p>
+					</div>
+				</li>
+				<li>
+					<i class="contact-info__icon fa fa-phone"></i>
+					<div class="contact-info__details">
+						<h3><?php echo l::get('phone') ?></h3>
+						<p><?php echo $site->phone() ?></p>
+					</div>
+				</li>
+				<li>
+					<i class="contact-info__icon fa fa-clock-o"></i>
+					<div class="contact-info__details">
+						<h3><?php echo l::get('working-hours') ?></h3>
+						<p><?php echo $site->working_hours()->kirbytext() ?><p>
+					</div>
+				</li>
+			</ul>
 
 		</div>
 

@@ -7,11 +7,11 @@ password: >
 language: en
 role: admin
 history:
+  - services
   - contact
+  - projects
   - >
     services/nueva-construccion-y-remodelacion
   - projects/acid-stain
-  - projects/wood-fence
-  - projects/restroom-remodeling
 firstname: Irvin
 lastname: Dominguez

@@ -6,13 +6,15 @@ $services = page('services')->children();
 <ul class="services">
 	<?php foreach ($services as $service): if ( $service->featured()->isTrue() ): ?>
 	<li>
-		<div class="icon-container">
+		<div class="service__icon">
 			<svg class="icon" role="img">
 				<use xlink:href="<?php echo $site->url() ?>/assets/images/svg-sprite.svg#icon-<?php echo $service->icon() ?>"></use>
 			</svg>
 		</div>
-		<h4 class="service__title"><?php echo $service->title() ?></h4>
-		<p class="service__summary"><?php echo $service->text() ?></p>
+		<div class="service__details">
+			<h4 class="service__title"><?php echo $service->title() ?></h4>
+			<p class="service__summary"><?php echo $service->text() ?></p>
+		</div>
 	</li>
 	<?php endif; endforeach ?>
 </ul>

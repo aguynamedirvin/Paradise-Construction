@@ -14,3 +14,6 @@ fields:
   title:
     label: Title
     type:  text
+  summary:
+    label: Summary
+    type:  textarea
