@@ -1,0 +1,185 @@
+.main
+	padding: 120px 0
+.content
+	font-size: 1.8rem
+	line-height: 1.7
+
+/** Services **/
+.services
+	list-style: none
+	padding: 0
+	margin: 0
+
+	> li 
+		list-style: none
+		margin-bottom: 2rem
+		@extend %clearfix
+
+		@media screen and (min-width: $break-medium)
+			@include span(6 of 12)
+
+			&:nth-child(2n+2)
+				@include last
+				float: left
+
+
+.service
+	&__icon
+		float: left
+		width: 19%
+		width: calc(100% - 80%)
+		
+		.icon
+			height: 50px
+
+	&__details
+		float: right
+		margin-left: 15px
+		width: 79%
+		width: calc(100% - (20% + 15px))
+		
+		@media screen and (min-width: $break-medium)
+			margin: 0
+			width: calc(100% - 20%)
+		
+
+	&__title
+		font-size: 1.8rem
+		font-weight: 500
+
+		&.big
+			font-size: 2.2rem
+
+		a
+			color: $black
+
+			&:hover
+				color: $primary-color
+
+	&__summary
+		color: $light-black
+
+
+/** Projects **/
+.projects, .other-projects
+	@include container
+
+.projects .project__thumb
+
+	@media screen and (min-width: $break-small)
+		@include span(1 of 2 0)
+	
+	@media screen and (min-width: $break-medium)
+		margin-bottom: gutter(1)
+		@include span(4 of 12 1)
+
+	&.last
+		@include last
+
+
+/** Project Page **/
+.project-container
+	margin-bottom: 100px
+	@extend %clearfix
+
+	.project-info
+		background: $light-grey
+		border: 1px solid $grey
+		margin-bottom: 30px
+		padding: 20px 30px
+		@media screen and (min-width: $break-medium)
+			@include span(4 of 12 1)
+
+		ul
+			list-style: none
+			margin: 0
+			padding: 0
+
+			li
+				margin-bottom: 10px
+
+
+/** Project Slider **/
+.project
+	&__slides
+		.slick-prev,
+		.slick-next,
+			color: $primary-color
+
+
+	&__slide
+		> img
+			margin: 0 auto
+			max-height: 750px
+
+	&__slider-nav
+		@include container
+
+
+	&__slider-thumb
+		margin: 10px
+		cursor: pointer
+
+		img
+			width: 100%
+
+
+/** Project Page **/
+.project
+	&__gallery
+		margin-bottom: 7rem
+
+	&__gallery-thumbs
+		@include container
+
+		> a
+			@include gallery(2 of 12)
+
+			img
+				width: 100% 
+				height: auto
+
+	&__gallery-thumb
+		@include gallery(2 of 12)
+
+		img
+			width: 100% 
+  			height: auto
+
+
+/** Contact Page **/
+.contact-form
+	@extend %clearfix
+
+	@media screen and (min-width: $break-medium)
+		@include span(6 of 12 1)
+
+.contact-info
+	margin-top: 5rem
+
+	@media screen and (min-width: $break-medium)
+		margin: 0
+		@include span(4 of 12 0)
+
+	&__container
+		margin-bottom: 2rem
+		@extend %clearfix
+
+	&__icon
+		color: $grey
+		float: left
+		font-size: 3rem !important
+		width: 14%
+		width: calc(100% - 85%)
+	
+	&__details
+		color: $light-black
+		float: right
+		width: 84%
+		width: calc(100% - 15%)
+		
+		h3
+			color: $primary-color
+			font-size: 2.8rem
+			margin: 0
+

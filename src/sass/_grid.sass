@@ -1,0 +1,55 @@
+/** Containers **/
+%clearfix
+	@include clearfix
+
+.wrap, .main
+	max-width: 95%
+	margin: 0 auto
+	@extend %clearfix
+
+	@media (min-width: $break-big)
+		@include container
+
+
+.alignright
+	float: right
+
+.alignleft
+	float: left
+
+.aligncenter
+	display: block
+	margin: 0 auto
+	text-align: center
+
+.fullwidth
+	min-width: 100%
+
+.hidden
+	display: none
+
+//.last
+//	@include last
+
+
+// Hide for screens smaller than 'medium'
+@media screen and (max-width: $break-medium) 
+	.hide-sm
+		display: none
+
+// Hide for screens bigger than 'medium'
+@media screen and (min-width: $break-medium) 
+	.hide-md
+		display: none
+
+
+/** Grid **/
+@media screen and (min-width: $break-medium)
+	// Generate grid
+	@for $i from 1 through 12
+		.col-#{$i}
+			@include span($i)
+			&:last-of-type
+				@include last
+	.last
+		@include last

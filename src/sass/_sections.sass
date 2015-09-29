@@ -1,0 +1,96 @@
+/** Sections **/
+.section
+	padding: 80px 0
+	@extend %clearfix
+	
+	@media screen and (min-width: $break-medium)
+		margin: 60px 0 0
+	
+	.section__meta
+		margin-bottom: 80px
+
+	ul
+		list-style: none
+		margin: 0
+		padding: 0
+
+
+/** Why Us **/
+#why-us
+	.service
+		@extend %clearfix
+
+		@media screen and (max-width: $break-medium)
+			margin-bottom: 30px
+
+			.icon-container
+				float: left
+				height: 85px
+				margin-right: 40px
+				padding: 20px
+				width: 85px
+		
+		@media screen and (min-width: $break-medium)
+			padding: 0
+			text-align: center
+			@include span(1 of 3 .5 outside)
+
+			&:last-of-type
+				@include last
+
+/** Projects showcase **/
+#projects-showcase
+	color: #ffffff
+	background: $black
+
+	.featured-projects
+		margin: 80px auto
+		@extend %clearfix
+
+
+/** Our services **/
+#our-services
+
+	.all-services
+		margin-bottom: 50px
+	
+	.icon-container
+		float: left
+		height: 50px
+		margin-right: 40px
+		width: 50px
+
+
+
+/** Client quotes **/
+#client-quotes
+	background: $light-grey
+
+	.client-quote
+		text-align: center
+
+		.quote
+			margin: 0 auto
+			max-width: 900px
+			font-size: 2.8rem
+
+		
+		.client-name
+			color: $primary-color
+			font-size: 2.5rem
+			font-weight: bold
+			margin: 50px 0 80px
+			
+			&:before
+				content: '—'
+				display: inline-block
+				margin-right: 8px
+
+
+	// Let's make the slider buttons green
+	// Slider Styles: _slider.sass
+	.slick-prev,
+	.slick-next,
+	ul.slick-dots li button:before
+		top: 20%
+		color: $primary-color

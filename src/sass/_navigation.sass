@@ -1,0 +1,98 @@
+/** Main Navigation Menu **/
+.site-navigation
+	color: $nav-link
+	font-family: $nav-family
+	text-transform: uppercase
+	width: 100%
+	z-index: 100%
+
+	ul.navigation
+		display: none
+		list-style: none
+		margin: 0
+		padding: 0
+		position: static
+
+
+		li
+			margin: 0
+			position: relative
+
+			a
+				color: $nav-link
+				display: block
+				font-weight: 600
+				padding: 20px 15px
+				text-decoration: none
+
+				@media screen and (min-width: $break-medium)
+					padding: 0
+					margin: 0 25px
+
+				&:hover 
+					color: $nav-hover-link
+
+
+#menu-hamburger
+	font-weight: bold
+	height: 5rem
+	padding: 1rem 5rem 1rem 0
+	text-align: right
+	
+	&:before, &:after
+		@include transition(all 0.35s ease)	
+	
+	&:before
+		background: #fff
+		content: ''
+		display: block
+		height: 2px
+		position: absolute
+		right: 17px
+		top: 16px
+		width: 20px
+	
+	&:after
+		border-bottom: 2px solid #fff
+		border-top: 2px solid #fff
+		box-sizing: content-box
+		content: ''
+		display: block
+		height: 4px
+		position: absolute
+		right: 17px
+		top: 22px
+		width: 20px
+
+	// When menu is opened, do hamburger animation
+	&.menu-opened
+		&:after
+			background: #fff
+			border: 0
+			height: 2px
+			top: 23px
+			width: 15px
+			@include transform(rotate(45deg))
+		
+		&:before
+			background: #fff
+			top: 23px
+			width: 15px
+			@include transform(rotate(-45deg))
+
+
+@media screen and (min-width: $break-medium)
+	.site-navigation
+		font-size: 1.4rem
+		position: relative
+		width: auto
+
+		ul.navigation
+			display: block
+			@extend %clearfix
+
+			li
+				float: left
+
+		#menu-hamburger
+			display: none

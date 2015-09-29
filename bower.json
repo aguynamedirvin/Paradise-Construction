@@ -1,0 +1,19 @@
+{
+  "name": "Paradise-Construction",
+  "version": "1.0.0",
+  "authors": [
+    "Irvin Dominguez"
+  ],
+  "description": "Paradise Construction",
+  "license": "ISC",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.1",
+    "susy": "~2.2.2"
+  }
+}

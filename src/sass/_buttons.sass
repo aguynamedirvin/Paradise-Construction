@@ -1,0 +1,94 @@
+$darken-primary: darken($primary-color, 15)
+
+/** Buttons **/
+.btn,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] 
+	background: $primary-color
+	border-radius: 6px
+	border: 0
+	color: #ffffff
+	cursor: pointer
+	display: inline-block
+	font-family: $button-family
+	font-size: 1.8rem
+	font-weight: 500
+	padding: 15px 60px
+	text-align: center
+	text-decoration: none
+	text-decoration: none
+	text-transform: capitalize
+	white-space: nowrap
+	@include transition(background 0.5s ease)
+	
+	&:hover, &:focus
+		color: #ffffff
+		background: $darken-primary
+	
+	// Let's make the buttons smaller for big screens
+	@media screen and (min-width: $break-medium)
+		font-size: 1.3rem
+		padding: 15px 35px
+
+// Dark Button
+.btn-dark
+	background: $black
+	
+	&:hover, &:focus
+		background: darken($black, 15)
+
+
+// Line Button
+.btn-line
+	background: transparent
+	border: 1px solid #ffffff
+	padding: 13px 36px // Temporary fix
+	
+	&:hover, &:focus
+		background: $primary-color
+		border: 1px solid $primary-color
+
+
+// Big Button
+.btn-big
+	font-size: 1.6rem
+
+
+/**	Forms **/
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select 
+	border-radius: 0
+	border: 1px solid $grey
+	font-family: $form-font
+	font-size: 1.3rem
+	margin: 12px 0
+	padding: 16px 20px
+	width: 100%
+
+	&:focus
+		border-color: $primary-color
+		outline: 0
+
+
+textarea
+	min-height: 200px
+	resize: vertical
+
+// Removes awkward default styles on some inputs for iOS
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea 
+	@include appearance(none)

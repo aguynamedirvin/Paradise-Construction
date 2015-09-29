@@ -1,0 +1,110 @@
+/** Project Thumbnail **/
+.project__thumb
+	background: $black
+	overflow: hidden
+	position: relative
+	@extend %clearfix
+
+	@media screen and (min-width: $break-small)
+		@include span(1 of 2 0)
+
+	@media screen and (min-width: $break-medium)
+		@include span(1 of 4 0)
+
+	&.last
+		@include last
+
+	img, button
+		@include transition(all .25s ease-in-out)
+
+	button
+		left: 50%
+		margin-left: -85px
+		margin-top: -18px
+		opacity: 0
+		position: absolute
+		top: 50%
+		width: 170px
+		z-index: 2
+
+	@media screen and (min-width: $break-small)
+		&:hover
+			img
+				opacity: .5
+			button
+				opacity: 1
+
+/** Pages Nav **/
+ul.pages-nav
+	display: block
+	font-family: $nav-family
+	list-style: none
+	margin: 40px 0
+	padding: 0
+	text-align: center
+	
+	li
+		display: inline-block
+		margin: 10px 0
+
+		a
+			border-radius: 20px
+			color: $black
+			font-weight: 600
+			padding: 5px 15px
+			text-transform: uppercase
+
+		&.active a, a:hover
+			background: $primary-color
+			color: #ffffff
+
+
+/** Free estimate **/
+.free-estimate
+	background: $primary-color
+	color: #fff
+	padding: 30px 0
+	text-align: center
+
+	@media screen and (min-width: $break-medium)
+		text-align: left
+
+	&__title,
+	&__summary
+		margin: 0
+
+	&__title
+		@media screen and (max-width: $break-medium)
+			font-size: 2rem
+
+	.btn
+		position: relative
+		top: 13px
+
+
+/** List of all services **/
+ul.all-services
+	margin: 60px auto
+	text-align: center
+	width: 95%
+
+	> li
+		color: $light-black
+		display: inline-block
+		margin: 8px 0
+		text-transform: capitalize
+
+		a
+			color: $light-black
+
+			&:hover
+				color: $primary-color
+
+		&:after
+			content: "•"
+			display: inline-block
+			margin: 0 10px
+		
+		&:last-of-type
+			&:after
+				content: ""
