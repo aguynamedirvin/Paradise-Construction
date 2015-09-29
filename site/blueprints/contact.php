@@ -11,6 +11,9 @@ fields:
   title:
     label: Title
     type:  text
+  description:
+    label: Description
+    type: textarea
   summary:
     label: Summary
     type:  textarea

@@ -27,6 +27,10 @@ fields:
         home: Home
         layers: Layers
         tools: Tools
+        shovel: Shovel
+        ladder: Ladder
+        cement-machine: Cement Machine
+        stamped-concrete: Stamped Concrete
   text:
     label: Service Description
     type:  textarea

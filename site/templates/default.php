@@ -8,7 +8,10 @@
         <p class="summary"><?php echo $page->summary()->html() ?></p>
         <?php endif ?>
 
-		<?php echo $page->text()->kirbytext() ?>
+
+        <div class="content">
+		  <?php echo $page->text()->kirbytext() ?>
+        </div>
 
 	</main>
 

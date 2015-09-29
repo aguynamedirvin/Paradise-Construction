@@ -2,4 +2,8 @@ Title: Contact
 
 ----
 
-Text: 
+Summary: We're happy to answer any questions you have or provide you with an estimate. Just send us a message using the form below to get the ball rolling.
+
+----
+
+Description: We're happy to answer any questions you have or provide you with an estimate. Just send us a message using the form below to get the ball rolling.

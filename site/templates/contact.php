@@ -32,7 +32,8 @@
 			
 
 			<!-- Contact Form -->
-			<form method="POST" class="contact-form pull-left">
+			<div  class="contact-form">
+			<form method="POST">
 
 				<input type="text" name="name" placeholder="<?php echo l::get('name') ?>*" value="<?php echo $data['name'] ?>">
 				<input type="text" name="email" placeholder="<?php echo l::get('email') ?>*" value="<?php echo $data['email'] ?>">
@@ -45,31 +46,32 @@
 				<input type="submit" name="submit" class="btn pull-right" value="<?php echo l::get('send_message_btn') ?>">
 			
 			</form>
+			</div>
 
 			<!-- Contact Info -->
-			<ul class="contact-info">
-				<li>
+			<div class="contact-info">
+				<div class="contact-info__container">
 					<i class="contact-info__icon fa fa-envelope"></i>
 					<div class="contact-info__details">
 						<h3><?php echo l::get('email') ?></h3>
 						<p><?php echo $site->email() ?></p>
 					</div>
-				</li>
-				<li>
+				</div>
+				<div class="contact-info__container">
 					<i class="contact-info__icon fa fa-phone"></i>
 					<div class="contact-info__details">
 						<h3><?php echo l::get('phone') ?></h3>
 						<p><?php echo $site->phone() ?></p>
 					</div>
-				</li>
-				<li>
+				</div>
+				<div class="contact-info__container">
 					<i class="contact-info__icon fa fa-clock-o"></i>
 					<div class="contact-info__details">
-						<h3><?php echo l::get('working-hours') ?></h3>
+						<h3><?php echo l::get('working_hours') ?></h3>
 						<p><?php echo $site->working_hours()->kirbytext() ?><p>
 					</div>
-				</li>
-			</ul>
+				</div>
+			</div>
 
 		</div>
 

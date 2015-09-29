@@ -2,4 +2,12 @@ Title: Stamped Concrete
 
 ----
 
-Text: 
+Text: We use the best quality cement with variants of printing and colors for your greatest satisfaction.
+
+----
+
+Featured: true
+
+----
+
+Icon: stamped-concrete

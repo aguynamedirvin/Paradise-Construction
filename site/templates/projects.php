@@ -1,6 +1,6 @@
 <?php 
 
-snippet('header') 
+snippet('header');
 
 /**
  * This page has a controller: controllers/projects.php
@@ -15,6 +15,7 @@ snippet('header')
 		<?php if ($page->summary()->isNotEmpty()): ?>
 		<p class="summary"><?php echo $page->summary()->html() ?></p>
 		<?php endif ?>
+
 
 		<?php 
 

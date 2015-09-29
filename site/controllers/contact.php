@@ -11,7 +11,7 @@ return function($site, $pages, $page) {
 		'text'	=> ''
 	);
 
-	if(get('submit')) {
+	if (get('submit')) {
 
 		$data = array(
 			'name'  => get('name'),

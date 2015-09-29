@@ -2,7 +2,7 @@ Title: Paradise Construction
 
 ----
 
-Description: 
+Description: Tener la casa mas elegante es algo más que simple estética. Se trata de estatura y de clase. Paradise Construcción transforma el "todos los días" en elegancia.
 
 ----
 
@@ -10,15 +10,11 @@ Keywords: construcción,remodelación,paisajismo,concreto estampado
 
 ----
 
-Google-plus: http://google.com/plus/
+Google-plus: https://plus.google.com/b/114828126715128662066/
 
 ----
 
-Facebook: http://facebook.com/
-
-----
-
-Twitter: http://twitter.com/
+Facebook: https://www.facebook.com/paradiseconstructionep
 
 ----
 
@@ -42,8 +38,31 @@ Address: 11280 Mark Mabon Ct. Socorro, TX 79927
 
 ----
 
-Google-analytics: UA-XXXX-XXXX
+Google-analytics: UA-19072260-22
 
 ----
 
 Free-estimate: Llamanos Hoy Para Obtener Una Estimacion <b>Gratis</b>!
+
+----
+
+Working-hours: 
+
+Mon – Friday: 8am – 7pm
+Sat: 12pm – 6pm
+
+----
+
+City: Socorro
+
+----
+
+State: TX
+
+----
+
+Postal-code: 79927
+
+----
+
+Free-estimate-summary: If you call today you’ll get a FREE estimate of your home that compares the now to the wow!

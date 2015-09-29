@@ -7,7 +7,7 @@
 						<ul>
 							<li><i class="fa fa-phone"></i> <b><?php echo l::get('phone') ?>:</b> <a href="tel:<?php echo $site->phone() ?>"><?php echo $site->phone() ?></a></li>
 							<li><i class="fa fa-envelope"></i> <b><?php echo l::get('email') ?>:</b> <a href="mailto:<?php $email = $site->email(); echo emailencode("" . $email . "") ?>"><?php echo emailencode("" . $email . "") ?></a></li>
-							<li><i class="fa fa-map-marker"></i> <b><?php echo l::get('address') ?>:</b> <?php echo $site->address() ?></li>
+							<li><i class="fa fa-map-marker"></i> <b><?php echo l::get('address') ?>:</b> <?php echo $site->address() . ', ' . $site->city() . ', ' . $site->state() . ' ' . $site->postal_code() ?></li>
 						</ul>
 					</div>
 
@@ -66,26 +66,27 @@
 		<!-- JavaScript -->
 		<script>
 			Modernizr.load([
+				// Load jQuery
 				{
 					load: 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js',
 					complete: function () {
+						yepnope.errorTimeout = 5000;
 						if ( !window.jQuery ) {
 							Modernizr.load('<?php echo $site->url() ?>/assets/js/vendor/jquery-1.11.3.min.js');
 						}
 					}
 				},
-				// All other neccesary scrips
+				// Load other necessary scripts
 				{
 					load: [
 						'<?php echo $site->url() ?>/assets/js/main.min.js',
 					],
 					callback: function() {
-						// This is to run the before and after plugin: TwentyTwenty
-						jQuery('.before-after').twentytwenty();
+						//jQuery('a').fluidbox();
 					}
 
 				},
-				// If the device is mobile
+				// For mobile devices
 				{
 					test: Modernizr.mq('only all and (max-width: 868px)'),
 					yep: {
@@ -93,17 +94,31 @@
 					},
 					callback: {
 						'mobile': function() {
-							//console.log('Mobile jQuery Loaded!');
 							FastClick.attach(document.body); 
 						},
 					}
 				},
 			]);
+
+			// Download fonts
+			WebFontConfig = {
+				google: {
+					families: ['Raleway:600', 'Open+Sans:400']
+				},
+				custom: {
+					families: ['FontAwesome'],
+					urls: ['http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css']
+				}
+			};
+			(function(d) {
+				var wf = d.createElement('script'), s = d.scripts[0];
+				wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+				s.parentNode.insertBefore(wf, s);
+			})(document);
 		</script>
 
 
 		<?php if($site->google_analytics()->isNotEmpty()): ?>
-		
 		<!-- Google Analytics -->
 		<script>
 			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -113,7 +128,6 @@
 			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
 			ga('create','<?php echo $site->google_analytics() ?>','auto');ga('send','pageview');
 		</script>
-
 		<?php endif ?>
 
 	</body>

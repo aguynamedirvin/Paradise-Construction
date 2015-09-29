@@ -1,16 +1,17 @@
 <?php if(!defined('KIRBY')) exit ?>
 
-# voice blueprint
+# search blueprint
 
-title: Voice
+title: Search
 pages: false
-preview: parent
 files: false
 
+deletable: false
+
 fields:
-  title: Name
+  title: Title
     label: Title
     type:  text
-  quote:
-    label: Quote
+  text:
+    label: Text
     type:  textarea

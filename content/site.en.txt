@@ -6,15 +6,15 @@ Description: Having the most beautiful home in your neighborhood is about more t
 
 ----
 
-Keywords: construction,remodeling,landscaping,rock wall,slab concrete
+Keywords: construction,remodeling,landscaping,rock wall,slab concrete,roofing,yard maintenance
 
 ----
 
-Google-plus: http://google.com/plus/
+Google-plus: https://plus.google.com/b/114828126715128662066/
 
 ----
 
-Facebook: http://facebook.com/
+Facebook: https://www.facebook.com/paradiseconstructionep
 
 ----
 
@@ -34,11 +34,11 @@ Email: paradise_construction@hotmail.com
 
 ----
 
-Address: 11280 Mark Mabon Ct. Socorro, TX 79927
+Address: 11280 Mark Mabon Ct.
 
 ----
 
-Google-analytics: UA-XXXX-XXXX
+Google-analytics: UA-19072260-22
 
 ----
 
@@ -50,3 +50,19 @@ Working-hours:
 
 Mon – Friday: 8am – 7pm
 Sat: 12pm – 6pm
+
+----
+
+City: Socorro
+
+----
+
+State: TX
+
+----
+
+Postal-code: 79927
+
+----
+
+Free-estimate-summary: If you call today you’ll get a FREE estimate of your home that compares the now to the wow!

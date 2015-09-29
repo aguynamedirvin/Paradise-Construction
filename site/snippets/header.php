@@ -3,23 +3,25 @@
 	<head>
 		
 		<!-- Force IE to use the latest rendering engine -->
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-
+		<meta http-equiv="x-ua-compatible" content="IE=edge">
 		<meta charset="utf-8">
 
 		<?php if($page->isHomePage()): ?>
-		<title><?php echo ($site->title()) ?></title>
+		<title><?php echo $site->title()->html() ?></title>
+		<?php elseif(param('category')): ?>
+		<title><?php echo urldecode(param('category'))->html() ?> | <?php echo $site->title()->html() ?></title>
 		<?php else: ?>
-		<title><?php echo html($page->title()) ?> | <?php echo $site->title()->html() ?></title>
+		<title><?php echo $page->title()->html() ?> | <?php echo $site->title()->html() ?></title>
 		<?php endif ?>
 
 		
 		<?php if($page->description()->isNotEmpty()): ?>
-		<meta name="description" content="<?php echo html($page->description()) ?>" />
+		<meta name="description" content="<?php echo $page->description()->html(); ?>" />
 		<?php else: ?>
-		<meta name="description" content="<?php echo html($site->description()) ?>" />
+		<meta name="description" content="<?php echo $site->description()->html(); ?>" />
 		<?php endif ?>
-		<meta name="keywords" content="<?php echo html($site->keywords()) ?>" />
+
+		<meta name="keywords" content="<?php echo $site->keywords()->html(); ?>" />
 
 
 		<!-- Mobile specific metas -->
@@ -28,23 +30,8 @@
 
 		<!-- Stylesheets -->
 		<?php echo css('assets/css/main.css') ?>
-
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:600|Open+Sans:400">
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-		<?php if($page->isHomePage()): ?>
-		<style type="text/css">
-			@media screen and (min-width: 868px) {
-				.header {
-					background: transparent;
-				}
-				.sticky-header {
-					background: #2E2E2E;
-				}
-			}
-		</style>
-		<?php endif ?>
 		
+
 		<!--[if lte IE 8]>
 		<script src="<?php echo $site->url() ?>/assets/js/svg4everybody.ie.min.js"></script>
 		<![endif]-->
@@ -67,6 +54,35 @@
 			]);
 		</script>
 
+		<script type="application/ld+json">
+		{
+			"@context" : "http://schema.org",
+			"@type" : "LocalBusiness",
+			<?php if ($page->isHomePage()): ?>
+			"name" : "<?php echo $site->title()->html() ?>",
+			<?php else: ?>
+			"name" : "<?php echo $page->title()->html() ?> | <?php echo $site->title()->html() ?>",
+			<?php endif ?>
+			"logo" : "<?php echo $site->url() . '/assets/images/small_logo.png' ?>",
+			"telephone" : "<?php echo $site->phone() ?>",
+			"email" : "<?php echo $site->email() ?>",
+			"url" : "<?php echo $site->url() ?>",
+			"address" : {
+				"@type" : "PostalAddress",
+				"streetAddress" : "<?php echo $site->address() ?>",
+				"addressLocality" : "<?php echo $site->city() ?>",
+				"addressRegion" : "<?php echo $site->state() ?>",
+				"addressCountry" : "US",
+				"postalCode" : "<?php echo $site->postal_code() ?>"
+			},
+			"sameAs" : [
+				"<?php echo $site->facebook() ?>",
+				"<?php echo $site->google_plus() ?>"
+			]
+		}
+		</script>
+
+
 	</head>
 	<body>
 
@@ -75,20 +91,21 @@
 		<![endif]-->
 
 		<!-- Header -->
-		<div id="header" class="header sticky">
+		<div id="header" class="header<?php ecco($page->isHomePage(), ' header-transparent') ?>">
 			<div class="wrap">
 				
 				<!-- Logo -->
 				<a href="<?php echo $site->language->url() ?>" class="logo" alt="<?php echo $site->title()->html() ?>"></a>
 
 				<!-- Main Navigation Menu -->
-				<?php snippet('menu') ?>
+				<?php snippet('navbar') ?>
 
 			</div>
 		</div>
 
 	<?php if (!$page->isHomePage()): ?>
 		<div class="pad"></div>
+		
 		<?php if (param('status') != 'free-estimate'): ?>
 			<?php snippet('free_estimate') ?>
 		<?php endif ?>

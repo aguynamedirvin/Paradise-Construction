@@ -7,11 +7,10 @@ password: >
 language: en
 role: admin
 history:
-  - services
   - contact
-  - projects
-  - >
-    services/nueva-construccion-y-remodelacion
-  - projects/acid-stain
+  - services/stamped-concrete
+  - services/landscaping
+  - slides/project-1
+  - services/losas-de-cemento
 firstname: Irvin
 lastname: Dominguez

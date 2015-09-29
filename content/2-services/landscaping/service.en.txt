@@ -2,7 +2,7 @@ Title: Landscaping
 
 ----
 
-Text: 
+Text: We make your yard the best. With expertise in irrigation, flower beds, decorative lights, and more.
 
 ----
 
@@ -10,4 +10,4 @@ Featured: true
 
 ----
 
-Icon: helmet
+Icon: shovel

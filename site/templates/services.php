@@ -24,7 +24,7 @@
 				</div>
 				<?php endif ?>
 				<div class="service__details">
-					<h4 class="service__title"><?php echo $service->title() ?></h4>
+					<h4 class="service__title"><a href="<?php echo page('projects')->url() . '/category:' . urlencode($service->title()) ?>"><?php echo $service->title() ?></a></h4>
 					<p class="service__summary"><?php echo $service->text() ?></p>
 				</div>
 			</li>
@@ -32,9 +32,13 @@
 		</ul>
 
 		<ul class="all-services">
-		<?php foreach ($services as $service): if( $service->text()->isEmpty() ): ?>
-			<li><?php echo $service->title() ?></li>
-		<?php endif; endforeach ?>
+			<?php 
+				foreach ($services as $service):
+					if ($service->text()->isEmpty()): ?>
+			<li><a href="<?php echo page('projects')->url() . '/category:' . urlencode($service->title()) ?>"><?php echo $service->title() ?></a></li>
+			<?php 
+					endif;
+				endforeach ?>
 		</ul>
 
 	</main>

@@ -15,10 +15,15 @@ fields:
   description:
     label: Description
     type:  textarea
+  line-a:
+    type: line
   free-estimate:
     label: Free Estimate Headline
     type: text
-  line-a:
+  free-estimate-summary:
+    label: Free Estimate Summary
+    type: text
+  line-b:
     type: line
   phone:
     label: Phone Number
@@ -29,13 +34,31 @@ fields:
     type: email
     width: 1/2
   address:
-    label: Address
+    label: Street
     type: text
     icon: map-marker
-  working-hours:
+    width: 1/2
+  city:
+    label: City
+    type: text
+    icon: map-marker
+    width: 1/2
+  state:
+    label: State
+    type: text
+    icon: map-marker
+    width: 1/2
+  postal_code:
+    label: Zip Code
+    type: number
+    icon: map-marker
+    width: 1/2
+  line-c:
+    type: line
+  working_hours:
     label: Working Hours
     type: textarea
-  line-b:
+  line-d:
     type: line
   facebook:
     label: Facebook
@@ -47,7 +70,7 @@ fields:
     type: text
     icon: google-plus
     width: 1/2
-  line-c:
+  line-e:
     type: line
   keywords:
     label: Keywords

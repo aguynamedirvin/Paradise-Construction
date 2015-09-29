@@ -2,4 +2,12 @@ Title: Landscaping
 
 ----
 
-Text: Tratamos de hacer de su yarda lo mejor. Con experiencia en sistemas de riego, flower beds, luces decorativas y much mas.
+Text: Hacemos de su yarda lo mejor. Con experiencia en sistemas de riego, flower beds, luces decorativas, y mucho más.
+
+----
+
+Featured: true
+
+----
+
+Icon: shovel
