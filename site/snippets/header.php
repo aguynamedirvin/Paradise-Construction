@@ -9,7 +9,7 @@
 		<?php if($page->isHomePage()): ?>
 		<title><?php echo $site->title()->html() ?></title>
 		<?php elseif(param('category')): ?>
-		<title><?php echo urldecode(param('category'))->html() ?> | <?php echo $site->title()->html() ?></title>
+		<title>Projects under <?php echo html(urldecode(param('category'))) ?> | <?php echo $site->title()->html() ?></title>
 		<?php else: ?>
 		<title><?php echo $page->title()->html() ?> | <?php echo $site->title()->html() ?></title>
 		<?php endif ?>

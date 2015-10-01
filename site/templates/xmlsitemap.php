@@ -1,6 +1,6 @@
 <?php
 
-$ignore = array('sitemap', 'error', 'voices', 'voice');
+$ignore = array('sitemap', 'error', 'voices', 'voice', 'slides');
 
 // send the right header
 header('Content-type: text/xml; charset="utf-8"');
