@@ -115,7 +115,7 @@ function projects($options = array()) {
 
 ?>
 			<div class="project__thumb<?php ecco($count % $options['columns'] == 0, ' last') ?>">
-				<a href="<?php echo $project->url() ?>">
+				<a href="<?php echo $project->url() ?>" title="<?php echo $project->title()->html() ?>">
 					<?php 
 
 						if ($project->image( $project->featured() )) {
@@ -125,7 +125,7 @@ function projects($options = array()) {
 						}
 
 					?>
-					<img src="<?php echo thumb($image, $thumbSettings)->url() ?>" alt="<?php echo $project->title()->html() ?>" >
+					<img src="<?php echo thumb($image, $thumbSettings)->url() ?>" alt="<?php echo $project->title()->html() ?>">
 					<button class="btn btn-line aligncenter"><?php echo l::get('view_project_btn') ?></button>
 				</a>
 			</div>

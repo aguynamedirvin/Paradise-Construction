@@ -17,3 +17,7 @@ fields:
   summary:
     label: Summary
     type:  textarea
+  description:
+    label: SEO Summary
+    type: textarea
+    buttons: false

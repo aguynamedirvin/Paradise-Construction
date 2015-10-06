@@ -2,19 +2,26 @@ Title: Sobre Nosotros
 
 ----
 
-URL-Key: compania
+Url-key: compania
 
 ----
 
-Text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+Text: 
 
-## Lorem Ipsum
-In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+Paradise Construcción es una compañia ubicada en El Paso que provee servicios de construcción y remodelacion profesional a un precio accesible. Hemos desarrollado una reputación de confiabilidad y servicio al cliente superior y nos esforzamos por ofrecer a nuestros clientes una experiencia agradable mientras que satisfaciendo sus necesidades. Somos capaces de proporcionar la construcción, renovación, remodelación, reparación, y muchos más servicios. Somos confiables, profesionales y estamos equipados con estándares altos y la habilidad para manejar proyectos de toda clase.
 
-(image: about.jpg)
+Nuestros servicios incluyen:
+- Nueva Construcción Y Remodelación
+-  Landscaping
+- Stamped Concrete
+(link: services text: Ver Todos Nuestros Servicios)
 
-### Lorem Ipsum
-In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+Contactenos al (tel: +19155997149 text: 915-599-7149) para mas informacion o use nuestra (link: contact text: forma de contacto.)
 
-#### Lorem Ipsum
-In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+Síganos en Facebook y Google Plus:
+- (link: https://www.facebook.com/paradiseconstructionep text: Paradise Construction en Facebook)
+- (link: https://plus.google.com/b/114828126715128662066/ text: Paradise Construction en Google Plus)
+
+----
+
+Description: Paradise Construcción es una compañia ubicada en El Paso que provee servicios de construcción y remodelacion profesional a un precio accesible. Hemos desarrollado una reputación de confiabilidad y servicio al cliente superior y nos esforzamos por ofrecer a nuestros clientes una experiencia agradable mientras que satisfaciendo sus necesidades.

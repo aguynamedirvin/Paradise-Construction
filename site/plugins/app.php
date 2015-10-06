@@ -1,22 +1,21 @@
 <?php
 
 /**
- * This script obfuscates an email adress to protect
+ * This script obfuscates any string such as email adress to protect
  * it from spam bots.
  * 
- * @param 	Takes in the email adress
+ * @param 	string
  */
-function emailencode($emailaddress){
-	
-	$email = $emailaddress;                
-	$length = strlen($email);    
-	$obfuscatedEmail = ''; 
+function encode($string){
+	             
+	$length = strlen($string);    
+	$obfuscatedString = ''; 
 	
 	for ($i = 0; $i < $length; $i++){                
-		$obfuscatedEmail .= "&#" . ord($email[$i]) . ";";
+		$obfuscatedString .= "&#" . ord($string[$i]) . ";";
 	}
 
-	return $obfuscatedEmail;
+	return $obfuscatedString;
 }
 
 ?>

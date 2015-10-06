@@ -2,4 +2,23 @@ Title: About
 
 ----
 
-Text: At Paradise Construction, we have developed a reputation for reliability and superior customer service and strive in every way to provide our customers with a pleasant experience while meeting their needs.
+Text: 
+
+Paradise Construction is a company located in El Paso providing professional building construction and property development services at an affordable price. We have developed a reputation for reliability and superior customer service and strive in every way to provide our customers with a pleasant experience while meeting their needs. We are capable of providing construction, renovation, remodeling, repair services and many more services. We are reliable,  professional, and equipped with the high standards of skill and workmanship necessary to handle developmental projects.
+
+Our services include:
+- New Construction & Remodeling
+- Renovation
+-  Landscaping
+- Stamped Concrete
+(link: services text: View All Services)
+
+Contact us at (tel: +19155997149 text: 915-599-7149)  for more information or use our online (link: contact text: contact form).
+
+Stay in touch:
+- (link: https://www.facebook.com/paradiseconstructionep text: Paradise Construction on Facebook)
+- (link: https://plus.google.com/b/114828126715128662066/ text: Paradise Construction on Google Plus)
+
+----
+
+Description: Paradise Construction is a company located in El Paso providing professional building construction and property development services at an affordable price. We have developed a reputation for reliability and superior customer service and strive in every way to provide our customers with a pleasant experience while meeting their needs.

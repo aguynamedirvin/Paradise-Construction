@@ -52,6 +52,44 @@
 
 	<?php snippet('free_estimate') ?>
 		
+		<!-- Our services -->
+		<div id="our-services" class="section">
+			<div class="wrap">
+				<div class="section__meta">
+					<h2 class="title"><?php echo l::get('home_services_title') ?></h2>
+				</div>
+
+				<div class="section__content">
+					
+					<?php snippet('services') ?>
+					
+					<div class="aligncenter">
+						<a href="<?php echo page('services')->url() ?>" class="btn"><?php echo l::get('view_all_services') ?></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Projects Gallery -->
+		<div id="projects-showcase" class="section">
+			
+			<div class="section__meta">
+				<h2 class="title"><?php echo l::get('home_projects_title') ?></h2>
+			</div>
+
+			<div class="section__content">
+
+				<div class="featured-projects">
+					<?php projects(array('shuffle' => true)) ?>
+				</div>
+
+				<div class="aligncenter">
+					<a href="<?php echo page('projects')->url() ?>" class="btn btn-line"><?php echo l::get('view_all_projects') ?></a>
+				</div>
+			</div>
+		</div>
+
 		<!-- Why Us -->
 		<section id="why-us" class="section">
 			<div class="wrap">
@@ -93,45 +131,6 @@
 				</div>
 			</div>
 		</section>
-
-
-		<!-- Projects Gallery -->
-		<div id="projects-showcase" class="section">
-			
-			<div class="section__meta">
-				<h2 class="title"><?php echo l::get('home_projects_title') ?></h2>
-			</div>
-
-			<div class="section__content">
-
-				<div class="featured-projects">
-					<?php projects(array('shuffle' => true)) ?>
-				</div>
-
-				<div class="aligncenter">
-					<a href="<?php echo page('projects')->url() ?>" class="btn btn-line"><?php echo l::get('view_all_projects') ?></a>
-				</div>
-			</div>
-		</div>
-
-
-		<!-- Our services -->
-		<div id="our-services" class="section">
-			<div class="wrap">
-				<div class="section__meta">
-					<h2 class="title"><?php echo l::get('home_services_title') ?></h2>
-				</div>
-
-				<div class="section__content">
-					
-					<?php snippet('services') ?>
-					
-					<div class="aligncenter">
-						<a href="<?php echo page('services')->url() ?>" class="btn"><?php echo l::get('view_all_services') ?></a>
-					</div>
-				</div>
-			</div>
-		</div>
 
 
 

@@ -54,7 +54,7 @@
 					<i class="contact-info__icon fa fa-envelope"></i>
 					<div class="contact-info__details">
 						<h3><?php echo l::get('email') ?></h3>
-						<p><?php echo $site->email() ?></p>
+						<p><?php echo encode("" . $site->email() . "") ?></p>
 					</div>
 				</div>
 				<div class="contact-info__container">

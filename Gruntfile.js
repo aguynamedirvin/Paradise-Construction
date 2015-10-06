@@ -84,7 +84,7 @@ module.exports = function(grunt) {
 			options: {
 				processors: [
 					require('pixrem')(), // add fallbacks for rem units
-					require('autoprefixer-core')({browsers: ['last 2 versions', 'ie 8', 'ie 9', 'Android 2.3']}), // add vendor prefixes
+					require('autoprefixer')({browsers: ['last 2 versions', 'ie 8', 'ie 9', 'Android 2.3']}), // add vendor prefixes
 					require('cssnano')(), // minify the result
 				]
 			},

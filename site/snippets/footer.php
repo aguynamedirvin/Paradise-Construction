@@ -6,7 +6,7 @@
 						<h3><?php echo l::get('contact_us') ?></h3>
 						<ul>
 							<li><i class="fa fa-phone"></i> <b><?php echo l::get('phone') ?>:</b> <a href="tel:<?php echo $site->phone() ?>"><?php echo $site->phone() ?></a></li>
-							<li><i class="fa fa-envelope"></i> <b><?php echo l::get('email') ?>:</b> <a href="mailto:<?php $email = $site->email(); echo emailencode("" . $email . "") ?>"><?php echo emailencode("" . $email . "") ?></a></li>
+							<li><i class="fa fa-envelope"></i> <b><?php echo l::get('email') ?>:</b> <a href="mailto:<?php echo encode("" . $site->email() . "") ?>"><?php echo encode("" . $site->email() . "") ?></a></li>
 							<li><i class="fa fa-map-marker"></i> <b><?php echo l::get('address') ?>:</b> <?php echo $site->address() . ', ' . $site->city() . ', ' . $site->state() . ' ' . $site->postal_code() ?></li>
 						</ul>
 					</div>
@@ -46,7 +46,7 @@
 
 					<div class="widget bbb">
 						<a href="http://www.bbb.org/elpaso/business-reviews/roofing-contractors/paradise-construction-in-el-paso-tx-99130588">
-							<img src="<?php echo $site->url() . '/assets/images/bbb_logo.png' ?>" width="70">
+							<img src="<?php echo $site->url() . '/assets/images/bbb_logo.png' ?>" alt="<?php echo $site->title()->html() ?> on BBB" width="70">
 						</a>
 					</div>
 

@@ -7,10 +7,10 @@ password: >
 language: en
 role: admin
 history:
+  - projects/tree-removal-from-ground
+  - services
+  - projects/home-remodeling
+  - about
   - contact
-  - services/stamped-concrete
-  - services/landscaping
-  - slides/project-1
-  - services/losas-de-cemento
 firstname: Irvin
 lastname: Dominguez

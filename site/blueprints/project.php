@@ -28,18 +28,6 @@ fields:
     options: images
     required: true
     default: 
-  #before:
-  #  label: Before Picture
-  #  type: select
-  #  options: images
-  #  required: true
-  #  width: 1/2
-  #after:
-  #  label: After Picture
-  #  type: select
-  #  options: images
-  #  required: true
-  #  width: 1/2
   category:
     label: Category
     type: radio
@@ -54,3 +42,7 @@ fields:
   text:
     label: Summary
     type:  textarea
+    description:
+  label: SEO Summary
+    type: textarea
+    buttons: false

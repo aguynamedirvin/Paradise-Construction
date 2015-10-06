@@ -6,7 +6,7 @@ $services = page('services')->children();
 
 <ul class="services">
 	<?php foreach ($services as $service): ?>
-	<?php if ($service->featured()->isTrue()) continue ?>
+	<?php if ($service->featured()->isTrue()): ?>
 	<li>
 		<div class="service__icon">
 			<svg class="icon" role="img">
@@ -18,7 +18,7 @@ $services = page('services')->children();
 			<p class="service__summary"><?php echo $service->text() ?></p>
 		</div>
 	</li>
-	<?php endforeach ?>
+	<?php endif; endforeach ?>
 </ul>
 
 <ul class="all-services">

@@ -16,6 +16,19 @@ RewriteEngine on
 #
 # RewriteBase /mysite
 
+# Specify the default language
+DefaultLanguage en
+
+# Canonical URLs
+# Remove www
+<IfModule mod_rewrite.c>
+   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+   RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+</IfModule>
+
+# Sitemap
+RewriteRule ^sitemap\.xml http://paradiseconstructionep.com/sitemap [QSA,L]
+
 # block text files in the content folder from being accessed directly
 RewriteRule ^content/(.*)\.(txt|md|mdown)$ error [R=301,L]
 
@@ -47,4 +60,18 @@ RewriteRule ^(.*) index.php [L]
 
 <IfModule mod_deflate.c>
 AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript
+</IfModule>
+
+# EXPIRES
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 10 days"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType text/plain "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType application/x-javascript "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType application/x-icon "access plus 1 year"
 </IfModule>

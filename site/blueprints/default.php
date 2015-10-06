@@ -10,9 +10,10 @@ fields:
   title:
     label: Title
     type:  text
-  description:
-    label: Description
-    type: textarea
   text:
     label: Text
     type:  textarea
+  description:
+    label: SEO Summary
+    type: textarea
+    buttons: false

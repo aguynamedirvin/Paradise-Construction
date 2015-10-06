@@ -1,0 +1,37 @@
+/** Forms **/
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select 
+    border-radius: 0
+    border: 1px solid $grey
+    font-family: $form-font
+    font-size: 1.3rem
+    margin: 12px 0
+    padding: 16px 20px
+    width: 100%
+
+    &:focus
+        border-color: $primary-color
+        outline: 0
+
+
+textarea
+    min-height: 200px
+    resize: vertical
+
+// Removes awkward default styles on some inputs for iOS
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea 
+    @include appearance(none)
