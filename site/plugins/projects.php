@@ -57,14 +57,13 @@ function projects($options = array()) {
 		'visibleOnly'   => true,
 		'limit'         => 9,
 		'columns'       => 3,
-		'shuffle'		=> false,
-		'filterBy'		=> array(
-
+		'shuffle'		=> FALSE,
+		'filterBy'		=> NULL, /*array(
 			'by'		=> '',
 			'tag'		=> '',
 			'separator'	=> '',
 
-		),
+		),*/
 	);
 
 
@@ -96,7 +95,7 @@ function projects($options = array()) {
 	if ($options['shuffle']) {
 		$projects = $projects->shuffle();
 	}
-	if (!empty($options['filterBy'])) {
+	if (!array_key_exists('filterBy', $options)) {
 		$projects = $projects->filterBy(
 			$options['filterBy']['by'], 
 			$options['filterBy']['tag'],
