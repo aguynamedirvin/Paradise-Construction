@@ -1,10 +1,18 @@
 <?php 
 
-snippet('header');
-
 /**
  * This page has a controller: controllers/projects.php
  */
+
+snippet('header');
+
+$thumbSettings = array(
+	'height' 	=> 280,
+	'width' 	=> 400,  
+	'quality'	=> 75,
+	'crop' 		=> true,
+	'upscale' 	=> true,
+);
 
 ?>
 
@@ -16,20 +24,6 @@ snippet('header');
 		<p class="summary"><?php echo $page->summary()->html() ?></p>
 		<?php endif ?>
 
-
-		<?php 
-
-		// fetch the basic set of pages
-		$projects = $page->children()->visible();
-
-		// fetch all categories
-		$cats = $projects->pluck('category', ',', true);
-
-		// Apply pagination
-		$projects   = $projects->paginate(9);
-		$pagination = $projects->pagination();
-		
-		?>
 
 		<ul class="pages-nav" id="category">
 			<li <?php if (!param('category')) echo ' class="active"' ?>><a href="<?php echo page('projects')->url() ?>/#projects">All</a></li>
@@ -44,16 +38,34 @@ snippet('header');
 
 
 		<div class="projects">
-			
-			<?php 
 
-				if($cat = param('category')) {
-					projects(array('filterBy' => array('by' => 'category', 'tag' => urldecode($cat), 'separator' => ',')));
-				} else {
-					projects();
-				}
+			<?php 
+				$count = 0;
+				foreach ($projects as $project): 
+					if ($project->hasImages()):
+						$count++;
 
 			?>
+
+				<div class="project__thumb<?php ecco($count % 3 == 0, ' last') ?>">
+					<a href="<?php echo $project->url() ?>" title="<?php echo $project->title()->html() ?>">
+						<?php 
+
+							if ($project->image( $project->featured() )) {
+								$image = $project->image( $project->featured() );
+							} else {
+								$image = $project->image();
+							}
+
+						?>
+						<img src="<?php echo thumb($image, $thumbSettings)->url() ?>" alt="<?php echo $project->title()->html() ?>">
+						<button class="btn btn-line aligncenter"><?php echo l::get('view_project_btn') ?></button>
+					</a>
+				</div>
+
+			<?php endif; endforeach ?>
+
+		</div>
 
 		</div>
 

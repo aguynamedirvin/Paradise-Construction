@@ -5,6 +5,9 @@
 title: Projects
 pages:
   template: project
+  sort: flip
+  num: zero
+
 files: false
 
 deletable: false

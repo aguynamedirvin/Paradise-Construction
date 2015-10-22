@@ -15,7 +15,7 @@ fields:
     label: Date
     type:  date
     default: today
-    format: MM/YYYY
+    format: DD/MM/YYYY
     width: 1/2
   location:
     label: Location
@@ -26,8 +26,6 @@ fields:
     label: Featured Picture
     type: select
     options: images
-    required: true
-    default: 
   category:
     label: Category
     type: radio
@@ -39,10 +37,6 @@ fields:
   tags:
     label: Tags
     type:  tags
-  text:
+  description:
     label: Summary
     type:  textarea
-    description:
-  label: SEO Summary
-    type: textarea
-    buttons: false

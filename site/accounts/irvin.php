@@ -7,10 +7,10 @@ password: >
 language: en
 role: admin
 history:
-  - projects/tree-removal-from-ground
-  - services
-  - projects/home-remodeling
-  - about
-  - contact
+  - projects/backyard-cooking-station
+  - projects/home-front-yard-flower-beds
+  - projects/backyard-inside-cooking-station
+  - projects/garden-wall
+  - projects/restroom-remodeling
 firstname: Irvin
 lastname: Dominguez

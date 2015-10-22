@@ -3,7 +3,7 @@
 
 # TEAM
 
-    Irvin Dominguez -- Web design/development
+    Irvin Dominguez -- Web design / development
 
 # TECHNOLOGY COLOPHON
 
