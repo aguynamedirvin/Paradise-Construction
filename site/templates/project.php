@@ -36,9 +36,13 @@ $smallThumb = array('height' => 175, 'width' => 250, 'quality' => 75, 'crop' => 
 					<?php if ($page->location()->isNotEmpty()): ?>
 					<li><b><?php echo l::get('location') ?>:</b> <?php echo $page->location() ?></li>
 					<?php endif ?>
-					<li><b><?php echo l::get('category') ?>:</b> <?php echo $page->category() ?></li>
-					<?php if ($page->text()->isNotEmpty()): ?>
-					<li><b><?php echo l::get('description') ?>:</b> <?php echo $page->text() ?></li>
+					<li><b><?php echo l::get('category') ?>:</b> 
+						<?php foreach($page->category()->split() as $category): ?>
+							<a href="<?php echo page('projects')->url() . '/category:' . urlencode($category) ?>"><?php echo $category ?></a>
+						<?php endforeach ?>
+					</li>
+					<?php if ($page->description()->isNotEmpty()): ?>
+					<li><b><?php echo l::get('description') ?>:</b> <?php echo $page->description() ?></li>
 					<?php endif ?>
 				</ul>
 			</div>

@@ -1,10 +1,10 @@
-Title: About
+Title: About Us
 
 ----
 
 Text: 
 
-Paradise Construction is a company located in El Paso providing professional building construction and property development services at an affordable price. We have developed a reputation for reliability and superior customer service and strive in every way to provide our customers with a pleasant experience while meeting their needs. We are capable of providing construction, renovation, remodeling, repair services and many more services. We are reliable,  professional, and equipped with the high standards of skill and workmanship necessary to handle developmental projects.
+Paradise Construction is a company located in El Paso providing professional building construction and property development services at an affordable price. We have developed a reputation for reliability and superior customer service and strive in every way to provide our customers with a pleasant experience while meeting their needs. We are capable of providing construction, renovation, remodeling, repair services and many more services. We are reliable,  professional, and equipped with the highest standards of skill and workmanship necessary to handle any kind of project.
 
 Our services include:
 - New Construction & Remodeling

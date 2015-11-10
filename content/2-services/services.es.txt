@@ -6,4 +6,8 @@ Url-key: servicios
 
 ----
 
-Summary: 
+Summary: Ofrecemos una amplia variedad de servicios - construcción, renovación, remodelación, reparación y muchos más. Somos confiable, profesional y estamos equipado con un la habilidad de mano de obra necesaria para manejar proyectos de desarrollo.
+
+----
+
+Description: Ofrecemos una amplia variedad de servicios - construcción, renovación, remodelación, reparación y muchos más. Somos confiable, profesional y estamos equipado con un la habilidad de mano de obra necesaria para manejar proyectos de desarrollo.

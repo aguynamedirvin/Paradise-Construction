@@ -6,7 +6,10 @@ title: Projects
 pages:
   template: project
   sort: flip
-  num: zero
+  num:
+    mode: date
+    field: date
+    format: Ymd
 
 files: false
 

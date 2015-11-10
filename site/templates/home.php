@@ -13,7 +13,7 @@
 								<use xlink:href="assets/images/svg-sprite.svg#icon-logo"></use>
 							</svg> -->
 						</div>
-						<p class="summary"><?php echo $site->description() ?></p>
+						<p class="summary"><?php echo $page->introduction()->html() ?></p>
 						<p class="summary"><b><?php echo l::get('call_us') ?>: <?php echo $site->phone() ?></b></p>
 						<a class="btn btn-big btn-line hide-sm" role="button" href="<?php echo page('contact')->url() ?>">
 							<?php echo l::get('contact_us') ?>
@@ -50,110 +50,116 @@
 		</div>
 	</div>
 
+
+
 	<?php snippet('free_estimate') ?>
-		
-		<!-- Our services -->
-		<div id="our-services" class="section">
-			<div class="wrap">
-				<div class="section__meta">
-					<h2 class="title"><?php echo l::get('home_services_title') ?></h2>
-				</div>
-
-				<div class="section__content">
-					
-					<?php snippet('services') ?>
-					
-					<div class="aligncenter">
-						<a href="<?php echo page('services')->url() ?>" class="btn"><?php echo l::get('view_all_services') ?></a>
-					</div>
-				</div>
-			</div>
-		</div>
 
 
-		<!-- Projects Gallery -->
-		<div id="projects-showcase" class="section">
-			
+
+	<!-- Why Us -->
+	<section id="why-us" class="section">
+		<div class="wrap">
 			<div class="section__meta">
-				<h2 class="title"><?php echo l::get('home_projects_title') ?></h2>
+				<h1 class="title"><?php echo l::get('home_why_us_title') ?></h1>
 			</div>
 
 			<div class="section__content">
+				<ul>
+					<li class="service">
+						<!--<div class="icon-container icon-round">
+							<svg class="icon" role="img">
+								<use xlink:href="assets/images/svg-sprite.svg#icon-decade"></use>
+							</svg>
+						</div>-->
+						<h3 class="service__title big"><?php echo $page->service1_title() ?></h3>
+						<p class="service__summary"><?php echo $page->service1_summary() ?></p>
+					</li>
+					<li class="service">
+						<!--<div class="icon-container icon-round">
+							<svg class="icon" role="img">
+								<use xlink:href="assets/images/svg-sprite.svg#icon-layers"></use>
+							</svg>
+						</div>-->
+						<h3 class="service__title big"><?php echo $page->service2_title() ?></h3>
+						<p class="service__summary"><?php echo $page->service2_summary() ?></p>
+					</li>
+					<li class="service last">
+						<!--<div class="icon-container icon-round">
+							<svg class="icon" role="img">
+								<use xlink:href="assets/images/svg-sprite.svg#icon-tools"></use>
+							</svg>
+						</div>-->
+						<h3 class="service__title big"><?php echo $page->service3_title() ?></h3>
+						<p class="service__summary"><?php echo $page->service3_summary() ?></p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	
 
-				<div class="featured-projects">
-					<?php projects(array('shuffle' => true)) ?>
-				</div>
 
+	<!-- Projects Gallery -->
+	<div id="projects-showcase" class="section">
+		
+		<div class="section__meta">
+			<h1 class="title"><?php echo l::get('home_projects_title') ?></h1>
+		</div>
+
+		<div class="section__content">
+
+			<div class="featured-projects">
+				<?php projects(array('shuffle' => true)) ?>
+			</div>
+
+			<div class="aligncenter">
+				<a href="<?php echo page('projects')->url() ?>" class="btn btn-line"><?php echo l::get('view_all_projects') ?></a>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- Our services -->
+	<div id="our-services" class="section">
+		<div class="wrap">
+			<div class="section__meta">
+				<h1 class="title"><?php echo l::get('home_services_title') ?></h1>
+			</div>
+
+			<div class="section__content">
+				
+				<?php snippet('services') ?>
+				
 				<div class="aligncenter">
-					<a href="<?php echo page('projects')->url() ?>" class="btn btn-line"><?php echo l::get('view_all_projects') ?></a>
+					<a href="<?php echo page('services')->url() ?>" class="btn"><?php echo l::get('view_all_services') ?></a>
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<!-- Why Us -->
-		<section id="why-us" class="section">
-			<div class="wrap">
-				<div class="section__meta">
-					<h2 class="title"><?php echo l::get('home_why_us_title') ?></h2>
-					<p class="summary">Having the most beautiful home in your neighborhood is about more than simple aesthetics. It’s about stature and class. Paradise Construction transforms the “every day” into elegance.</p>
-				</div>
 
-				<div class="section__content">
-					<ul>
-						<li class="service">
-							<div class="icon-container icon-round">
-								<svg class="icon" role="img">
-									<use xlink:href="assets/images/svg-sprite.svg#icon-decade"></use>
-								</svg>
-							</div>
-							<h3 class="service__title big"><?php echo $page->service1_title() ?></h3>
-							<p class="service__summary"><?php echo $page->service1_summary() ?></p>
-						</li>
-						<li class="service">
-							<div class="icon-container icon-round">
-								<svg class="icon" role="img">
-									<use xlink:href="assets/images/svg-sprite.svg#icon-layers"></use>
-								</svg>
-							</div>
-							<h3 class="service__title big"><?php echo $page->service2_title() ?></h3>
-							<p class="service__summary"><?php echo $page->service2_summary() ?></p>
-						</li>
-						<li class="service last">
-							<div class="icon-container icon-round">
-								<svg class="icon" role="img">
-									<use xlink:href="assets/images/svg-sprite.svg#icon-tools"></use>
-								</svg>
-							</div>
-							<h3 class="service__title big"><?php echo $page->service3_title() ?></h3>
-							<p class="service__summary"><?php echo $page->service3_summary() ?></p>
-						</li>
-					</ul>
+
+	<!-- Client quotes -->
+	<div id="client-quotes" class="section">
+		<div class="wrap">
+			<div class="section__meta">
+				<h1 class="title "><?php echo l::get('home_quotes_title') ?></h1>
+			</div>
+
+			<div class="section__content">
+				<div class="quote-slider">
+					<?php foreach(page('voices')->children()->limit(5) as $voice): ?>
+						<div class="client-quote">
+							<blockquote class="quote">&#8220;<?php echo $voice->quote() ?>&#8221;</blockquote>
+							<div class="client-name"><?php echo $voice->title() ?></div>
+						</div>
+					<?php endforeach ?>
 				</div>
 			</div>
-		</section>
 
-
-
-		<!-- Client quotes -->
-		<div id="client-quotes" class="section">
-			<div class="wrap">
-				<div class="section__meta">
-					<h2 class="title "><?php echo l::get('home_quotes_title') ?></h2>
-				</div>
-
-				<div class="section__content">
-					<div class="quote-slider">
-						<?php foreach(page('voices')->children()->limit(5) as $voice): ?>
-							<div class="client-quote">
-								<blockquote class="quote">&#8220;<?php echo $voice->quote() ?>&#8221;</blockquote>
-								<div class="client-name"><?php echo $voice->title() ?></div>
-							</div>
-						<?php endforeach ?>
-					</div>
-				</div>
-
-			</div>
 		</div>
+	</div>
 
 
 <?php snippet('footer') ?>

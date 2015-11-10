@@ -2,15 +2,11 @@ Title: Home
 
 ----
 
-Text: 
-
-----
-
 Service1-title: Over A Decade Of Experience
 
 ----
 
-Service1-summary: We have over 10 years of experience satisfying our customers
+Service1-summary: We have over 10 years of experience providing professional building construction and property development services at an affordable price. We have developed a reputation for reliability and superior customer service. We guarantee that you will be satisfied with our service.
 
 ----
 
@@ -18,7 +14,7 @@ Service2-title: All-In-One
 
 ----
 
-Service2-summary: We offer a wide range of services unlike any other company in El Paso
+Service2-summary: We provide a wide range of services ranging from construction, renovation, remodeling, repair and much more. We are reliable, professional, and equipped with the high standards of skill and workmanship necessary to handle developmental projects.
 
 ----
 
@@ -26,4 +22,12 @@ Service3-title: No Upfront Payment
 
 ----
 
-Service3-summary: 
+Service3-summary: We don't ask for upfront payments.
+
+----
+
+Description: Having the most beautiful home in your neighborhood is about more than simple aesthetics. It’s about stature and class. Paradise Construction transforms the “every day” into elegance.
+
+----
+
+Introduction: Having the most beautiful home in your neighborhood is about more than simple aesthetics. It’s about stature and class. Paradise Construction transforms the “every day” into elegance.

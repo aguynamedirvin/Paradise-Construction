@@ -6,4 +6,8 @@ Url-key: proyectos
 
 ----
 
-Text: 
+Summary: 
+
+----
+
+Description: 

@@ -9,10 +9,9 @@ fields:
   title:
     label: Title
     type:  text
-  text:
-    label: Text
-    type:  textarea
-    size:  large
+  introduction:
+    label: Introduction
+    type: textarea
   line-1:
     type: line
   service1_title:

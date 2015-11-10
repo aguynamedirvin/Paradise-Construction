@@ -9,12 +9,10 @@ fields:
   title:
     label: Title
     type:  text
-  author:
-    label: Author
-    type:  text
   description:
-    label: Description
-    type:  textarea
+    label: SEO Introduction Text
+    type: textarea
+    buttons: false
   line-a:
     type: line
   free-estimate:

@@ -28,7 +28,7 @@ fields:
     options: images
   category:
     label: Category
-    type: radio
+    type: checkboxes
     default: remodeling
     options: query
     query:
@@ -37,6 +37,7 @@ fields:
   tags:
     label: Tags
     type:  tags
+    lower: true
   description:
     label: Summary
     type:  textarea

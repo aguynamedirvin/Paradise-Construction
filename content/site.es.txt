@@ -2,23 +2,19 @@ Title: Paradise Construction
 
 ----
 
-Description: Tener la casa mas elegante es algo más que simple estética. Se trata de estatura y de clase. Paradise Construcción transforma el "todos los días" en elegancia.
+Description: Somos una compañía en El Paso, TX proveyendo varios servicios en construcción y renovación. Tenemos una reputación por qualidad, de mano de hobra, y satisfacion al cliente.
 
 ----
 
-Keywords: construcción,remodelación,paisajismo,concreto estampado
+Keywords: construcción,remodelación,paisajismo,concreto estampado,contratista general,renovación,contratista de construccion,renovacion de hogar
 
 ----
 
-Google-plus: https://plus.google.com/b/114828126715128662066/
+Google-plus: http://www.google.com/+Paradiseconstructionepcompany
 
 ----
 
 Facebook: https://www.facebook.com/paradiseconstructionep
-
-----
-
-Author: 
 
 ----
 
@@ -30,7 +26,7 @@ Phone: (915) 599-7149
 
 ----
 
-Email: paradise_construction@hotmail.com
+Email: contact@paradiseconstructionep.com
 
 ----
 
@@ -38,7 +34,7 @@ Address: 11280 Mark Mabon Ct. Socorro, TX 79927
 
 ----
 
-Google-analytics: UA-19072260-22
+Google-analytics: UA-19072260-22_DJS
 
 ----
 
@@ -65,4 +61,4 @@ Postal-code: 79927
 
 ----
 
-Free-estimate-summary: If you call today you’ll get a FREE estimate of your home that compares the now to the wow!
+Free-estimate-summary: Si llama hoy obtendrá una estimación GRATUITA que compara el ahora al wow!

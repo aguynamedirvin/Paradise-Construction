@@ -3,14 +3,14 @@
 username: irvin
 email: irvindominguez1@gmail.com
 password: >
-  $2a$10$Z/WQJ8GfFbVI1TXVYq34n.OqPxeoyLyGW9ZS3D7QRA7f/PXPSVQSy
+  $2a$10$.ffrgDsU58M7JsewSx.nXeyyg8KPZFLyx8R9NfsanO2qsJSJN/m5K
 language: en
 role: admin
 history:
-  - projects/backyard-cooking-station
-  - projects/home-front-yard-flower-beds
-  - projects/backyard-inside-cooking-station
+  - home
+  - contact
+  - projects/home-remodeling-2
+  - projects/acid-stain
   - projects/garden-wall
-  - projects/restroom-remodeling
 firstname: Irvin
 lastname: Dominguez

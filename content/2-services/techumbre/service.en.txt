@@ -2,4 +2,12 @@ Title: Roofing
 
 ----
 
-Text: 
+Text: Roofing is what protects one of your largest investment, your home. Whether in need of simple roofing repairs or a full replacement, leave it to us to complete the daunting task. You will be at ease knowing that our craftsmen will be using the best materials.
+
+----
+
+Featured: false
+
+----
+
+Icon: ladder

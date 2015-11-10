@@ -2,7 +2,7 @@
 %clearfix
 	@include clearfix
 
-.wrap, .main
+.wrap, .main, .content
 	max-width: 95%
 	margin: 0 auto
 	@extend %clearfix
@@ -10,6 +10,13 @@
 	@media (min-width: $break-big)
 		@include container
 
+.main
+	padding: 120px 0
+	
+.content, .article
+	font-size: 1.8rem
+	line-height: 1.7
+	max-width: 700px
 
 .alignright
 	float: right
@@ -27,9 +34,6 @@
 
 .hidden
 	display: none
-
-//.last
-//	@include last
 
 
 // Hide for screens smaller than 'medium'
