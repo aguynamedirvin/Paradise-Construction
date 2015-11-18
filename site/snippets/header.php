@@ -4,21 +4,24 @@
 		
 		<!-- Force IE to use the latest rendering engine -->
 		<meta http-equiv="x-ua-compatible" content="IE=edge">
+		
 		<meta charset="utf-8">
 
 		<?php if($page->isHomePage()): ?>
-		<title><?php echo $site->title()->html() ?></title>
+		<title><?php echo $site->title()->html() ?> &#8212; Construction, Landscaping in El Paso TX</title>
 		<?php elseif(param('category')): ?>
-		<title>Projects under <?php echo html(urldecode(param('category'))) ?> | <?php echo $site->title()->html() ?></title>
+		<title>Projects under <?php echo html(urldecode(param('category'))) ?> &#8212; <?php echo $site->title()->html() ?></title>
 		<?php else: ?>
-		<title><?php echo $page->title()->html() ?> | <?php echo $site->title()->html() ?></title>
+		<title><?php echo $page->title()->html() ?> &#8212; <?php echo $site->title()->html() ?></title>
 		<?php endif ?>
 
-		
-		<?php if($page->description()->isNotEmpty()): ?>
+
+		<?php if($page->isHomePage()): ?>
+		<meta name="description" content="<?php echo $site->description()->html(); ?>" />
+		<?php elseif($page->description()->isNotEmpty()): ?>
 		<meta name="description" content="<?php echo $page->description()->html(); ?>" />
 		<?php else: ?>
-		<meta name="description" content="<?php echo $site->description()->html(); ?>" />
+		<meta name="description" content="<?php echo $page->summary()->html(); ?>" />
 		<?php endif ?>
 
 		<meta name="keywords" content="<?php echo $site->keywords()->html(); ?>" />
@@ -58,22 +61,25 @@
 		{
 			"@context" : "http://schema.org",
 			"@type" : "LocalBusiness",
-			<?php if ($page->isHomePage()): ?>
 			"name" : "<?php echo $site->title()->html() ?>",
-			<?php else: ?>
-			"name" : "<?php echo $page->title()->html() ?> | <?php echo $site->title()->html() ?>",
-			<?php endif ?>
 			"logo" : "<?php echo $site->url() . '/assets/images/small_logo.png' ?>",
-			"telephone" : "<?php echo $site->phone() ?>",
+			"telephone" : "+1 <?php echo $site->phone() ?>",
 			"email" : "<?php echo $site->email() ?>",
 			"url" : "<?php echo $site->url() ?>",
 			"address" : {
 				"@type" : "PostalAddress",
-				"streetAddress" : "<?php echo $site->address() ?>",
 				"addressLocality" : "<?php echo $site->city() ?>",
 				"addressRegion" : "<?php echo $site->state() ?>",
 				"addressCountry" : "US",
 				"postalCode" : "<?php echo $site->postal_code() ?>"
+			},
+			"contactPoint" : {
+				"@type" : "ContactPoint",
+				"telephone" : "+1 <?php echo $site->phone() ?>",
+				"contactType" : "customer service",
+				"contactOption" : "TollFree",
+				"areaServed" : "US",
+				"availableLanguage": ["English", "Spanish"]
 			},
 			"sameAs" : [
 				"<?php echo $site->facebook() ?>",

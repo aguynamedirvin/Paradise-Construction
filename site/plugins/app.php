@@ -6,7 +6,7 @@
  * 
  * @param 	string
  */
-function encode($string){
+function encode($string) {
 	             
 	$length = strlen($string);    
 	$obfuscatedString = ''; 

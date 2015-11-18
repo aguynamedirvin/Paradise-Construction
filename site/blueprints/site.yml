@@ -1,0 +1,93 @@
+title: Site
+
+pages: default
+
+fields:
+  title:
+    label: Title
+    type:  text
+  description:
+    label: SEO Introduction Text
+    type: textarea
+    buttons: false
+<<<<<<< HEAD:site/blueprints/site.yml
+  line_a:
+=======
+  line-a:
+>>>>>>> origin/master:site/blueprints/site.php
+    type: line
+  free_estimate:
+    label: Free Estimate Headline
+    type: text
+  free_estimate_summary:
+    label: Free Estimate Summary
+    type: text
+  line_b:
+    type: line
+  phone:
+    label: Phone Number
+    type: tel
+    width: 1/2
+  email:
+    label: Email
+    type: email
+    width: 1/2
+  address:
+    label: Street
+    type: text
+    icon: map-marker
+    width: 1/2
+  city:
+    label: City
+    type: text
+    icon: map-marker
+    width: 1/2
+  state:
+    label: State
+    type: text
+    icon: map-marker
+    width: 1/2
+  postal_code:
+    label: Zip Code
+    type: number
+    icon: map-marker
+    width: 1/2
+  line_c:
+    type: line
+  work_hours:
+    label: Working Hours
+    type: structure
+    style: table
+    fields:
+      day:
+        label: Day
+        type: text
+      open_hours:
+        label: Opening Time  
+        type: time
+      closing_hours:
+        label: Closing Time
+        type: time
+  line_d:
+    type: line
+  facebook:
+    label: Facebook
+    type: text
+    icon: facebook
+    width: 1/2
+  google_plus:
+    label: Google Plus
+    type: text
+    icon: google-plus
+    width: 1/2
+  line_e:
+    type: line
+  keywords:
+    label: Keywords
+    type:  tags
+  copyright:
+    label: Copyright
+    type:  textarea
+  google_analytics:
+    label: Google Analytics ID
+    type: text

@@ -1,0 +1,50 @@
+title: Slides
+
+pages: false
+deletable: false
+files:
+  type: image
+  sortable: true
+
+fields:
+  title:
+    label: Title
+    type:  text
+  slides:
+    label: Slides
+    type: structure
+    entry: >
+      <h1>{{title}}</h1><br />
+      {{description}}
+    fields:
+      title:
+        label: Title
+        type: text
+      display_title:
+        label: Display Title
+        type: toggle
+        text: yes/no
+      background:
+        label: Futured Slide Image
+        type: select
+        options: images
+        required: true
+      description:
+        label: Description
+        type: textarea
+      button_text:
+        label: Button Text
+        type: text
+        width: 1/2
+      button_style:
+        label: Button Style
+        type: select
+        width: 1/2
+        default: btn-green
+        options:
+          btn-green: Solid Green
+          btn-dark: Solid Black
+          btn-line: Line
+      button_link:
+        label: Button Link
+        type: text

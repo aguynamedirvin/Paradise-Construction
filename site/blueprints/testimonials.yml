@@ -1,0 +1,21 @@
+title: Testimonials
+
+pages: false
+files: false
+deletable: false
+
+fields:
+  title:
+    label: Title
+    type:  text
+  testimonials:
+    label: Testimonials
+    type: structure
+    style: table
+    fields:
+      client:
+        label: Client Name
+        type: text
+      quote:
+        label: Quote
+        type: textarea

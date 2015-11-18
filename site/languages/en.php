@@ -6,10 +6,10 @@
 	l::set('working_hours', 'Working Hours');
 	l::set('click_to_call', 'Click to Call');
 	l::set('get_a_quote', 'Get Quote');
-	l::set('call_us', 'Call us today');
+	l::set('call_us', 'Call us');
 
 	// Homepage Titles
-	l::set('home_why_us_title', 'Why we\'re awesome');
+	l::set('home_why_us_title', 'Why choose us?');
 	l::set('home_projects_title', 'Don’t Just Take Our Word For It');
 	l::set('home_services_title', 'Here\'s what we do');
 	l::set('home_quotes_title', 'What our clients are saying');

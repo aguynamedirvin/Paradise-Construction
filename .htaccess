@@ -16,27 +16,14 @@ RewriteEngine on
 #
 # RewriteBase /mysite
 
-# Specify the default language
-DefaultLanguage en
-
-# Canonical URLs
-# Remove www
-<IfModule mod_rewrite.c>
-   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-   RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
-</IfModule>
-
-# Sitemap
-RewriteRule ^sitemap\.xml http://paradiseconstructionep.com/sitemap [QSA,L]
-
 # block text files in the content folder from being accessed directly
-RewriteRule ^content/(.*)\.(txt|md|mdown)$ error [R=301,L]
+RewriteRule ^content/(.*)\.(txt|md|mdown)$ index.php [L]
 
 # block all files in the site folder from being accessed directly
-RewriteRule ^site/(.*) error [R=301,L]
+RewriteRule ^site/(.*) index.php [L]
 
 # block all files in the kirby folder from being accessed directly
-RewriteRule ^kirby/(.*) error [R=301,L]
+RewriteRule ^kirby/(.*) index.php [L]
 
 # make panel links work
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -57,6 +44,18 @@ RewriteRule ^(.*) index.php [L]
 #
 # php_flag short_open_tag on
 
+
+
+
+# Canonical URLs
+# Remove www
+<IfModule mod_rewrite.c>
+   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+   RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+</IfModule>
+
+# Sitemap
+RewriteRule ^sitemap\.xml http://paradiseconstructionep.com/sitemap [QSA,L]
 
 <IfModule mod_deflate.c>
 AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript

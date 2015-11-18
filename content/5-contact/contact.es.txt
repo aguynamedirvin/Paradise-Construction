@@ -6,8 +6,8 @@ Url-key: contactar
 
 ----
 
-Text: 
+Summary: Estamos encantados de responder cualquier pregunta que tenga o proporcionarle una estimación. Sólo tienes que enviar un mensaje usando el siguiente formulario con cualquier pregunta que pueda tener.
 
 ----
 
-Summary: Estamos encantados de responder cualquier pregunta que tenga o proporcionarle una estimación. Sólo tienes que enviar un mensaje usando el siguiente formulario con cualquier pregunta que pueda tener.
+Description: Contáctenos, estamos encantados de responder cualquier pregunta que tenga

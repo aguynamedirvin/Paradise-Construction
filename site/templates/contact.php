@@ -68,7 +68,27 @@
 					<i class="contact-info__icon fa fa-clock-o"></i>
 					<div class="contact-info__details">
 						<h3><?php echo l::get('working_hours') ?></h3>
-						<p><?php echo $site->working_hours()->kirbytext() ?><p>
+						<p>
+						<?php 
+							
+							foreach($site->work_hours()->toStructure() as $time) {
+
+								// Create times
+								$opening_hours = date_create($time->open_hours());
+								$closing_hours = date_create($time->closing_hours());
+
+								// Format times
+								$opening_hours = date_format($opening_hours, 'g:i A');
+								$closing_hours = date_format($closing_hours, 'g:i A');
+
+								// Display times
+								echo $time->day() . ': ' . $opening_hours . ' &#8212; ' . $closing_hours . '<br/>';
+
+							}
+
+						?>
+						<p>
+
 					</div>
 				</div>
 			</div>

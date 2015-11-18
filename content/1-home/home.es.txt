@@ -1,44 +1,48 @@
 Title: Principal
-----
-
-
-decade_experience_title: Más de una década de experiencia
-----
-decade_experience_summary: Tenemos mas de 10 años de experienca
-
-
-----
-all_in_one_title: Todo En Uno
-----
-all_in_one_summary: Ofrecemos mas servicios que cualquier otra compañía en El Paso
-
-
-
-----
-top_notch_materials_title: Materiales de primera categoría
-----
-top_notch_materials_summary: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 
 ----
 
-why_us_title: Cientos de clientes satisfechos
+Service1-title: Más de una década de experiencia
 
 ----
 
-projects_title: Vea por si mismo
+Service1-summary: Tenemos más de 10 años de experiencia ofreciendo servicios de construcción a un precio accesible. Hemos desarrollado una reputación de fiabilidad y servicio al cliente superior.
 
 ----
 
-view_projects_btn: Ver todos nuestros proyectos
+Service2-title: Todo en uno
 
 ----
 
-services_title: Nuestros servicios
+Service2-summary: Ofrecemos una amplia variedad de servicios - construcción, renovación, remodelación, reparación y muchos más. Somos confiable, profesional y estamos equipos con estándares mas altos y con la habilidad de mano de obra necesaria para manejar proyectos.
 
 ----
 
-services_btn: Ver todos nuestros servicios
+Service3-title: Sin pago por adelantado
 
 ----
 
-client_quote_title: Lo que dicen nuestros clientes
+Service3-summary: We don't ask for upfront payments.
+
+----
+
+Description: Having the most beautiful home in your neighborhood is about more than simple aesthetics. It’s about stature and class. Paradise Construction transforms the “every day” into elegance.
+
+----
+
+Why-us: 
+
+- 
+  title: Más de una década de experiencia
+  description: >
+    Tenemos más de 10 años de experiencia
+    ofreciendo servicios de construcción a
+    un precio accesible. Hemos desarrollado
+    una reputación de fiabilidad y servicio
+    al cliente superior.
+- 
+  title: Todo en uno
+  description: 'Ofrecemos una amplia variedad de servicios - construcción, renovación, remodelación, reparación y muchos más. Somos confiable, profesional y estamos equipos con estándares mas altos y con la habilidad de mano de obra necesaria para manejar proyectos.'
+- 
+  title: Sin pago por adelantado
+  description: "We don't ask for upfront payments."

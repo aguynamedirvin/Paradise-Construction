@@ -1,0 +1,24 @@
+title: Home
+
+pages: false
+
+fields:
+  title:
+    label: Title
+    type:  text
+  description:
+    label: Description
+    type:  textarea
+  line-1:
+    type: line
+  why_us:
+    label: Why Us
+    type: structure
+    style: table
+    fields:
+      title:
+        label: Title
+        type: text
+      description:
+        label: Description  
+        type: textarea

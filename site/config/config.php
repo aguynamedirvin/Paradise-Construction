@@ -32,13 +32,13 @@ of the system, please check out http://getkirby.com/docs/advanced/options
 */
 
 // Enable caching
-//c::set('cache', true);
+c::set('cache', true);
 
 // Disable caching for sitemap
 c::set('cache.ignore', array('sitemap'));
 
 // Enable debbuging
-c::set('debug', true);
+//c::set('debug', true);
 
 // Set up the languages
 c::set('languages', array(
