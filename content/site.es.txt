@@ -34,7 +34,7 @@ Address: 11280 Mark Mabon Ct. Socorro, TX 79927
 
 ----
 
-Google-analytics: UA-19072260-22
+Google-analytics: UA-19072260-22_DJS
 
 ----
 
@@ -54,6 +54,7 @@ Postal-code: 79927
 
 ----
 
+<<<<<<< HEAD
 Free-estimate-summary: Si llama hoy obtendrá una estimación GRATUITA que compara el ahora al wow!
 
 ----
@@ -68,3 +69,6 @@ Work-hours:
   day: Saturday
   open_hours: 12:00
   closing_hours: 18:00
+=======
+Free-estimate-summary: Si llama hoy obtendrá una estimación GRATUITA que compara el ahora al wow!
+>>>>>>> origin/master

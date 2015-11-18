@@ -10,11 +10,7 @@ fields:
     label: SEO Introduction Text
     type: textarea
     buttons: false
-<<<<<<< HEAD:site/blueprints/site.yml
   line_a:
-=======
-  line-a:
->>>>>>> origin/master:site/blueprints/site.php
     type: line
   free_estimate:
     label: Free Estimate Headline

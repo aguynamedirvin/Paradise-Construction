@@ -13,10 +13,6 @@
 							<img src="<?php echo $site->url() . '/assets/images/logo.png' ?>" alt="<?php echo $site->title() ?> Logo">
 						</div>
 						<p class="summary"><?php echo $page->introduction()->html() ?></p>
-<<<<<<< HEAD
-=======
-						<p class="summary"><b><?php echo l::get('call_us') ?>: <?php echo $site->phone() ?></b></p>
->>>>>>> origin/master
 						<a class="btn btn-big btn-line hide-sm" role="button" href="<?php echo page('contact')->url() ?>">
 							<?php echo l::get('contact_us') ?>
 						</a>
@@ -67,42 +63,12 @@
 
 			<div class="section__content">
 				<ul>
-<<<<<<< HEAD
 					<?php foreach($page->why_us()->toStructure() as $service): ?>
 					<li class="service">
 						<h3 class="service__title big"><?php echo $service->title() ?></h3>
 						<p class="service__summary"><?php echo $service->description() ?></p>
 					</li>
 					<?php endforeach ?>
-=======
-					<li class="service">
-						<!--<div class="icon-container icon-round">
-							<svg class="icon" role="img">
-								<use xlink:href="assets/images/svg-sprite.svg#icon-decade"></use>
-							</svg>
-						</div>-->
-						<h3 class="service__title big"><?php echo $page->service1_title() ?></h3>
-						<p class="service__summary"><?php echo $page->service1_summary() ?></p>
-					</li>
-					<li class="service">
-						<!--<div class="icon-container icon-round">
-							<svg class="icon" role="img">
-								<use xlink:href="assets/images/svg-sprite.svg#icon-layers"></use>
-							</svg>
-						</div>-->
-						<h3 class="service__title big"><?php echo $page->service2_title() ?></h3>
-						<p class="service__summary"><?php echo $page->service2_summary() ?></p>
-					</li>
-					<li class="service last">
-						<!--<div class="icon-container icon-round">
-							<svg class="icon" role="img">
-								<use xlink:href="assets/images/svg-sprite.svg#icon-tools"></use>
-							</svg>
-						</div>-->
-						<h3 class="service__title big"><?php echo $page->service3_title() ?></h3>
-						<p class="service__summary"><?php echo $page->service3_summary() ?></p>
-					</li>
->>>>>>> origin/master
 				</ul>
 			</div>
 		</div>
@@ -127,10 +93,7 @@
 				<a href="<?php echo page('projects')->url() ?>" class="btn btn-line"><?php echo l::get('view_all_projects') ?></a>
 			</div>
 		</div>
-<<<<<<< HEAD
 		
-=======
->>>>>>> origin/master
 	</div>
 
 
@@ -147,11 +110,7 @@
 				<?php snippet('services') ?>
 				
 				<div class="aligncenter">
-<<<<<<< HEAD
 					<a class="btn" href="<?php echo page('services')->url() ?>"><?php echo l::get('view_all_services') ?></a>
-=======
-					<a href="<?php echo page('services')->url() ?>" class="btn"><?php echo l::get('view_all_services') ?></a>
->>>>>>> origin/master
 				</div>
 			</div>
 		</div>
@@ -168,19 +127,11 @@
 
 			<div class="section__content">
 				<div class="quote-slider">
-<<<<<<< HEAD
 					<?php foreach(page('testimonials')->testimonials()->toStructure() as $client): ?>
 					<div class="client-quote">
 						<blockquote class="quote">&#8220;<?php echo $client->quote() ?>&#8221;</blockquote>
 						<div class="client-name"><?php echo $client->client() ?></div>
 					</div>
-=======
-					<?php foreach(page('voices')->children()->limit(5) as $voice): ?>
-						<div class="client-quote">
-							<blockquote class="quote">&#8220;<?php echo $voice->quote() ?>&#8221;</blockquote>
-							<div class="client-name"><?php echo $voice->title() ?></div>
-						</div>
->>>>>>> origin/master
 					<?php endforeach ?>
 				</div>
 			</div>

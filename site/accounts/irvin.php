@@ -7,18 +7,10 @@ password: >
 language: en
 role: admin
 history:
-<<<<<<< HEAD
   - slides
   - testimonials
   - home
   - contact
   - projects/home-remodeling-2
-=======
-  - home
-  - contact
-  - projects/home-remodeling-2
-  - projects/acid-stain
-  - projects/garden-wall
->>>>>>> origin/master
 firstname: Irvin
 lastname: Dominguez

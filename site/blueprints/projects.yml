@@ -7,7 +7,6 @@ pages:
     mode: date
     field: date
     format: Ymd
-    
 files: false
 deletable: false
 

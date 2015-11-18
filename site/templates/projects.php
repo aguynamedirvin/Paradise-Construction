@@ -6,6 +6,14 @@
 
 snippet('header');
 
+$thumbSettings = array(
+	'height' 	=> 280,
+	'width' 	=> 400,  
+	'quality'	=> 75,
+	'crop' 		=> true,
+	'upscale' 	=> true,
+);
+
 ?>
 
 	<main class="main" id="projects" role="main">
@@ -30,7 +38,35 @@ snippet('header');
 
 
 		<div class="projects">
-			<?php echo $projects; ?>
+
+			<?php 
+				$count = 0;
+				foreach ($projects as $project): 
+					if ($project->hasImages()):
+						$count++;
+
+			?>
+
+				<div class="project__thumb<?php ecco($count % 3 == 0, ' last') ?>">
+					<a href="<?php echo $project->url() ?>" title="<?php echo $project->title()->html() ?>">
+						<?php 
+
+							if ($project->image( $project->featured() )) {
+								$image = $project->image( $project->featured() );
+							} else {
+								$image = $project->image();
+							}
+
+						?>
+						<img src="<?php echo thumb($image, $thumbSettings)->url() ?>" alt="<?php echo $project->title()->html() ?>">
+						<button class="btn btn-line aligncenter"><?php echo l::get('view_project_btn') ?></button>
+					</a>
+				</div>
+
+			<?php endif; endforeach ?>
+
+		</div>
+
 		</div>
 
 
