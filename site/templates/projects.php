@@ -4,17 +4,7 @@
  * This page has a controller: controllers/projects.php
  */
 
-snippet('header');
-
-$thumbSettings = array(
-	'height' 	=> 280,
-	'width' 	=> 400,  
-	'quality'	=> 75,
-	'crop' 		=> true,
-	'upscale' 	=> true,
-);
-
-?>
+snippet('header') ?>
 
 	<main class="main" id="projects" role="main">
 		
@@ -58,7 +48,7 @@ $thumbSettings = array(
 							}
 
 						?>
-						<img src="<?php echo thumb($image, $thumbSettings)->url() ?>" alt="<?php echo $project->title()->html() ?>">
+						<img src="<?php echo $image->crop(400, 280, 75)->url() ?>" alt="<?php echo $project->title()->html() ?>">
 						<button class="btn btn-line aligncenter"><?php echo l::get('view_project_btn') ?></button>
 					</a>
 				</div>

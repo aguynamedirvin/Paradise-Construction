@@ -1,10 +1,4 @@
-<?php 
-
-snippet('header');
-
-$smallThumb = array('height' => 175, 'width' => 250, 'quality' => 75, 'crop' => true);
-
-?>
+<?php snippet('header') ?>
 
 	<main class="main" role="main">
 
@@ -23,7 +17,7 @@ $smallThumb = array('height' => 175, 'width' => 250, 'quality' => 75, 'crop' => 
 				<div class="project__slider-nav hide-sm">
 					<?php foreach($page->images() as $image): ?>
 					<div class="project__slider-thumb">
-						<img src="<?php echo thumb($image, $smallThumb)->url() ?>">
+						<img src="<?php echo $image->crop(250, 175)->url() ?>">
 					</div>
 					<?php endforeach ?>
 				</div>

@@ -74,18 +74,6 @@ function projects($options = array()) {
 
 
 	/**
-	 * Thumbnail Options
-	 */
-	$thumbSettings = array(
-		'height' 	=> 280,
-		'width' 	=> 400,  
-		'quality'	=> 75,
-		'crop' 		=> true,
-		'upscale' 	=> true,
-	);
-
-
-	/**
 	 * Get projects from the Projects page, either visible only or all
 	 */
 	$projects = page('projects')->children()->sortBy('date', 'desc')->limit($options['limit']);
@@ -124,7 +112,7 @@ function projects($options = array()) {
 						}
 
 					?>
-					<img src="<?php echo thumb($image, $thumbSettings)->url() ?>" alt="<?php echo $project->title()->html() ?>">
+					<img src="<?php echo $image->crop(400, 280, 75)->url() ?>" alt="<?php echo $project->title()->html() ?>">
 					<button class="btn btn-line aligncenter"><?php echo l::get('view_project_btn') ?></button>
 				</a>
 			</div>

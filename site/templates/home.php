@@ -24,7 +24,7 @@
 			</div>
 
 			<?php foreach(page('slides')->slides()->toStructure() as $slide): ?>
-			<div class="slide" style="background-image: url(<?php page('slides')->image($slide->background())->resize(1440, 650, 80)->url() ?>);">
+			<div class="slide" style="background-image: url(<?php page('slides')->image($slide->background())->crop(1440, 650, 80)->url() ?>);">
 				<div class="slide-content wrap">
 					<div class="slide-meta">
 						<?php if ($slide->display_title()->isTrue()): ?>
@@ -77,7 +77,7 @@
 
 
 	<!-- Projects Gallery -->
-	<div id="projects-showcase" class="section">
+	<section id="projects-showcase" class="section">
 		
 		<div class="section__meta">
 			<h1 class="title"><?php echo l::get('home_projects_title') ?></h1>
@@ -94,12 +94,12 @@
 			</div>
 		</div>
 		
-	</div>
+	</section>
 
 
 
 	<!-- Our services -->
-	<div id="our-services" class="section">
+	<section id="our-services" class="section">
 		<div class="wrap">
 			<div class="section__meta">
 				<h1 class="title"><?php echo l::get('home_services_title') ?></h1>
@@ -114,12 +114,12 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 
 
 
 	<!-- Client quotes -->
-	<div id="client-quotes" class="section">
+	<section id="client-quotes" class="section">
 		<div class="wrap">
 			<div class="section__meta">
 				<h1 class="title "><?php echo l::get('home_quotes_title') ?></h1>
@@ -137,7 +137,7 @@
 			</div>
 
 		</div>
-	</div>
+	</section>
 
 
 <?php snippet('footer') ?>
