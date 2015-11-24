@@ -10,7 +10,7 @@
 				<div class="slide-content wrap">
 					<div class="slide-meta">
 						<div class="big-logo">
-							<img src="<?php echo $site->url() . '/assets/images/logo.png' ?>" alt="<?php echo $site->title() ?> Logo">
+							<img src="<?php echo $site->url() . '/assets/images/logo.png' ?>" alt="<?php echo $site->title()->html() ?> Logo">
 						</div>
 						<p class="summary"><?php echo $page->introduction()->html() ?></p>
 						<a class="btn btn-big btn-line hide-sm" role="button" href="<?php echo page('contact')->url() ?>">
@@ -24,11 +24,11 @@
 			</div>
 
 			<?php foreach(page('slides')->slides()->toStructure() as $slide): ?>
-			<div class="slide" style="background-image: url(<?php page('slides')->image($slide->background())->crop(1440, 650, 80)->url() ?>);">
+			<div class="slide" style="background-image: url(<?php echo page('slides')->image($slide->background())->crop(1440, 650, 80)->url() ?>);">
 				<div class="slide-content wrap">
 					<div class="slide-meta">
 						<?php if ($slide->display_title()->isTrue()): ?>
-						<h2 class="title"><?php echo $slide->title() ?></h2>
+						<h2 class="title"><?php echo $slide->title()->html() ?></h2>
 						<?php endif ?>
 
 						<?php if ($slide->text()->isNotEmpty()): ?>
@@ -65,7 +65,7 @@
 				<ul>
 					<?php foreach($page->why_us()->toStructure() as $service): ?>
 					<li class="service">
-						<h3 class="service__title big"><?php echo $service->title() ?></h3>
+						<h3 class="service__title big"><?php echo $service->title()->html() ?></h3>
 						<p class="service__summary"><?php echo $service->description() ?></p>
 					</li>
 					<?php endforeach ?>

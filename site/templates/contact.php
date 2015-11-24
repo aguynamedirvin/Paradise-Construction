@@ -11,7 +11,7 @@
 
 	<?php else: ?>
 		
-		<h1 class="title"><?php e(param('status') == 'free-estimate', 'Get A Free Estimate', $page->title()) ?></h1>
+		<h1 class="title"><?php e(param('status') == 'free-estimate', 'Get A Free Estimate', $page->title()->html()) ?></h1>
 		
 		<?php if ($page->summary()->isNotEmpty()): ?>
 		<p class="summary"><?php echo $page->summary()->html() ?></p>

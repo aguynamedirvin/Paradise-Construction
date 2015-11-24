@@ -7,10 +7,10 @@ password: >
 language: en
 role: admin
 history:
-  - services/techumbre
-  - services/stamped-concrete
-  - services/synthetic-grass
-  - services/texture-complete-paint
+  - services/yard-maintenance
+  - services/cascadas
+  - services/walkways
   - services/trees-bushes-maintenance
+  - services/texture-complete-paint
 firstname: Irvin
 lastname: Dominguez
