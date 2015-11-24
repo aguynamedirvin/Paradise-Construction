@@ -12,7 +12,6 @@ module.exports = function(grunt) {
 
 			uglify: {
 				files: ['src/js/*.js'],
-				task: ['uglify']
 			}
 		},
 
@@ -79,6 +78,15 @@ module.exports = function(grunt) {
 			},
 		},
 
+		// Combine Media Queries
+		cmq: {
+			build: {
+				files: {
+					'assets/css/main.css': ['assets/css/*.css']
+				}
+			}
+		},
+
 
 		postcss: {
 			options: {
@@ -95,16 +103,11 @@ module.exports = function(grunt) {
 
 		cssmin: {
 		// the combine task
-			combine: {
+			minify: {
 				files: {
-					'assets/css/main.css': ['src/css/normalize.css', 'assets/css/main.css']
+					'assets/css/main.css': ['src/css/main.css']
 				}
 			},
-			/*minify: {
-				files: {
-					'cleaned/css/app-cleaned.min.css': ['cleaned/css/app-cleaned.css']
-				}
-			}*/
 		},
 		
 	});
@@ -118,17 +121,18 @@ grunt.loadNpmTasks('grunt-sass');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-svgstore');
+grunt.loadNpmTasks('grunt-combine-media-queries');
 grunt.loadNpmTasks('grunt-postcss');
 grunt.loadNpmTasks('grunt-contrib-cssmin');
 
 
-// Build Our SASS
+// Quick Compilation - Build Our SASS
 grunt.registerTask('build', ['sass']);
 
-// Watch Our SASS Files
+// Developement - Watch & Build Our SASS Files
 grunt.registerTask('default', ['build', 'watch']);
 
-// Ready For Production
-grunt.registerTask('production', ['build', 'uglify', 'svgstore', 'cssmin', 'postcss']);
+// Production - Build the files for production use
+grunt.registerTask('production', ['build', 'uglify', 'svgstore', 'cmq', 'postcss'/*, 'cssmin'*/]);
 
 };
