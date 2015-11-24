@@ -3,3 +3,15 @@ Title: Brick Islands & Flower Beds
 ----
 
 Text: 
+
+----
+
+Featured: false
+
+----
+
+Icon: 
+
+----
+
+Autoid: 1

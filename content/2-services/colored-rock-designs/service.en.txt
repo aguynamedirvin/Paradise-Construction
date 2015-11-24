@@ -3,3 +3,15 @@ Title: Colored Rock Designs
 ----
 
 Text: 
+
+----
+
+Featured: false
+
+----
+
+Icon: 
+
+----
+
+Autoid: 4

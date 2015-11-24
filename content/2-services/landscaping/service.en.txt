@@ -11,3 +11,7 @@ Featured: true
 ----
 
 Icon: shovel
+
+----
+
+Autoid: 9

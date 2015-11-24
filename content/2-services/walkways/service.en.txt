@@ -3,3 +3,15 @@ Title: Walkways
 ----
 
 Text: 
+
+----
+
+Featured: false
+
+----
+
+Icon: 
+
+----
+
+Autoid: 17

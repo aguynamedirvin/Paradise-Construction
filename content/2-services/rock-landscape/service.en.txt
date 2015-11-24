@@ -3,3 +3,15 @@ Title: Rock Landscape
 ----
 
 Text: 
+
+----
+
+Featured: false
+
+----
+
+Icon: 
+
+----
+
+Autoid: 10

@@ -11,3 +11,7 @@ Featured: true
 ----
 
 Icon: home
+
+----
+
+Autoid: 2

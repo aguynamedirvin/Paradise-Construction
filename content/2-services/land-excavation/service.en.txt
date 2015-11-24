@@ -3,3 +3,15 @@ Title: Land Excavation
 ----
 
 Text: 
+
+----
+
+Featured: false
+
+----
+
+Icon: 
+
+----
+
+Autoid: 8

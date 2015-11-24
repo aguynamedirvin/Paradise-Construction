@@ -3,3 +3,15 @@ Title: Cultured Stone \ Stone Veneer
 ----
 
 Text: 
+
+----
+
+Featured: false
+
+----
+
+Icon: 
+
+----
+
+Autoid: 6
