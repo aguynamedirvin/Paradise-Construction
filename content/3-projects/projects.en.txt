@@ -6,4 +6,12 @@ Summary: Latest construction, remodeling, and landscaping projects.
 
 ----
 
-Description: All the latest construction, remodeling, and landscaping projects.
+Description: 
+
+----
+
+Seo-summary: All the latest construction, remodeling, and landscaping projects.
+
+----
+
+Text: Latest construction, remodeling, and landscaping projects.

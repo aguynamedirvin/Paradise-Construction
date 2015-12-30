@@ -54,42 +54,29 @@
 		color: $light-black
 
 
-/** Projects **/
-.projects, .other-projects
+/** Projects Gallery Page **/
+.projects-gallery
+	line-height: 0
 	@include container
-
-.projects .project__thumb
+	@include column-count(1)
+	@include column-gap(0)
 
 	@media screen and (min-width: $break-small)
-		@include span(1 of 2 0)
-	
+		@include column-count(2)
+		@include column-gap(1.5rem)
+
 	@media screen and (min-width: $break-medium)
-		margin-bottom: 2.85%
-		//margin-bottom: gutter(.5)
-		@include span(4 of 12 0.5)
+		@include column-count(3)
+		@include column-gap(1.5rem)
 
-	&.last
-		@include last
+	@media screen and (min-width: $break-big)
+		@include column-count(4)
+		@include column-gap(1.5rem)
 
-
-/** Project Page **/
-.project-container
-	margin-bottom: 100px
-	@extend %clearfix
-
-	.project-info
-		background: $light-grey
-		border: 1px solid $grey
-		margin-bottom: 30px
-		padding: 20px 30px
-
-		ul
-			list-style: none
-			margin: 0
-			padding: 0
-
-			li
-				margin-bottom: 10px
+	img
+		margin-bottom: 1.5rem
+		width: 100% !important
+		height: auto !important
 
 
 /** Project Slider **/
@@ -115,29 +102,6 @@
 
 		img
 			width: 100%
-
-
-/** Project Page **/
-.project
-	&__gallery
-		margin-bottom: 7rem
-
-	&__gallery-thumbs
-		@include container
-
-		> a
-			@include gallery(2 of 12)
-
-			img
-				width: 100% 
-				height: auto
-
-	&__gallery-thumb
-		@include gallery(2 of 12)
-
-		img
-			width: 100% 
-  			height: auto
 
 
 /** Contact Page **/

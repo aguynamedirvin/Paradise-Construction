@@ -1,3 +1,5 @@
+		</main>
+
 		<!-- Footer -->
 		<footer id="footer" role="footer">
 			<div class="footer__widgets">
@@ -7,7 +9,7 @@
 						<ul>
 							<li><i class="fa fa-phone"></i> <b><?php echo l::get('phone') ?>:</b> <a href="tel:<?php echo $site->phone() ?>"><?php echo $site->phone() ?></a></li>
 							<li><i class="fa fa-envelope"></i> <b><?php echo l::get('email') ?>:</b> <a href="mailto:<?php echo encode("" . $site->email() . "") ?>"><?php echo encode("" . $site->email() . "") ?></a></li>
-							<!--<li><i class="fa fa-map-marker"></i> <b><?php echo l::get('address') ?>:</b> <?php echo $site->address() . ', ' . $site->city() . ', ' . $site->state() . ' ' . $site->postal_code() ?></li>-->
+							<li><i class="fa fa-map-marker"></i> <b><?php echo l::get('address') ?>:</b> <?php echo $site->address() . ', ' . $site->city() . ', ' . $site->state() . ' ' . $site->postal_code() ?></li>
 						</ul>
 					</div>
 
@@ -81,22 +83,18 @@
 				{
 					load: [
 						'<?php echo $site->url() ?>/assets/js/main.min.js',
+						<?php ecco($page->isHomePage(), "'" . $site->url() . "/assets/js/slickslider.min.js'") ?>
 					],
 					callback: function() {
-						//jQuery('a').fluidbox();
+						jQuery('img').unveil();
 					}
-
 				},
 				// For mobile devices
 				{
 					test: Modernizr.mq('only all and (max-width: 868px)'),
-					yep: {
-						'mobile': '<?php echo $site->url() ?>/assets/js/mobile.min.js',
-					},
-					callback: {
-						'mobile': function() {
-							FastClick.attach(document.body); 
-						},
+					yep: '<?php echo $site->url() ?>/assets/js/mobile.min.js',
+					callback: function() {
+						FastClick.attach(document.body);
 					}
 				},
 			]);

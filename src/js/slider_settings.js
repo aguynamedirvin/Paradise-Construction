@@ -2,11 +2,15 @@
 
 $(document).ready(function() {
 
+	var $nextArrow = '<div class="slick-next">&#xf105;</div>';
+	var $prevArrow = '<div class="slick-prev">&#xf104;</div>';
+
 	// Main Slider 
 	$('.slide-container').slick({
 		arrows: false,
 		autoplay: true,
 		dots: true,
+		cssEase: 'linear',
 	});
 
 	// Client Quote Slider
@@ -15,8 +19,8 @@ $(document).ready(function() {
 		autoplay: true,
 		dots: true,
 		cssEase: 'linear',
-		nextArrow: '<div class="slick-next">&#xf105;</div>',
-		prevArrow: '<div class="slick-prev">&#xf104;</div>',
+		nextArrow: $nextArrow,
+		prevArrow: $prevArrow,
 		responsive: [
 			{
 				breakpoint: 868,
@@ -27,27 +31,6 @@ $(document).ready(function() {
 		]
 	});
 
-	// Project Page Slider & Navigation Slider
-	$('.project__slides').slick({
-		adaptiveHeight: true,
-		arrows: true,
-		asNavFor: '.project__slider-nav',
-		autoplay: true,
-		//lazyLoad: 'ondemand',
-		nextArrow: '<div class="slick-next">&#xf105;</div>',
-		prevArrow: '<div class="slick-prev">&#xf104;</div>',
-	});
-	$('.project__slider-nav').slick({
-		arrows: false,
-		asNavFor: '.project__slides',
-		//centerMode: true,
-		focusOnSelect: true,
-		slidesToScroll: 1,
-		slidesToShow: 4,
-	});
-
-
-
 	// Featured Projects - Homepage
 	$('.featured-projects').slick({
 		arrows: false,
@@ -57,8 +40,8 @@ $(document).ready(function() {
 		pauseOnHover: false,
 		slidesToScroll: 1,
 		slidesToShow: 4,
-		nextArrow: '<div class="slick-next">&#xf105;</div>',
-		prevArrow: '<div class="slick-prev">&#xf104;</div>',
+		nextArrow: $nextArrow,
+		prevArrow: $prevArrow,
 		responsive: [
 			{
 				breakpoint: 380,

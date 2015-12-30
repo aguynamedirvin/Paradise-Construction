@@ -34,3 +34,6 @@ fields:
   text:
     label: Service Description
     type:  textarea
+  autoid:
+    type: text
+    readonly: true

@@ -7,10 +7,9 @@ password: >
 language: en
 role: admin
 history:
-  - services/yard-maintenance
-  - services/cascadas
-  - services/walkways
-  - services/trees-bushes-maintenance
-  - services/texture-complete-paint
+  - contact
+  - services
+  - projects
+  - about
 firstname: Irvin
 lastname: Dominguez

@@ -16,7 +16,7 @@ for more information: http://getkirby.com/license
 */
 
 
-c::set('license', 'put your license key here');
+//c::set('license', 'put your license key here');
 
 
 /*
@@ -38,7 +38,7 @@ of the system, please check out http://getkirby.com/docs/advanced/options
 c::set('cache.ignore', array('sitemap'));
 
 // Enable debbuging
-c::set('debug', true);
+//c::set('debug', true);
 
 // Set up the languages
 c::set('languages', array(

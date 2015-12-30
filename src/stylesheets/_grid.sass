@@ -2,7 +2,8 @@
 %clearfix
 	@include clearfix
 
-.wrap, .main, .content
+.wrap, 
+.content
 	max-width: 95%
 	margin: 0 auto
 	@extend %clearfix
@@ -10,10 +11,10 @@
 	@media (min-width: $break-big)
 		@include container
 
-.main
+.content
 	padding: 120px 0
 	
-.content, .article
+.article
 	font-size: 1.8rem
 	line-height: 1.7
 	max-width: 700px

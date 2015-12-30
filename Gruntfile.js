@@ -1,138 +1,249 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
 
-		// Watch
-		watch: {
-			grunt: { files: ['Gruntfile.js'] },
 
-			sass: {
-				files: ['src/sass/**/*.sass', 'src/sass/**/*.scss'],
-				tasks: ['sass']
+		// Configuration
+		pkg: grunt.file.readJSON('package.json'),
+
+
+		// Directories      // Use ex: '<%= dirs.src.js %>/main.js' -> 'src/js/main.js'
+		dirs: {
+			// Source
+			src: {
+				css: 'src/stylesheets',
+				img: 'src/images',
+				js: 'src/js'
 			},
 
-			uglify: {
-				files: ['src/js/*.js'],
+			// Distribution
+			dist: {
+				css: 'assets/css',
+				img: 'assets/images',
+				js: 'assets/js'
 			}
 		},
 
-		// SASS
+
+		// Watch our files for changes
+		watch: {
+			options: {
+				livereload: {
+					host: 'localhost',
+					//port: '8888'
+				}
+			},
+
+			gruntfile: {
+				files: 'Gruntfile.js',
+				options: {
+					reload: true
+				}
+			},
+
+			css: {
+				files: ['<%= dirs.src.css %>/**/*.{sass,scss,css}'],
+				tasks: ['sass', 'concat'],
+			},
+
+			js: {
+				files: '<%= dirs.src.js %>/**/*.js',
+				tasks: ['uglify:default']
+			}
+		},
+
+
+		// Compile our SASS
 		sass: {
 			options: {
-				includePaths: [
-					'bower_components/bourbon/app/assets/stylesheets'
+				outputStyle: 'expanded',
+				includePaths: ['bower_components/bourbon/app/assets/stylesheets']
+			},
+			default: {
+				files: {
+					'<%= dirs.dist.css %>/main.css': '<%= dirs.src.css %>/*.{sass,scss}'
+				}
+			}
+		},
+
+
+		// Combine CSS media queries
+		cmq: {
+			default: {
+				files: {
+					src: '<%= dirs.dist.css %>/*.css'
+				}
+			}
+		},
+
+
+		// Finish off our CSS
+		postcss: {
+			options: {
+				processors: [
+					require('autoprefixer')({ // Add vendor prefixes
+						browsers: [
+							'last 3 versions', 
+							'ie 8-9',
+						]
+					}),
+					require('pixrem')(), // Add fallback units for rem
+					//require('cssnano')(), // Minify our css
 				]
 			},
-			dist: {
-				options: {
-						outputStyle: 'expanded'
-				},
-				files: {
-					'assets/css/main.css': 'src/sass/main.sass'
-				}
+			default: {
+				src: '<%= dirs.dist.css %>/*.css'
 			}
 		},
 
 
-    	// Uglify
-    	uglify: {
+		// Combine and minify our JavaScript
+		uglify: {
 			build: {
-				/*options: {
+				options: {
+					//preserveComments: 'some'
+				},
+				files: '<%=uglify.default.files %>'
+			},
+			default: {
+				options: {
+					mangle: false,
+					screwIE8: true,
 					beautify: {
-						width: 80,
-						beautify: true
+						beautify: true,
+						comments: true,
+						width: 50
 					}
-				},*/
-				files: {
+				},
+				files: [
 
-					// Main
-					'assets/js/main.min.js': ['src/js/navigation.js', 'src/js/svg4everybody.js', 'src/js/slick_slider.js', 'src/js/slider_settings.js', 'src/js/event.move.js'],
+					// Main.js      // Example: script1.main.js & script2.main.js -> main.min.js
+					{
+						dest: '<%= dirs.dist.js %>/main.min.js',
+						src: '<%= dirs.src.js %>/main/*.js',
 
+						/**
+						
+							Or you can orgranize by folder   
+							Example: src/main/script1.js & src/main/script2.js -> assets/js/main.min.js
+							
+							expand: true,
+							cwd: '<%= dirs.src.js %>/main',
+							src: '*.main.js',
+							dest: '<%= dirs.dist.js %>',
+							ext: '.min.js',
+							extDot: 'last'
 
-					// For mobile
-					'assets/js/mobile.min.js': ['src/js/fastclick.js'],
+						**/
+					},
 
-					// Polyfills/Fixes
-					'assets/js/respond.min.js': 'src/js/respond.js',
-					'assets/js/svg4everybody.ie.min.js': 'src/js/svg4everybody.ie.js',
-					'assets/js/svg4everybody.min.js': 'src/js/svg4everybody.js',
+					// Mobile.js       // Example: script1.mobile.js & script2.mobile.js -> mobile.min.js
+					{
+						dest: '<%= dirs.dist.js %>/mobile.min.js',
+						src: '<%= dirs.src.js %>/mobile/*.js'
+					},
 
-					// Vendor
-					'assets/js/vendor/modernizr.min.js': 'src/js/vendor/modernizr.js'
-				}
+					// Vendor          // Minified & stored separately
+					{
+						expand: true,
+						cwd: '<%= dirs.src.js %>/vendor',
+						src: '*.js',
+						dest: '<%= dirs.dist.js %>/vendor',
+						ext: '.min.js',
+						extDot: 'last'
+					},
+
+					// Polyfills
+					{
+						expand: true,
+						cwd: '<%= dirs.src.js %>/polyfills',
+						src: '*.js',
+						dest: '<%= dirs.dist.js %>/polyfills',
+						ext: '.min.js'
+					},
+
+					// Slick Slider
+					{
+						dest: '<%= dirs.dist.js %>/slickslider.min.js',
+						src: ['src/js/slick_slider.js', 'src/js/slider_settings.js']
+					}
+
+				]
 			}
 		},
 
-		// SVG STORE
+
+		// Minify our images
+		imagemin: {
+			default: {
+				options: {
+					optimizationLevel: 5
+				},
+				files: [{
+					expand: true,
+					cwd: '<%= dirs.src.img %>',
+					src: ['*.{png,jpg,jpeg,gif}'],
+					dest: '<%= dirs.dist.img %>'
+				}]
+			}
+		},
+
+
+		// Create our SVG Sprite
 		svgstore: {
 			options: {
+				cleanup: true,
+				inheritviewbox: true,
 				prefix : 'icon-', // This will prefix each ID
 				svg: { // will add and overide the the default xmlns="http://www.w3.org/2000/svg" attribute to the resulting SVG
-					viewBox : '0 0 100 100',
 					xmlns: 'http://www.w3.org/2000/svg'
 				}
 			},
 			default: {
 				files: {
-					'assets/images/svg-sprite.svg': ['src/svg/*.svg']
+					'<%= dirs.dist.img %>/svg-sprite.svg': ['src/svg/*.svg']
 				}
 			},
 		},
 
-		// Combine Media Queries
-		cmq: {
-			build: {
-				files: {
-					'assets/css/main.css': ['assets/css/*.css']
-				}
-			}
-		},
 
-
-		postcss: {
-			options: {
-				processors: [
-					require('pixrem')(), // add fallbacks for rem units
-					require('autoprefixer')({browsers: ['last 2 versions', 'ie 8', 'ie 9', 'Android 2.3']}), // add vendor prefixes
-					require('cssnano')(), // minify the result
-				]
-			},
-			dist: {
-				src: 'assets/css/main.css'
-			}
-		},
-
-		cssmin: {
-		// the combine task
-			minify: {
-				files: {
-					'assets/css/main.css': ['src/css/main.css']
-				}
+		// Copy files from src into assets
+		copy: {
+			default: {
+				files: [
+					// Images
+					{
+						expand: true, 
+						cwd: '<%= dirs.src.img %>', 
+						src: ['**'], 
+						dest: '<%= dirs.dist.img %>'
+					},
+				],
 			},
 		},
 		
 	});
 
 
+	
+	// Load Plugins
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-combine-media-queries');
+	grunt.loadNpmTasks('grunt-postcss');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-svgstore');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 
 
 
-// Tasks
-grunt.loadNpmTasks('grunt-sass');
-grunt.loadNpmTasks('grunt-contrib-watch');
-grunt.loadNpmTasks('grunt-contrib-uglify');
-grunt.loadNpmTasks('grunt-svgstore');
-grunt.loadNpmTasks('grunt-combine-media-queries');
-grunt.loadNpmTasks('grunt-postcss');
-grunt.loadNpmTasks('grunt-contrib-cssmin');
+	// Quick Compilation - Build Our SASS
+	grunt.registerTask('build', ['sass', 'uglify:default']);
 
+	// Developement - Watch & Build Our SASS Files
+	grunt.registerTask('default', ['build', 'watch']);
 
-// Quick Compilation - Build Our SASS
-grunt.registerTask('build', ['sass']);
-
-// Developement - Watch & Build Our SASS Files
-grunt.registerTask('default', ['build', 'watch']);
-
-// Production - Build the files for production use
-grunt.registerTask('production', ['build', 'uglify', 'svgstore', 'cmq', 'postcss'/*, 'cssmin'*/]);
+	// Production - Build the files for production use
+	grunt.registerTask('production', ['build', 'cmq', 'postcss', 'uglify:build', 'copy', 'imagemin', 'svgstore']);
 
 };

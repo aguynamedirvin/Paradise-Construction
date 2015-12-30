@@ -8,10 +8,10 @@ fields:
   title:
     label: Title
     type:  text
-  summary:
-    label: Summary
+  text:
+    label: Text
     type:  textarea
-  description:
+  seo_summary:
     label: SEO Summary
     type: textarea
     buttons: false

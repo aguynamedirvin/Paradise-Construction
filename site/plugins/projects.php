@@ -54,7 +54,7 @@ function projects($options = array()) {
 	 */
 
 	$defaults = array(
-		'visibleOnly'   => true,
+		//'visibleOnly'   => true,
 		'limit'         => 9,
 		'columns'       => 3,
 		'shuffle'		=> FALSE,
@@ -74,53 +74,41 @@ function projects($options = array()) {
 
 
 	/**
-	 * Get projects from the Projects page, either visible only or all
+	 * Get projects from the Projects page
 	 */
-	$projects = page('projects')->children()->sortBy('date', 'desc')->limit($options['limit']);
-	if ($options['visibleOnly']) { 
+	$projects = page('projects')->images();
+	/*if ($options['visibleOnly']) { 
 		$projects = $projects->visible(); 
-	}
+	}*/
 	if ($options['shuffle']) {
 		$projects = $projects->shuffle();
 	}
-	if (!array_key_exists('filterBy', $options)) {
+	/*if (!array_key_exists('filterBy', $options)) {
 		$projects = $projects->filterBy(
 			$options['filterBy']['by'], 
 			$options['filterBy']['tag'],
 			$options['filterBy']['separator']
 		);
-	}
+	}*/
+	$projects = $projects->limit($options['limit']);
 
 
 	/**
 	 * Main Loop
 	 */
 	$count = 0;
-	foreach ($projects as $project) { 
-		if($project->hasImages()) {
-			$count++;
 
+	foreach ($projects as $project) {
+		$count++; 
 ?>
-			<div class="project__thumb<?php ecco($count % $options['columns'] == 0, ' last') ?>">
-				<a href="<?php echo $project->url() ?>" title="<?php echo $project->title()->html() ?>">
-					<?php 
+		<div class="project__thumb<?php ecco($count % $options['columns'] == 0, ' last') ?>">
+			<a href="<?php echo page('projects')->url() ?>">
+				<?php echo $project->crop(400, 280, 75)->html() ?>
+				<button class="btn btn-line aligncenter"><?php echo l::get('view_projects_btn') ?></button>
+			</a>
+		</div>
 
-						if ($project->image( $project->featured() )) {
-							$image = $project->image( $project->featured() );
-						} else {
-							$image = $project->image();
-						}
-
-					?>
-					<img src="<?php echo $image->crop(400, 280, 75)->url() ?>" alt="<?php echo $project->title()->html() ?>">
-					<button class="btn btn-line aligncenter"><?php echo l::get('view_project_btn') ?></button>
-				</a>
-			</div>
-<?php
-		}
-	}
-
-}
-
-
+<?php 
+	} // End foreach
+} // End function
 ?>

@@ -5,57 +5,23 @@
  */
 
 snippet('header') ?>
-
-	<main class="main" id="projects" role="main">
-		
+	
+	<div class="content">	
+	
 		<h1 class="title"><?php echo $page->title()->html() ?></h1>
 
-		<?php if ($page->summary()->isNotEmpty()): ?>
-		<p class="summary"><?php echo $page->summary()->html() ?></p>
+		<?php if ($page->text()->isNotEmpty()): ?>
+		<p class="summary"><?php echo $page->text()->html() ?></p>
 		<?php endif ?>
 
 
-		<ul class="pages-nav" id="category">
-			<li <?php if (!param('category')) echo ' class="active"' ?>><a href="<?php echo page('projects')->url() ?>/#projects">All</a></li>
-			<?php foreach ($cats as $cat): ?>
-			<li <?php if (param('category') == urlencode($cat)) echo ' class="active"' ?>>
-				<a href="<?php echo $page->url() . '/category:' . urlencode($cat) ?>/#projects">
-					<?php echo $cat ?>
-				</a>
-			</li>
+		<div class="projects-gallery">
+			
+			<?php foreach ($projects as $image): ?>
+			<a href="<?php echo $image->url() ?>" data-lightbox="projects">
+				<img src="" data-src="<?php echo $image->resize(300, null, 100)->url() ?>">
+			</a>
 			<?php endforeach ?>
-		</ul>
-
-
-		<div class="projects">
-
-			<?php 
-				$count = 0;
-				foreach ($projects as $project): 
-					if ($project->hasImages()):
-						$count++;
-
-			?>
-
-				<div class="project__thumb<?php ecco($count % 3 == 0, ' last') ?>">
-					<a href="<?php echo $project->url() ?>" title="<?php echo $project->title()->html() ?>">
-						<?php 
-
-							if ($project->image( $project->featured() )) {
-								$image = $project->image( $project->featured() );
-							} else {
-								$image = $project->image();
-							}
-
-						?>
-						<img src="<?php echo $image->crop(400, 280, 75)->url() ?>" alt="<?php echo $project->title()->html() ?>">
-						<button class="btn btn-line aligncenter"><?php echo l::get('view_project_btn') ?></button>
-					</a>
-				</div>
-
-			<?php endif; endforeach ?>
-
-		</div>
 
 		</div>
 
@@ -75,8 +41,7 @@ snippet('header') ?>
 			<?php endif ?>
 		</ul>
 		<?php endif ?>
-		
 
-	</main>
+	</div>
 
 <?php snippet('footer') ?>

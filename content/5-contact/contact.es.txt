@@ -11,3 +11,11 @@ Summary: Estamos encantados de responder cualquier pregunta que tenga o proporci
 ----
 
 Description: Contáctenos, estamos encantados de responder cualquier pregunta que tenga
+
+----
+
+Seo-summary: Contáctenos, estamos encantados de responder cualquier pregunta que tenga
+
+----
+
+Text: Estamos encantados de responder cualquier pregunta que tenga o proporcionarle una estimación. Sólo tienes que enviar un mensaje usando el siguiente formulario con cualquier pregunta que pueda tener.

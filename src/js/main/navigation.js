@@ -21,7 +21,7 @@ $(function() {
 		var shouldBeSticky = windowPosition >= 250;
 
 		// If TRUE then add class .STICKY-HEADER to header
-		if(shouldBeSticky) {
+		if (shouldBeSticky) {
 			button.removeClass('btn-line');
 			header.addClass('header-sticky');
 		} else {

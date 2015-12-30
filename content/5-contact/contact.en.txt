@@ -6,4 +6,12 @@ Summary: We're happy to answer any questions you have or provide you with an est
 
 ----
 
-Description: Contact Paradise Construction. We're happy to answer any questions you have.
+Description: 
+
+----
+
+Seo-summary: Contact Paradise Construction. We're happy to answer any questions you have.
+
+----
+
+Text: We're happy to answer any questions you have or provide you with an estimate. Just send us a message using the form below to get the ball rolling.

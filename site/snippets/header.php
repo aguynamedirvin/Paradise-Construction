@@ -8,23 +8,22 @@
 		<meta charset="utf-8">
 
 		<?php if($page->isHomePage()): ?>
-		<title><?php echo $site->title()->html() ?> &#8212; Construction, Landscaping in El Paso TX</title>
-		<?php elseif(param('category')): ?>
-		<title>Projects under <?php echo html(urldecode(param('category'))) ?> &#8212; <?php echo $site->title()->html() ?></title>
+		<title><?php echo $site->title()->html() ?> &#124; El Paso TX Roofing, Landscaping</title>
 		<?php else: ?>
 		<title><?php echo $page->title()->html() ?> &#8212; <?php echo $site->title()->html() ?></title>
 		<?php endif ?>
 
 
-		<?php if($page->isHomePage()): ?>
-		<meta name="description" content="<?php echo $site->description()->html(); ?>" />
-		<?php elseif($page->description()->isNotEmpty()): ?>
-		<meta name="description" content="<?php echo $page->description()->html(); ?>" />
+		<?php if($page->seo_summary()->isNotEmpty()): ?>
+		<meta name="description" content="<?php echo $page->seo_summary()->html(); ?>" />
 		<?php else: ?>
-		<meta name="description" content="<?php echo $page->summary()->html(); ?>" />
+		<meta name="description" content="<?php echo $site->seo_summary()->html(); ?>" />
 		<?php endif ?>
 
 		<meta name="keywords" content="<?php echo $site->keywords()->html(); ?>" />
+
+		<!-- OG -->
+		<meta property="og:image" content="<?php echo $site->url() . '/assets/images/small_logo.png' ?>" />
 
 
 		<!-- Mobile specific metas -->
@@ -46,15 +45,27 @@
 				{
 					// If Media Queries not supported
 					test: Modernizr.mq('only all'),
-					nope: '<?php echo $site->url() ?>/assets/js/respond.min.js'
+					nope: '<?php echo $site->url() ?>/assets/js/polyfills/respond.min.js'
 				},
 				{
 					// If SVGs not supported
 					test: Modernizr.svg,
-					nope: ['<?php echo $site->url() ?>/assets/js/svg4everybody.min.js', 'ielt8!<?php echo $site->url() ?>/assets/js/svg4everybody.ie.min.js']
+					nope: ['<?php echo $site->url() ?>/assets/js/polyfills/svg4everybody.min.js', 'ielt8!<?php echo $site->url() ?>/assets/js/polyfills/svg4everybody.ie.min.js']
 				},
 
 			]);
+		</script>
+
+		<!-- Hotjar Tracking Code for paradiseconstructionep.com -->
+		<script>
+			(function(h,o,t,j,a,r){
+					h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+					h._hjSettings={hjid:114644,hjsv:5};
+					a=o.getElementsByTagName('head')[0];
+					r=o.createElement('script');r.async=1;
+					r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+					a.appendChild(r);
+			})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 		</script>
 
 		<script type="application/ld+json">
@@ -104,15 +115,13 @@
 				<a href="<?php echo $site->language->url() ?>" class="logo" alt="<?php echo $site->title()->html() ?>"></a>
 
 				<!-- Main Navigation Menu -->
-				<?php snippet('navbar') ?>
+				<?php snippet('nav') ?>
 
 			</div>
 		</div>
 
-	<?php if (!$page->isHomePage()): ?>
-		<div class="pad"></div>
-		
-		<?php if (param('status') != 'free-estimate'): ?>
+		<main <?php ecco(!$page->isHomePage(), 'class="pad"')?>>
+
+		<?php if (param('status') != 'free-estimate' & !$page->isHomePage()): ?>
 			<?php snippet('free_estimate') ?>
 		<?php endif ?>
-	<?php endif ?>

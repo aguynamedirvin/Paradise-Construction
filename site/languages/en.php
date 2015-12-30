@@ -1,6 +1,7 @@
 <?php
 
 	l::set('view_project_btn', 'View Project');
+	l::set('view_projects_btn', 'View Projects');
 	l::set('free_estimate_btn', 'Free Estimate');
 	l::set('send_message_btn', 'Send Message');
 	l::set('working_hours', 'Working Hours');

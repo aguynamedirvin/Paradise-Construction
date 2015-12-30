@@ -1,7 +1,6 @@
 <?php snippet('header') ?>
 
 
-
 	<!-- Slider -->
 	<div id="main-slider">
 		<div class="slide-container">
@@ -13,11 +12,8 @@
 							<img src="<?php echo $site->url() . '/assets/images/logo.png' ?>" alt="<?php echo $site->title()->html() ?> Logo">
 						</div>
 						<p class="summary"><?php echo $page->introduction()->html() ?></p>
-						<a class="btn btn-big btn-line hide-sm" role="button" href="<?php echo page('contact')->url() ?>">
-							<?php echo l::get('contact_us') ?>
-						</a>
-						<a class="btn btn-big btn-line" role="button" href="<?php echo page('contact')->url() . '/status:free-estimate' ?>">
-							<?php echo l::get('get_a_quote') ?>
+						<a class="btn btn-big btn-large btn-line" role="button" href="<?php echo page('projects')->url() ?>">
+							<?php echo l::get('view_projects_btn') ?>
 						</a>
 					</div>
 				</div>

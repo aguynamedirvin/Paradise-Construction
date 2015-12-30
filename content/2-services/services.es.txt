@@ -11,3 +11,11 @@ Summary: Ofrecemos una amplia variedad de servicios - construcción, renovación
 ----
 
 Description: Ofrecemos una amplia variedad de servicios - construcción, renovación, remodelación, reparación y muchos más. Somos confiable, profesional y estamos equipado con un la habilidad de mano de obra necesaria para manejar proyectos de desarrollo.
+
+----
+
+Seo-summary: Ofrecemos una amplia variedad de servicios - construcción, renovación, remodelación, reparación y muchos más. Somos confiable, profesional y estamos equipado con un la habilidad de mano de obra necesaria para manejar proyectos de desarrollo.
+
+----
+
+Text: Ofrecemos una amplia variedad de servicios - construcción, renovación, remodelación, reparación y muchos más. Somos confiable, profesional y estamos equipado con un la habilidad de mano de obra necesaria para manejar proyectos de desarrollo.

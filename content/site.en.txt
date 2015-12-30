@@ -2,11 +2,7 @@ Title: Paradise Construction
 
 ----
 
-Description: We are a construction company based in El Paso providing wide range of services – from roofing to landscaping. We have developed a reputation for reliability and superior customer service.
-
-----
-
-Keywords: construction,landscaping,roofing,yard maintenance,cultured brick,general contractor,home renovation,construction contractor
+Keywords: construction,landscaping,roofing,yard maintenance,home renovation,construction contractor,home builders el paso tx,el paso,contractor,home builders,roofing el paso tx
 
 ----
 
@@ -34,7 +30,7 @@ Address: 11280 Mark Mabon Ct.
 
 ----
 
-Google-analytics: UA-19072260-22_DJS
+Google-analytics: UA-19072260-22-NJ
 
 ----
 
@@ -68,3 +64,7 @@ Work-hours:
   day: Saturday
   open_hours: 12:00
   closing_hours: 18:00
+
+----
+
+Seo-summary: We are a construction company based in El Paso, TX providing wide range of services – from roofing to landscaping. We are committed to offering you the best materials, customer service, and workmanship and quality and we guarantee that you will be satisfied

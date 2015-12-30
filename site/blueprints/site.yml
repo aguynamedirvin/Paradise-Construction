@@ -6,8 +6,8 @@ fields:
   title:
     label: Title
     type:  text
-  description:
-    label: SEO Introduction Text
+  seo_summary:
+    label: SEO Summary
     type: textarea
     buttons: false
   line_a:

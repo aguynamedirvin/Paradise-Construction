@@ -1,11 +1,11 @@
 <?php snippet('header') ?>
 
-	<main class="main" role="main">
+	<div class="content">
 
 		<h1 class="title"><?php echo $page->title()->html() ?></h1>
 		
-		<?php if ($page->summary()->isNotEmpty()): ?>
-		<p class="summary"><?php echo $page->summary()->html() ?></p>
+		<?php if ($page->text()->isNotEmpty()): ?>
+		<p class="summary"><?php echo $page->text()->html() ?></p>
 		<?php endif ?>
 
 		<?php 
@@ -24,7 +24,7 @@
 				</div>
 				<?php endif ?>
 				<div class="service__details">
-					<h4 class="service__title"><a href="<?php echo page('projects')->url() . '/category:' . urlencode($service->title()->html()) ?>"><?php echo $service->title()->html() ?></a></h4>
+					<h4 class="service__title"><?php echo $service->title()->link(page('projects')->url() . '/category:' . urlencode($service->title())) ?></h4>
 					<p class="service__summary"><?php echo $service->text() ?></p>
 				</div>
 			</li>
@@ -35,13 +35,12 @@
 			<?php 
 				foreach ($services as $service):
 					if ($service->text()->isEmpty()): ?>
-			<li><a href="<?php echo page('projects')->url() . '/category:' . urlencode($service->title()->html()) ?>"><?php echo $service->title()->html() ?></a></li>
+			<li><?php echo $service->title()->link(page('projects')->url() . '/category:' . urlencode($service->title())) ?></li>
 			<?php 
 					endif;
 				endforeach ?>
 		</ul>
-		
-
-	</main>
+	
+	</div>
 
 <?php snippet('footer') ?>
