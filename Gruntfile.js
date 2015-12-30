@@ -60,7 +60,7 @@ module.exports = function(grunt) {
 			},
 			default: {
 				files: {
-					'<%= dirs.dist.css %>/main.css': '<%= dirs.src.css %>/*.{sass,scss}'
+					'<%= dirs.dist.css %>/main.css': '<%= dirs.src.css %>/main.sass'
 				}
 			}
 		},
@@ -70,7 +70,7 @@ module.exports = function(grunt) {
 		cmq: {
 			default: {
 				files: {
-					src: '<%= dirs.dist.css %>/*.css'
+					'<%= dirs.dist.css %>': '<%= dirs.dist.css %>/*.css'
 				}
 			}
 		},
