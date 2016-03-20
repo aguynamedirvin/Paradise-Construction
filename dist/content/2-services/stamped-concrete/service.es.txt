@@ -1,0 +1,13 @@
+Title: Stamped Concrete
+
+----
+
+Text: Utilizamos cemento de la mejor cualidad con variantes de estampado y colores para su mayor satisfacción.
+
+----
+
+Featured: true
+
+----
+
+Icon: stamped-concrete

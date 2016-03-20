@@ -1,0 +1,17 @@
+Title: Testimonials
+
+----
+
+Testimonials: 
+
+- 
+  client: Alma Sanchez
+  quote: >
+    Absolutely love our front landscaping,
+    looks very elegant and crisp...Thanks
+    again Paradise Construction, we are so
+    happy we decided to get the job done by
+    you and will highly recommend you all.
+- 
+  client: Letty
+  quote: "Highly recommended! Being a single mother, Paradise Construction helped me through it all step by step. I'm very happy with their work!"

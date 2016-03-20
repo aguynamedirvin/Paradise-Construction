@@ -10,16 +10,16 @@ module.exports = function(grunt) {
 		dirs: {
 			// Source
 			src: {
-				css: 'src/stylesheets',
-				img: 'src/images',
-				js: 'src/js'
+				css: 'stylesheets',
+				img: 'images',
+				js: 'js'
 			},
 
 			// Distribution
 			dist: {
-				css: 'assets/css',
-				img: 'assets/images',
-				js: 'assets/js'
+				css: 'dist/assets/css',
+				img: 'dist/assets/images',
+				js: 'dist/assets/js'
 			}
 		},
 
@@ -82,7 +82,7 @@ module.exports = function(grunt) {
 				processors: [
 					require('autoprefixer')({ // Add vendor prefixes
 						browsers: [
-							'last 3 versions', 
+							'last 3 versions',
 							'ie 8-9',
 						]
 					}),
@@ -122,10 +122,10 @@ module.exports = function(grunt) {
 						src: '<%= dirs.src.js %>/main/*.js',
 
 						/**
-						
-							Or you can orgranize by folder   
+
+							Or you can orgranize by folder
 							Example: src/main/script1.js & src/main/script2.js -> assets/js/main.min.js
-							
+
 							expand: true,
 							cwd: '<%= dirs.src.js %>/main',
 							src: '*.main.js',
@@ -200,7 +200,7 @@ module.exports = function(grunt) {
 			},
 			default: {
 				files: {
-					'<%= dirs.dist.img %>/svg-sprite.svg': ['src/svg/*.svg']
+					'<%= dirs.dist.img %>/svg-sprite.svg': ['<%= dirs.src.img %>/*.svg']
 				}
 			},
 		},
@@ -212,19 +212,19 @@ module.exports = function(grunt) {
 				files: [
 					// Images
 					{
-						expand: true, 
-						cwd: '<%= dirs.src.img %>', 
-						src: ['**'], 
+						expand: true,
+						cwd: '<%= dirs.src.img %>',
+						src: ['**'],
 						dest: '<%= dirs.dist.img %>'
 					},
 				],
 			},
 		},
-		
+
 	});
 
 
-	
+
 	// Load Plugins
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-sass');
