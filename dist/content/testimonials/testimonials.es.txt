@@ -1,1 +1,27 @@
 Title: Testimonials
+
+----
+
+Testimonials: 
+
+- 
+  client: Javier Alfredo
+  quote: >
+    Me terminaron mi trabajo de mi casa muy
+    bien, no pague nada hasta que vi todo
+    terminado y la calidad del material si
+    fue lo acordado, mi yarda tracera quedo
+    preciosa y por último el trato y
+    amabilidad de los muchachos fue algo que
+    a mi familia y a mi nos agrado mucho.
+- 
+  client: Alma Sanchez
+  quote: >
+    Absolutely love our front landscaping,
+    looks very elegant and crisp...Thanks
+    again Paradise Construction, we are so
+    happy we decided to get the job done by
+    you and will highly recommend you all.
+- 
+  client: Letty
+  quote: "Highly recommended! Being a single mother, Paradise Construction helped me through it all step by step. I'm very happy with their work!"

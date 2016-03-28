@@ -3,14 +3,14 @@
 	<div class="content">
 
 		<h1 class="title"><?php echo $page->title()->html() ?></h1>
-		
+
 		<?php if ($page->text()->isNotEmpty()): ?>
 		<p class="summary"><?php echo $page->text()->html() ?></p>
 		<?php endif ?>
 
-		<?php 
-		
-			$services = $page->children(); 
+		<?php
+
+			$services = $page->children();
 
 		?>
 		<ul class="services">
@@ -24,7 +24,7 @@
 				</div>
 				<?php endif ?>
 				<div class="service__details">
-					<h4 class="service__title"><?php echo $service->title()->link(page('projects')->url() . '/category:' . urlencode($service->title())) ?></h4>
+					<h4 class="service__title"><?php echo $service->title()->link(page('projects')->url()) ?></h4>
 					<p class="service__summary"><?php echo $service->text() ?></p>
 				</div>
 			</li>
@@ -32,15 +32,15 @@
 		</ul>
 
 		<ul class="all-services">
-			<?php 
+			<?php
 				foreach ($services as $service):
 					if ($service->text()->isEmpty()): ?>
-			<li><?php echo $service->title()->link(page('projects')->url() . '/category:' . urlencode($service->title())) ?></li>
-			<?php 
+			<li><?php echo $service->title()->link(page('projects')->url()) ?></li>
+			<?php
 					endif;
 				endforeach ?>
 		</ul>
-	
+
 	</div>
 
 <?php snippet('footer') ?>

@@ -2,15 +2,11 @@ Title: Paradise Construction
 
 ----
 
-Description: 
-
-----
-
 Keywords: construction,landscaping,roofing,yard maintenance,home renovation,construction contractor,home builders el paso tx,el paso,contractor,home builders,roofing el paso tx
 
 ----
 
-Google-plus: http://www.google.com/+Paradiseconstructionepcompany
+Google-plus: http://plus.google.com/+ParadiseConstructionEPcompany
 
 ----
 
@@ -58,17 +54,17 @@ Free-estimate-summary: If you call today you’ll get a FREE estimate of your ho
 
 ----
 
-Work-hours: 
+Work-hours:
 
-- 
+-
   day: Mon – Fri
   open_hours: 08:00
   closing_hours: 19:00
-- 
+-
   day: Saturday
   open_hours: 12:00
   closing_hours: 18:00
 
 ----
 
-Seo-summary: We are a construction company based in El Paso, TX providing wide range of services – from roofing to landscaping. We are committed to offering you the best materials, customer service, and workmanship and quality and we guarantee that you will be satisfied
+Seo-summary: We are a construction company based in El Paso, TX providing wide range of services – from roofing & landscaping to projects such as home building. We are committed to offering you the best materials, customer service, and workmanship and quality and we guarantee that you will be satisfied.

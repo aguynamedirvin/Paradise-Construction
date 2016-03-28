@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $services = page('services')->children();
 
@@ -14,7 +14,7 @@ $services = page('services')->children();
 			</svg>
 		</div>
 		<div class="service__details">
-			<h4 class="service__title"><?php echo $service->title()->link(page('projects')->url() . '/category:' . urlencode($service->title())) ?></h4>
+			<h4 class="service__title"><?php echo $service->title()->link(page('projects')->url()) ?></h4>
 			<p class="service__summary"><?php echo $service->text() ?></p>
 		</div>
 	</li>
@@ -23,6 +23,6 @@ $services = page('services')->children();
 
 <ul class="all-services">
 	<?php foreach ($services as $service): ?>
-	<li><?php echo $service->title()->link(page('projects')->url() . '/category:' . urlencode($service->title())) ?></li>
+	<li><?php echo $service->title()->link(page('projects')->url()) ?></li>
 	<?php endforeach ?>
 </ul>

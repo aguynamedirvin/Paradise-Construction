@@ -15,3 +15,10 @@ Testimonials:
 - 
   client: Letty
   quote: "Highly recommended! Being a single mother, Paradise Construction helped me through it all step by step. I'm very happy with their work!"
+- 
+  client: Jen
+  quote: >
+    My front yard looks beautiful! They did
+    a amazing job and everything looks
+    great! Very pleased with it. Would
+    highly recommend! Thank you!

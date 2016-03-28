@@ -1,10 +1,10 @@
 <!doctype html>
 <html class="no-js" lang="<?php echo $site->language()->code() ?>">
 	<head>
-		
+
 		<!-- Force IE to use the latest rendering engine -->
 		<meta http-equiv="x-ua-compatible" content="IE=edge">
-		
+
 		<meta charset="utf-8">
 
 		<?php if($page->isHomePage()): ?>
@@ -32,12 +32,12 @@
 
 		<!-- Stylesheets -->
 		<?php echo css('assets/css/main.css') ?>
-		
+
 
 		<!--[if lte IE 8]>
 		<script src="<?php echo $site->url() ?>/assets/js/svg4everybody.ie.min.js"></script>
 		<![endif]-->
-		
+
 		<!-- Modernizer -->
 		<?php echo js('assets/js/vendor/modernizr.min.js') ?>
 		<script>
@@ -54,18 +54,6 @@
 				},
 
 			]);
-		</script>
-
-		<!-- Hotjar Tracking Code for paradiseconstructionep.com -->
-		<script>
-			(function(h,o,t,j,a,r){
-					h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-					h._hjSettings={hjid:114644,hjsv:5};
-					a=o.getElementsByTagName('head')[0];
-					r=o.createElement('script');r.async=1;
-					r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-					a.appendChild(r);
-			})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 		</script>
 
 		<script type="application/ld+json">
@@ -110,7 +98,7 @@
 		<!-- Header -->
 		<div id="header" class="header<?php ecco($page->isHomePage(), ' header-transparent') ?>">
 			<div class="wrap">
-				
+
 				<!-- Logo -->
 				<a href="<?php echo $site->language->url() ?>" class="logo" alt="<?php echo $site->title()->html() ?>"></a>
 

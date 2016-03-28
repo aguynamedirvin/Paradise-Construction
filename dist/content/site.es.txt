@@ -2,7 +2,7 @@ Title: Paradise Construction
 
 ----
 
-Description: 
+Description:
 
 ----
 
@@ -10,7 +10,7 @@ Keywords: construcción,remodelación,paisajismo,concreto estampado,contratista 
 
 ----
 
-Google-plus: http://www.google.com/+Paradiseconstructionepcompany
+Google-plus: http://plus.google.com/+ParadiseConstructionEPcompany
 
 ----
 
@@ -58,13 +58,13 @@ Free-estimate-summary: Si llama hoy obtendrá una estimación GRATUITA que compa
 
 ----
 
-Work-hours: 
+Work-hours:
 
-- 
+-
   day: Mon – Fri
   open_hours: 08:00
   closing_hours: 19:00
-- 
+-
   day: Saturday
   open_hours: 12:00
   closing_hours: 18:00
