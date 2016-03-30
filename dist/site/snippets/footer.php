@@ -5,7 +5,7 @@
 			<div class="footer__widgets">
 				<div class="wrap">
 					<div class="widget contact">
-						<h3><?php echo l::get('contact_us') ?></h3>
+						<h3 class="widget__title"><?php echo l::get('contact_us') ?></h3>
 						<ul>
 							<li><i class="fa fa-phone"></i> <b><?php echo l::get('phone') ?>:</b> <a href="tel:<?php echo $site->phone() ?>"><?php echo $site->phone() ?></a></li>
 							<li><i class="fa fa-envelope"></i> <b><?php echo l::get('email') ?>:</b> <a href="mailto:<?php echo encode("" . $site->email() . "") ?>"><?php echo encode("" . $site->email() . "") ?></a></li>
@@ -14,7 +14,7 @@
 					</div>
 
 					<div class="widget social">
-						<h3><?php echo l::get('follow_us') ?></h3>
+						<h3 class="widget__title"><?php echo l::get('follow_us') ?></h3>
 						<div class="social-icons">
 							<!-- Facebook -->
 							<span><a href="<?php echo $site->facebook() ?>">&#xf09a;</a></span>
@@ -25,7 +25,7 @@
 					</div>
 
 					<div class="widget company">
-						<h3><?php echo l::get('company') ?></h3>
+						<h3 class="widget__title"><?php echo l::get('company') ?></h3>
 						<ul>
 							<?php foreach($pages->visible() as $p): ?>
 							<li><a <?php e($p->isOpen(), ' class="active"') ?> href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?></a></li>
@@ -34,7 +34,7 @@
 					</div>
 
 					<div class="widget language">
-						<h3><?php echo l::get('language') ?></h3>
+						<h3 class="widget__title"><?php echo l::get('language') ?></h3>
 						<ul>
 							<?php foreach($site->languages() as $language): ?>
 								<li<?php e($site->language() == $language, ' class="active"') ?>>

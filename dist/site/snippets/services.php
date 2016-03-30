@@ -14,7 +14,7 @@ $services = page('services')->children();
 			</svg>
 		</div>
 		<div class="service__details">
-			<h4 class="service__title"><?php echo $service->title()->link(page('projects')->url()) ?></h4>
+			<h2 class="service__title"><?php echo $service->title()->link(page('projects')->url()) ?></h2>
 			<p class="service__summary"><?php echo $service->text() ?></p>
 		</div>
 	</li>
