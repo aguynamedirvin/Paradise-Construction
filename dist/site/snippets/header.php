@@ -100,7 +100,7 @@
 			<div class="wrap">
 
 				<!-- Logo -->
-				<a href="<?php echo $site->language->url() ?>" class="logo" alt="<?php echo $site->title()->html() ?>"></a>
+				<a href="<?php echo $site->language->url() ?>" class="logo" title="<?php echo $site->title()->html() ?>"></a>
 
 				<!-- Main Navigation Menu -->
 				<?php snippet('nav') ?>

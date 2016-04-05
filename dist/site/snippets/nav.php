@@ -1,4 +1,4 @@
-<nav class="site-navigation alignright" role="navigation">
+<nav class="site-navigation alignright">
 	<ul class="navigation">
 		<?php foreach($pages->visible() as $p): ?>
 			<li><a <?php e($p->isOpen(), ' class="active"') ?> href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?></a></li>

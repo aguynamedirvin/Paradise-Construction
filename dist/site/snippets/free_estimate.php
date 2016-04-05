@@ -7,6 +7,8 @@
 		</div>
 
 		<a class="btn btn-dark alignright hide-sm" role="button" href="<?php echo page('contact')->url() . '/status:free-estimate' ?>"><?php echo l::get('free_estimate_btn') ?></a>
-		<button class="btn btn-dark aligncenter hide-md"><a href="tel:<?php echo $site->phone() ?>"><?php echo l::get('click_to_call') ?></a></button>
+		<a href="tel:<?php echo formatPhone($site->phone()) ?>">
+			<button class="btn btn-dark aligncenter hide-md"><?php echo l::get('click_to_call') ?></button>
+		</a>
 	</div>
 </section>

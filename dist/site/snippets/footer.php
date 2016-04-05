@@ -7,7 +7,7 @@
 					<div class="widget contact">
 						<h3 class="widget__title"><?php echo l::get('contact_us') ?></h3>
 						<ul>
-							<li><i class="fa fa-phone"></i> <b><?php echo l::get('phone') ?>:</b> <a href="tel:<?php echo $site->phone() ?>"><?php echo $site->phone() ?></a></li>
+							<li><i class="fa fa-phone"></i> <b><?php echo l::get('phone') ?>:</b> <a href="tel:<?php echo formatPhone($site->phone()) ?>"><?php echo $site->phone() ?></a></li>
 							<li><i class="fa fa-envelope"></i> <b><?php echo l::get('email') ?>:</b> <a href="mailto:<?php echo encode("" . $site->email() . "") ?>"><?php echo encode("" . $site->email() . "") ?></a></li>
 							<li><i class="fa fa-map-marker"></i> <b><?php echo l::get('address') ?>:</b> <?php echo $site->address() . ', ' . $site->city() . ', ' . $site->state() . ' ' . $site->postal_code() ?></li>
 						</ul>
