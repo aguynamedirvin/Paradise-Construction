@@ -47,7 +47,7 @@ return function($site, $pages, $page) {
 			// build the email
 			$email = email(array(
 				'to'      => $site->email(),
-				'from'    => $site->email(),
+				'from'    => $data['email'],
 				'subject' => 'New message from Paradise Construction',
 				'replyTo' => $data['email'],
 				'body'    => $body
